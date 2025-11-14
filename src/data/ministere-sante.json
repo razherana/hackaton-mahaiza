@@ -1,0 +1,80 @@
+[
+  {
+    "id": "min-sante",
+    "name": "Ministère de la Santé Publique",
+    "news": [
+      {
+        "id": "sante-001",
+        "title": "💉 Alerte rougeole : 2 millions d'enfants vaccinés gratuitement ce mois-ci !",
+        "date": "2025-11-12",
+        "author": "Direction de la Communication Santé",
+        "category": "Santé publique",
+        "summary": "Lancement d'une campagne de vaccination dans toutes les régions du pays visant à protéger plus de 2 millions d'enfants.",
+        "image": "/images/sante.png",
+        "images": ["/images/sante.png", "/images/sante.png"],
+        "sections": [
+          {
+            "title": "Lancement de la campagne",
+            "content": "Le Ministère de la Santé Publique a officiellement lancé une campagne de vaccination massive contre la rougeole sur l'ensemble du territoire national. Cette initiative s'inscrit dans le cadre du programme élargi de vaccination et vise à protéger les enfants âgés de 9 mois à 5 ans.\n\nLa rougeole reste une maladie hautement contagieuse et potentiellement mortelle. Cette campagne vise à atteindre une couverture vaccinale de 95% pour assurer une immunité collective."
+          },
+          {
+            "title": "Déploiement sur le terrain",
+            "content": "Plus de 5 000 agents de santé sont mobilisés dans 22 régions du pays. Des équipes mobiles seront déployées dans les zones reculées pour garantir un accès équitable à la vaccination. Les centres de santé de base, les hôpitaux régionaux et des points de vaccination temporaires accueilleront les familles.\n\nDes campagnes de sensibilisation accompagnent le déploiement avec des messages diffusés à la radio, à la télévision et sur les réseaux sociaux pour informer les parents de l'importance de la vaccination."
+          },
+          {
+            "title": "Partenariats et soutien international",
+            "content": "Cette campagne bénéficie du soutien de l'OMS, de l'UNICEF et de plusieurs partenaires internationaux. Les vaccins, seringues et matériels logistiques ont été fournis gratuitement grâce à ces partenariats.\n\nLe ministère travaille également avec les organisations de la société civile et les leaders communautaires pour faciliter l'acceptation de la vaccination dans toutes les communautés."
+          }
+        ]
+      },
+      {
+        "id": "sante-002",
+        "title": "🏥 Méga hôpital de Toamasina : 300 lits et technologies de pointe !",
+        "date": "2025-11-02",
+        "author": "Direction des Infrastructures Sanitaires",
+        "category": "Infrastructures",
+        "summary": "Un nouvel établissement hospitalier moderne de 200 lits ouvre ses portes à Toamasina, équipé des dernières technologies médicales.",
+        "image": "/images/sante.png",
+        "images": ["/images/sante.png", "/images/sante.png"],
+        "sections": [
+          {
+            "title": "Inauguration officielle",
+            "content": "Le nouvel hôpital régional de Toamasina a été inauguré en présence du Ministre de la Santé Publique et des autorités régionales. Cet établissement ultramoderne représente un investissement de 15 milliards d'Ariary et constitue une avancée majeure pour le système de santé de la région Atsinanana.\n\nL'hôpital dispose de 200 lits répartis dans différents services spécialisés : chirurgie, médecine interne, pédiatrie, maternité et soins intensifs."
+          },
+          {
+            "title": "Équipements et technologies",
+            "content": "L'établissement est équipé d'un scanner, d'une IRM, de salles d'opération modernes et d'un laboratoire d'analyses médicales performant. Une unité de dialyse et un service d'urgences ouvert 24h/24 complètent l'offre de soins.\n\nLe système d'information hospitalier permet la gestion électronique des dossiers patients et facilite la coordination entre les différents services."
+          },
+          {
+            "title": "Impact sur la région",
+            "content": "Cet hôpital desservira une population de plus de 500 000 habitants et réduira considérablement les évacuations sanitaires vers Antananarivo. Les patients pourront désormais bénéficier de soins de qualité dans leur région.\n\nL'établissement a créé 300 emplois directs et a permis le recrutement de médecins spécialistes, d'infirmiers et de personnel administratif. Des formations continues sont prévues pour maintenir le niveau d'excellence des soins."
+          }
+        ]
+      },
+      {
+        "id": "sante-003",
+        "title": "Journée mondiale de la santé : actions de sensibilisation",
+        "date": "2025-04-07",
+        "summary": "Des campagnes de sensibilisation sur la prévention des maladies non transmissibles.",
+        "content": "Le ministère a organisé des ateliers et des conférences dans tout le pays pour promouvoir la prévention des maladies cardiovasculaires et du diabète.",
+        "image": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd21?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "id": "sante-004",
+        "title": "Recrutement de 500 nouveaux agents de santé",
+        "date": "2025-10-15",
+        "summary": "Le ministère renforce les effectifs dans les centres de santé ruraux.",
+        "content": "Un appel à candidatures a été lancé pour recruter 500 agents de santé afin d'améliorer la couverture médicale dans les zones reculées.",
+        "image": "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "id": "sante-005",
+        "title": "Lutte contre le paludisme : distribution de moustiquaires",
+        "date": "2025-09-20",
+        "summary": "Distribution gratuite de moustiquaires imprégnées dans les régions à risque.",
+        "content": "Plus de 1 million de moustiquaires ont été distribuées dans les régions du sud pour lutter contre le paludisme.",
+        "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80"
+      }
+    ]
+  }
+]

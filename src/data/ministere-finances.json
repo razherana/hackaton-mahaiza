@@ -1,0 +1,72 @@
+[
+  {
+    "id": "min-finances",
+    "name": "Ministère de l'Économie et des Finances",
+    "news": [
+      {
+        "id": "fin-001",
+        "title": "💰 Budget 2026 : 7 500 milliards pour transformer Madagascar !",
+        "date": "2025-11-08",
+        "author": "Ministère de l'Économie et des Finances",
+        "category": "Budget",
+        "summary": "Le ministère présente le projet de budget pour l'année 2026, marquant une augmentation significative des investissements dans les secteurs prioritaires.",
+        "image": "/images/finances.png",
+        "images": [
+          "/images/finances.png"
+        ],
+        "sections": [
+          {
+            "title": "Un budget ambitieux pour 2026",
+            "content": "Le projet de loi de finances pour 2026 s'établit à 7 500 milliards d'Ariary, soit une augmentation de 12% par rapport à l'exercice précédent. Cette hausse traduit la volonté du gouvernement d'accélérer le développement du pays dans un contexte économique favorable.\n\nLe Ministre de l'Économie et des Finances a souligné que ce budget reflète les priorités nationales définies dans le cadre du Plan de Développement National. L'accent est mis sur trois piliers fondamentaux : l'éducation, la santé et les infrastructures.\n\nCette enveloppe budgétaire permettra de financer des projets stratégiques tout en maintenant la stabilité macroéconomique du pays. Le gouvernement s'engage à respecter les équilibres budgétaires et à poursuivre la politique de rigueur dans la gestion des finances publiques."
+          },
+          {
+            "title": "Éducation : une priorité renforcée",
+            "content": "Le secteur de l'éducation bénéficie d'une allocation budgétaire de 1 800 milliards d'Ariary, représentant 24% du budget total. Cette enveloppe permettra de financer la construction de nouvelles écoles, la formation des enseignants et l'amélioration des infrastructures éducatives.\n\nUn programme spécifique de bourses scolaires sera élargi pour toucher 500 000 élèves issus de familles défavorisées. L'objectif est de réduire le taux d'abandon scolaire et d'améliorer la qualité de l'enseignement à tous les niveaux.\n\nLe gouvernement prévoit également d'investir massivement dans la digitalisation de l'éducation avec l'acquisition de 100 000 tablettes éducatives et le déploiement de la connexion internet dans 1 500 établissements scolaires."
+          },
+          {
+            "title": "Santé publique : vers l'accès universel aux soins",
+            "content": "Le budget alloué au secteur de la santé atteint 1 350 milliards d'Ariary, en hausse de 18% par rapport à 2025. Cette augmentation permettra de renforcer le système de santé publique et d'améliorer l'accès aux soins pour tous les Malgaches.\n\nLes priorités incluent la construction de 50 nouveaux centres de santé de base dans les zones rurales, l'équipement de 15 hôpitaux régionaux et le recrutement de 2 000 professionnels de santé. Le gouvernement mettra également l'accent sur la prévention avec des campagnes de vaccination et de sensibilisation.\n\nUn fonds spécial de 100 milliards d'Ariary est prévu pour l'achat de médicaments essentiels et la mise en place d'une couverture maladie universelle progressive, visant à couvrir 2 millions de personnes dès la première année."
+          },
+          {
+            "title": "Infrastructures : développement et modernisation",
+            "content": "Les infrastructures constituent le troisième pilier du budget 2026 avec une enveloppe de 2 250 milliards d'Ariary. Les investissements porteront sur la réhabilitation et la construction de routes nationales, l'électrification rurale et la modernisation des ports et aéroports.\n\nLe programme de travaux routiers prévoit la réhabilitation de 1 200 km de routes nationales et la construction de 500 km de nouvelles routes. L'objectif est de désenclaver les régions isolées et de faciliter les échanges commerciaux.\n\nDans le domaine de l'énergie, le gouvernement investira 600 milliards d'Ariary pour étendre le réseau électrique dans 300 communes rurales et développer les énergies renouvelables. Ces investissements permettront d'améliorer le taux d'accès à l'électricité qui devrait atteindre 35% de la population."
+          },
+          {
+            "title": "Mobilisation des ressources et perspectives",
+            "content": "Pour financer ce budget ambitieux, le gouvernement compte sur une amélioration de la collecte fiscale avec un objectif de recettes de 4 800 milliards d'Ariary. Des réformes de l'administration fiscale sont en cours pour élargir l'assiette et renforcer le contrôle.\n\nLe solde budgétaire sera financé par des emprunts concessionnels auprès des partenaires au développement et par l'émission de bons du Trésor sur le marché national. Le gouvernement s'engage à maintenir la dette publique à un niveau soutenable, inférieur à 45% du PIB.\n\nLe Premier Ministre a souligné que ce budget marque une étape importante dans la transformation économique et sociale de Madagascar. Son adoption par l'Assemblée Nationale est prévue pour début décembre 2025, permettant son entrée en vigueur au 1er janvier 2026."
+          }
+        ]
+      },
+      {
+        "id": "fin-002",
+        "title": "🚨 FiscAlert : la plateforme qui traque les fraudeurs fiscaux en temps réel",
+        "date": "2025-11-01",
+        "author": "Direction Générale des Impôts",
+        "category": "Fiscalité",
+        "summary": "Le gouvernement déploie un arsenal de mesures renforcées pour combattre la fraude fiscale et améliorer la transparence dans la gestion des recettes publiques.",
+        "image": "/images/finances.png",
+        "images": [
+          "/images/finances.png"
+        ],
+        "sections": [
+          {
+            "title": "Un plan d'action ambitieux contre la fraude fiscale",
+            "content": "Face à l'ampleur de la corruption fiscale qui prive l'État de ressources importantes, le Ministère de l'Économie et des Finances lance un plan d'action global visant à renforcer l'intégrité du système fiscal malgache. Les pertes liées à la fraude sont estimées à plus de 500 milliards d'Ariary par an.\n\nCe plan s'articule autour de trois axes majeurs : le renforcement des contrôles, la modernisation des outils de détection et la sanction exemplaire des fraudeurs. Le gouvernement manifeste ainsi sa détermination à lutter contre l'impunité et à rétablir l'équité fiscale.\n\nLe Ministre a annoncé la création d'une brigade spéciale anti-fraude composée de 200 agents spécialement formés aux techniques d'investigation financière. Cette unité d'élite sera équipée des dernières technologies pour traquer les montages frauduleux les plus sophistiqués."
+          },
+          {
+            "title": "Digitalisation et transparence : une plateforme innovante",
+            "content": "La pièce maîtresse de cette stratégie est le lancement de la plateforme digitale 'FiscAlert', accessible via web et application mobile. Ce système permettra aux citoyens et aux entreprises de signaler anonymement les cas suspects de fraude fiscale, de fausses factures ou de corruption impliquant des agents des impôts.\n\nChaque signalement sera traité dans un délai de 72 heures par une cellule dédiée qui évaluera sa recevabilité et déclenchera les investigations nécessaires. Les lanceurs d'alerte seront protégés par la loi et pourront bénéficier d'une prime allant jusqu'à 10% des montants récupérés.\n\nLa plateforme intègre également un tableau de bord public permettant de suivre en temps réel les statistiques de la lutte anti-fraude : nombre de signalements, montants récupérés, sanctions prononcées. Cette transparence vise à restaurer la confiance des contribuables dans l'administration fiscale."
+          },
+          {
+            "title": "Renforcement des contrôles et des sanctions",
+            "content": "Le nombre de contrôles fiscaux sera triplé dès 2026, avec une attention particulière portée aux secteurs à risque : import-export, immobilier, grandes distributions et professions libérales. L'administration fiscale déploiera des équipes mobiles pour des contrôles inopinés sur le terrain.\n\nLes sanctions contre les fraudeurs seront durcies avec des amendes pouvant atteindre 200% du montant fraudé et des peines d'emprisonnement de 5 à 10 ans pour les cas les plus graves. Les noms des fraudeurs récidivistes seront publiés sur un registre public pour effet dissuasif.\n\nUn partenariat avec le système bancaire permettra de tracer les flux financiers suspects et de détecter les opérations de blanchiment liées à la fraude fiscale. Les banques auront l'obligation de signaler automatiquement les transactions anormales dépassant certains seuils."
+          },
+          {
+            "title": "Formation et éthique pour l'administration fiscale",
+            "content": "La lutte contre la corruption passe aussi par la formation et la responsabilisation des agents du fisc. Un programme de formation continue sera mis en place pour 3 000 agents sur les thématiques de l'éthique professionnelle, de la déontologie et de la détection des fraudes.\n\nUn code de conduite strict sera appliqué avec des sanctions disciplinaires pouvant aller jusqu'à la révocation pour tout agent impliqué dans des actes de corruption. Des audits internes réguliers et inopinés seront menés pour vérifier l'intégrité des services.\n\nLes salaires des agents des impôts seront revalorisés de 30% pour réduire la tentation de la corruption. Un système de primes au mérite récompensera les agents les plus performants dans la détection des fraudes et le recouvrement des créances fiscales."
+          }
+        ]
+      }
+    ]
+  }
+]

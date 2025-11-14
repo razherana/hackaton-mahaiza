@@ -1,0 +1,78 @@
+[
+  {
+    "id": "min-education",
+    "name": "Ministère de l'Éducation Nationale",
+    "news": [
+      {
+        "id": "edu-001",
+        "title": "🎓 500 000 élèves bénéficieront de bourses gratuites dès janvier 2025 !",
+        "date": "2025-11-10",
+        "author": "Direction de la Communication",
+        "category": "Programmes éducatifs",
+        "summary": "Le ministère annonce l'ouverture des candidatures pour les bourses scolaires destinées aux élèves méritants pour l'année académique 2025-2026.",
+        "image": "/images/education.png",
+        "images": [
+          "/images/education.png",
+          "/images/education.png"
+        ],
+        "sections": [
+          {
+            "title": "Annonce officielle",
+            "content": "Le Ministère de l'Éducation Nationale a officiellement lancé le programme de bourses scolaires pour l'année 2025. Cette initiative vise à soutenir les élèves méritants issus de familles à revenus modestes dans la poursuite de leurs études."
+          },
+          {
+            "title": "Critères d'éligibilité",
+            "content": "Pour être éligibles, les candidats doivent répondre aux critères suivants : avoir une moyenne générale d'au moins 14/20, être inscrit dans un établissement reconnu par le ministère, présenter un dossier complet incluant les bulletins des deux dernières années, et fournir une attestation de revenus des parents.\n\nLes élèves provenant de zones rurales et défavorisées bénéficieront d'une attention particulière dans le processus de sélection."
+          },
+          {
+            "title": "Montant et avantages",
+            "content": "Les bourses couvriront les frais de scolarité, les fournitures scolaires, et une allocation mensuelle pour les frais de subsistance. Le montant varie entre 50 000 et 150 000 Ariary selon le niveau d'études et la situation familiale.\n\nDes avantages supplémentaires incluent l'accès gratuit aux bibliothèques universitaires, des sessions de tutorat, et un accompagnement personnalisé pour l'orientation professionnelle."
+          },
+          {
+            "title": "Procédure de candidature",
+            "content": "Les élèves intéressés doivent soumettre leur dossier avant le 15 décembre 2025. Les dossiers peuvent être déposés dans les directions régionales de l'éducation ou envoyés par voie électronique via le portail officiel du ministère.\n\nUne commission d'évaluation examinera tous les dossiers et les résultats seront communiqués au plus tard le 31 janvier 2026. Les bénéficiaires recevront leur première allocation dès le mois de février 2026."
+          },
+          {
+            "title": "Impact attendu",
+            "content": "Ce programme devrait bénéficier à plus de 5 000 élèves à travers tout Madagascar. Le ministre de l'Éducation Nationale a souligné l'importance de cette initiative dans la lutte contre l'abandon scolaire et la promotion de l'excellence académique.\n\n'Nous croyons fermement que l'éducation est la clé du développement de notre pays. Ce programme de bourses permettra à nos jeunes talents de réaliser leur plein potentiel', a déclaré le ministre lors de la conférence de presse de lancement."
+          }
+        ]
+      },
+      {
+        "id": "edu-002",
+        "title": "⚡ Grandes vacances raccourcies : le nouveau calendrier qui fait débat",
+        "date": "2025-11-05",
+        "author": "Service de la Planification Éducative",
+        "category": "Réformes",
+        "summary": "Un nouveau calendrier scolaire sera appliqué dès janvier 2026 pour optimiser le temps d'apprentissage et mieux répartir les périodes de repos.",
+        "image": "/images/education.png",
+        "images": [
+          "/images/education.png",
+          "/images/education.png"
+        ],
+        "sections": [
+          {
+            "title": "Présentation de la réforme",
+            "content": "Le Ministère de l'Éducation Nationale a présenté une réforme majeure du calendrier scolaire qui entrera en vigueur en janvier 2026. Cette réforme vise à mieux répartir les périodes de cours et de vacances pour optimiser l'apprentissage et réduire la fatigue des élèves."
+          },
+          {
+            "title": "Principaux changements",
+            "content": "Le nouveau calendrier prévoit une organisation en quatre trimestres au lieu de trois, avec des périodes de vacances plus courtes mais plus fréquentes. Chaque trimestre durera environ 9 semaines, suivi d'une pause de 2 semaines.\n\nLes grandes vacances seront réduites à 6 semaines au lieu de 10, mais des pauses supplémentaires seront ajoutées tout au long de l'année. Cette approche s'inspire des systèmes éducatifs performants à l'international."
+          },
+          {
+            "title": "Objectifs pédagogiques",
+            "content": "Les études ont montré que des pauses régulières améliorent la concentration et la rétention des connaissances. Le nouveau calendrier permettra également de mieux préparer les élèves aux examens en évitant les périodes de surcharge.\n\nLes enseignants bénéficieront aussi de ce système avec des formations continues programmées pendant les périodes inter-trimestrielles, permettant une amélioration constante de leurs compétences pédagogiques."
+          },
+          {
+            "title": "Phase de transition",
+            "content": "Une période de transition est prévue pour l'année scolaire 2025-2026 afin de permettre aux établissements, aux enseignants et aux familles de s'adapter progressivement. Des formations seront organisées pour les directeurs d'établissement et les enseignants.\n\nLe ministère mettra en place un comité de suivi pour évaluer l'impact de cette réforme et apporter les ajustements nécessaires. Des consultations régulières avec les parents d'élèves et les syndicats d'enseignants sont également prévues."
+          },
+          {
+            "title": "Réactions et perspectives",
+            "content": "La réforme a été globalement bien accueillie par les acteurs du secteur éducatif. Les associations de parents d'élèves saluent cette initiative qui prend en compte le bien-être des enfants.\n\nPlusieurs établissements pilotes ont déjà expérimenté ce système avec des résultats encourageants : amélioration des performances scolaires, réduction de l'absentéisme, et meilleure motivation des élèves. Le ministère espère généraliser ce modèle à l'ensemble du territoire d'ici 2027."
+          }
+        ]
+      }
+    ]
+  }
+]

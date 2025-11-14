@@ -1,0 +1,68 @@
+[
+  {
+    "id": "min-justice",
+    "name": "Ministère de la Justice",
+    "news": [
+      {
+        "id": "jus-001",
+        "title": "⚖️ Code pénal 2027 : cybercrimes et corruption visés par la réforme",
+        "date": "2025-11-09",
+        "author": "Ministère de la Justice",
+        "category": "Réforme Législative",
+        "summary": "Le ministère lance une vaste consultation nationale pour moderniser le code pénal malgache et l'adapter aux réalités contemporaines.",
+        "image": "/images/justice.png",
+        "images": [
+          "/images/justice.png"
+        ],
+        "sections": [
+          {
+            "title": "Une réforme nécessaire pour la justice moderne",
+            "content": "Le code pénal malgache, datant de plusieurs décennies, nécessite une refonte complète pour répondre aux défis actuels de la criminalité et garantir une meilleure protection des droits des citoyens. Le Ministre de la Justice a annoncé le lancement d'une consultation nationale d'une durée de six mois impliquant tous les acteurs de la justice.\n\nCette réforme vise à harmoniser la législation pénale avec les conventions internationales ratifiées par Madagascar, notamment en matière de droits humains, de lutte contre la cybercriminalité et de protection des victimes. L'objectif est de disposer d'un code pénal adapté au 21ème siècle.\n\nUne commission technique de 30 experts comprenant des magistrats, des avocats, des universitaires et des représentants de la société civile a été constituée pour piloter les travaux. Cette commission recevra les contributions de tous les citoyens via une plateforme en ligne dédiée."
+          },
+          {
+            "title": "Les axes prioritaires de la réforme",
+            "content": "La réforme s'articule autour de cinq axes majeurs. Le premier concerne le renforcement de la lutte contre la corruption et les crimes économiques avec l'introduction de nouvelles infractions et l'alourdissement des peines. Le deuxième axe vise la protection des personnes vulnérables, notamment les femmes et les enfants, avec des dispositions spécifiques contre les violences domestiques.\n\nLe troisième axe traite de la cybercriminalité, un phénomène en forte croissance à Madagascar. Le nouveau code pénal introduira des dispositions contre le piratage informatique, l'usurpation d'identité numérique, les fraudes en ligne et la diffusion de contenus illicites sur internet.\n\nLes deux derniers axes concernent la dépénalisation de certaines infractions mineures pour désengorger les tribunaux et l'introduction de peines alternatives à l'emprisonnement comme le travail d'intérêt général, la médiation pénale et la surveillance électronique."
+          },
+          {
+            "title": "Un processus participatif et inclusif",
+            "content": "La consultation nationale se déroulera en trois phases. La première phase, qui vient de débuter, consiste en une collecte de contributions via une plateforme en ligne où chaque citoyen peut soumettre ses propositions et commentaires. Des ateliers régionaux seront organisés dans les 22 régions de Madagascar pour recueillir les avis de la population.\n\nLa deuxième phase, prévue pour janvier 2026, comprendra des auditions publiques au Parlement où les organisations de la société civile, les ordres professionnels et les associations de victimes pourront présenter leurs positions. Des débats télévisés permettront d'informer le grand public sur les enjeux de la réforme.\n\nLa phase finale consistera en la rédaction du projet de loi par la commission technique, en tenant compte de toutes les contributions reçues. Le texte sera ensuite soumis au Conseil des Ministres puis déposé au Parlement pour adoption avant la fin de l'année 2026."
+          },
+          {
+            "title": "Impact attendu sur le système judiciaire",
+            "content": "Cette réforme du code pénal aura des répercussions majeures sur l'ensemble du système judiciaire malgache. Elle nécessitera la formation de tous les magistrats et auxiliaires de justice aux nouvelles dispositions. Un programme de formation intensive sera mis en place dès 2026 pour préparer les professionnels du droit.\n\nLe Ministère prévoit également d'adapter les infrastructures judiciaires pour accompagner la réforme. Cela inclut la modernisation des salles d'audience, l'équipement informatique des tribunaux et la création de services spécialisés pour traiter les nouvelles catégories d'infractions, notamment les cybercrimes.\n\nLe Garde des Sceaux a assuré que cette réforme contribuera à restaurer la confiance des citoyens dans la justice en la rendant plus accessible, plus rapide et plus équitable. Les premières applications du nouveau code pénal sont attendues pour le début de l'année 2027."
+          }
+        ]
+      },
+      {
+        "id": "jus-002",
+        "title": "📱 Fini les dossiers perdus : 20 millions d'archives numérisées d'ici 2028",
+        "date": "2025-11-03",
+        "author": "Direction de l'Administration Judiciaire",
+        "category": "Modernisation",
+        "summary": "Le Ministère lance un vaste programme de numérisation des archives judiciaires pour préserver le patrimoine documentaire et faciliter l'accès à la justice.",
+        "image": "/images/justice.png",
+        "images": [
+          "/images/justice.png"
+        ],
+        "sections": [
+          {
+            "title": "Un projet pionnier de transformation numérique",
+            "content": "Le Ministère de la Justice inaugure un projet ambitieux de numérisation complète des archives judiciaires, une première à Madagascar dans le secteur de la justice. Ce programme s'inscrit dans la stratégie nationale de modernisation de l'administration et vise à préserver des millions de documents accumulés depuis des décennies.\n\nLe projet pilote débute dans trois tribunaux de première instance : Antananarivo, Toamasina et Mahajanga. Ces établissements conservent des archives remontant jusqu'à l'époque coloniale, dont certaines sont dans un état de dégradation avancé. La numérisation permettra de sauvegarder ce patrimoine documentaire avant qu'il ne soit définitivement perdu.\n\nUn investissement de 5 milliards d'Ariary a été alloué pour la première phase du projet, qui s'étalera sur trois ans. Cette enveloppe couvrira l'acquisition du matériel de numérisation, le recrutement et la formation du personnel, ainsi que la mise en place d'une infrastructure de stockage sécurisée."
+          },
+          {
+            "title": "Méthodologie et technologies déployées",
+            "content": "Le processus de numérisation suivra une méthodologie rigoureuse pour garantir la qualité et l'authenticité des documents numérisés. Chaque document sera scanné en haute résolution, indexé selon des métadonnées normalisées et certifié numériquement pour assurer sa valeur légale. Des équipes de 10 archivistes et techniciens ont été spécialement formées pour cette mission.\n\nLe Ministère a fait l'acquisition de 15 scanners professionnels de dernière génération capables de traiter les documents fragiles sans les endommager. Un logiciel de reconnaissance optique de caractères (OCR) permettra de rendre les documents recherchables par mots-clés, facilitant considérablement l'accès à l'information.\n\nLes archives numérisées seront stockées sur des serveurs sécurisés avec triple système de sauvegarde : local, national et international. Un système de gestion électronique de documents (GED) permettra aux magistrats et greffiers d'accéder instantanément aux dossiers depuis leur poste de travail."
+          },
+          {
+            "title": "Bénéfices pour les usagers et les professionnels",
+            "content": "Cette transformation numérique apportera des bénéfices considérables pour tous les acteurs de la justice. Les avocats pourront consulter les dossiers de leurs clients à distance, réduisant les déplacements et les délais. Les citoyens auront accès en ligne à certains documents comme les jugements publics, les extraits de casier judiciaire et les certificats de non-appel.\n\nPour les magistrats et greffiers, la numérisation permettra de retrouver un dossier en quelques secondes au lieu de plusieurs jours actuellement. Les recherches de jurisprudence seront grandement facilitées avec un moteur de recherche performant permettant de filtrer par date, type d'affaire, juridiction et mots-clés.\n\nLe temps gagné sera réinvesti dans le traitement des dossiers en cours, contribuant ainsi à réduire les délais de jugement. Les statistiques judiciaires pourront également être produites automatiquement, offrant une meilleure visibilité sur l'activité des tribunaux et facilitant le pilotage du système judiciaire."
+          },
+          {
+            "title": "Extension nationale et perspectives d'avenir",
+            "content": "Après l'évaluation positive du projet pilote, le Ministère prévoit d'étendre la numérisation à tous les tribunaux de Madagascar d'ici 2028. Cette extension concernera les 34 tribunaux de première instance, les cours d'appel et la Cour suprême, représentant un volume estimé à plus de 20 millions de documents.\n\nEn parallèle de la numérisation des archives anciennes, tous les nouveaux dossiers seront créés directement au format numérique à partir de 2026. Les greffes seront équipés de tablettes et de logiciels spécialisés pour enregistrer électroniquement les actes de procédure, les jugements et les correspondances.\n\nCette transformation numérique s'accompagnera d'un renforcement de la cybersécurité pour protéger les données sensibles. Le Ministre de la Justice a assuré que tous les standards internationaux de protection des données personnelles seront respectés, conformément aux exigences de la loi sur la protection des données en vigueur à Madagascar."
+          }
+        ]
+      }
+    ]
+  }
+]

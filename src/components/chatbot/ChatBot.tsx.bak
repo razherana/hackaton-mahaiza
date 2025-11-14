@@ -1,0 +1,254 @@
+import { useState, useEffect, useRef } from "react"
+import { MessageCircle, X, Send, Minimize2, Menu, Plus, Trash2 } from "lucide-react"
+import chatbotData from "@/data/chatbot-qa.json"
+import "./ChatBot.css"
+
+interface Message {
+  id: string
+  text: string
+  sender: "user" | "bot"
+  timestamp: Date
+}
+
+interface Conversation {
+  id: string
+  title: string
+  messages: Message[]
+  createdAt: Date
+  lastMessageAt: Date
+}
+
+interface LemurMood {
+  type: "happy" | "thinking" | "neutral" | "excited"
+  image: string
+}
+
+interface ChatBotProps {
+  initialText?: string
+}
+
+export default function ChatBot() {
+  const [isOpen, setIsOpen] = useState(false)
+  const [isMinimized, setIsMinimized] = useState(false)
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      id: `bot-welcome`,
+      text: "👋 Bonjour ! Je suis Lemmy, votre assistant ActuFlash IA ! Comment puis-je vous aider aujourd'hui ?",
+      sender: "bot",
+      timestamp: new Date()
+    }
+  ])
+  const [inputValue, setInputValue] = useState("")
+  const [lemurMood, setLemurMood] = useState<LemurMood>({ type: "happy", emoji: "😊" })
+  const messagesEndRef = useRef<HTMLDivElement>(null)
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
+  }
+
+  useEffect(() => {
+    scrollToBottom()
+  }, [messages])
+
+  const findBestResponse = (userInput: string): string => {
+    const lowerInput = userInput.toLowerCase().trim()
+
+    // Vérifier les salutations
+    for (const greeting of chatbotData.greetings) {
+      if (greeting.keywords.some(keyword => lowerInput.includes(keyword))) {
+        const responses = greeting.responses
+        return responses[Math.floor(Math.random() * responses.length)]
+      }
+    }
+
+    // Vérifier les adieux
+    for (const farewell of chatbotData.farewell) {
+      if (farewell.keywords.some(keyword => lowerInput.includes(keyword))) {
+        const responses = farewell.responses
+        return responses[Math.floor(Math.random() * responses.length)]
+      }
+    }
+
+    // Chercher dans les questions
+    let bestMatch = null
+    let maxMatchCount = 0
+
+    for (const question of chatbotData.questions) {
+      const matchCount = question.keywords.filter(keyword => 
+        lowerInput.includes(keyword)
+      ).length
+
+      if (matchCount > maxMatchCount) {
+        maxMatchCount = matchCount
+        bestMatch = question
+      }
+    }
+
+    if (bestMatch && maxMatchCount > 0) {
+      return bestMatch.answer
+    }
+
+    // Réponse par défaut
+    const fallbackResponses = chatbotData.fallback.responses
+    return fallbackResponses[Math.floor(Math.random() * fallbackResponses.length)]
+  }
+
+  const updateLemurMood = (response: string) => {
+    if (response.includes("👋") || response.includes("😊")) {
+      setLemurMood({ type: "happy", emoji: "😊" })
+    } else if (response.includes("🤔") || response.includes("💭")) {
+      setLemurMood({ type: "thinking", emoji: "🤔" })
+    } else if (response.includes("🎉") || response.includes("🌟")) {
+      setLemurMood({ type: "excited", emoji: "🤩" })
+    } else {
+      setLemurMood({ type: "neutral", emoji: "😌" })
+    }
+  }
+
+  const handleSendMessage = () => {
+    if (!inputValue.trim()) return
+
+    // Message utilisateur
+    const userMessage: Message = {
+      id: `user-${Date.now()}`,
+      text: inputValue,
+      sender: "user",
+      timestamp: new Date()
+    }
+
+    setMessages(prev => [...prev, userMessage])
+    setInputValue("")
+    setLemurMood({ type: "thinking", emoji: "🤔" })
+
+    // Simuler un délai de réflexion
+    setTimeout(() => {
+      const response = findBestResponse(inputValue)
+      
+      const botMessage: Message = {
+        id: `bot-${Date.now()}`,
+        text: response,
+        sender: "bot",
+        timestamp: new Date()
+      }
+
+      setMessages(prev => [...prev, botMessage])
+      updateLemurMood(response)
+    }, 800)
+  }
+
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault()
+      handleSendMessage()
+    }
+  }
+
+  const toggleChat = () => {
+    setIsOpen(!isOpen)
+    if (!isOpen) {
+      setIsMinimized(false)
+    }
+  }
+
+  const toggleMinimize = () => {
+    setIsMinimized(!isMinimized)
+  }
+
+  return (
+    <div className="chatbot-container">
+      {/* Bouton flottant */}
+      {!isOpen && (
+        <button className="chatbot-toggle-btn" onClick={toggleChat}>
+          <MessageCircle className="chatbot-toggle-icon" />
+          <span className="chatbot-badge">💬</span>
+        </button>
+      )}
+
+      {/* Fenêtre du chatbot */}
+      {isOpen && (
+        <div className={`chatbot-window ${isMinimized ? "minimized" : ""}`}>
+          {/* Header */}
+          <div className="chatbot-header">
+            <div className="chatbot-header-left">
+              <div className="lemur-avatar">
+                <span className="lemur-emoji">{lemurMood.emoji}</span>
+              </div>
+              <div className="chatbot-header-info">
+                <h3 className="chatbot-title">Lemmy - Assistant IA</h3>
+                <p className="chatbot-status">
+                  <span className="status-dot"></span>
+                  En ligne
+                </p>
+              </div>
+            </div>
+            <div className="chatbot-header-actions">
+              <button 
+                className="chatbot-action-btn" 
+                onClick={toggleMinimize}
+                title={isMinimized ? "Agrandir" : "Réduire"}
+              >
+                <Minimize2 className="action-icon" />
+              </button>
+              <button 
+                className="chatbot-action-btn" 
+                onClick={toggleChat}
+                title="Fermer"
+              >
+                <X className="action-icon" />
+              </button>
+            </div>
+          </div>
+
+          {/* Corps du chat */}
+          {!isMinimized && (
+            <>
+              <div className="chatbot-messages">
+                {messages.map((message) => (
+                  <div
+                    key={message.id}
+                    className={`message ${message.sender === "user" ? "message-user" : "message-bot"}`}
+                  >
+                    {message.sender === "bot" && (
+                      <div className="message-avatar">
+                        <span className="lemur-small">{lemurMood.emoji}</span>
+                      </div>
+                    )}
+                    <div className="message-content">
+                      <p className="message-text">{message.text}</p>
+                      <span className="message-time">
+                        {message.timestamp.toLocaleTimeString('fr-FR', { 
+                          hour: '2-digit', 
+                          minute: '2-digit' 
+                        })}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+                <div ref={messagesEndRef} />
+              </div>
+
+              {/* Input */}
+              <div className="chatbot-input-container">
+                <input
+                  type="text"
+                  className="chatbot-input"
+                  placeholder="Posez votre question..."
+                  value={inputValue}
+                  onChange={(e) => setInputValue(e.target.value)}
+                  onKeyPress={handleKeyPress}
+                />
+                <button 
+                  className="chatbot-send-btn" 
+                  onClick={handleSendMessage}
+                  disabled={!inputValue.trim()}
+                >
+                  <Send className="send-icon" />
+                </button>
+              </div>
+            </>
+          )}
+        </div>
+      )}
+    </div>
+  )
+}

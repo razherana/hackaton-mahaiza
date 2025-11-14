@@ -1,0 +1,98 @@
+[
+  {
+    "id": "min-interieur",
+    "name": "Ministère de l'Intérieur et de la Décentralisation",
+    "news": [
+      {
+        "id": "int-001",
+        "title": "📋 10 000 agents mobillisés : le grand recensement démarre le 20 novembre",
+        "date": "2025-11-13",
+        "author": "Ministère de l'Intérieur et de la Décentralisation",
+        "category": "Statistiques",
+        "summary": "Le ministère lance le troisième recensement général de la population et de l'habitat, une opération d'envergure mobilisant plus de 10 000 agents sur tout le territoire.",
+        "image": "/images/interieur.png",
+        "images": [
+          "/images/interieur.png"
+        ],
+        "sections": [
+          {
+            "title": "Un recensement crucial pour le développement national",
+            "content": "Le Ministère de l'Intérieur et de la Décentralisation lance officiellement le troisième recensement général de la population et de l'habitat (RGPH-3) qui débutera le 20 novembre 2025. Cette opération d'envergure nationale, réalisée tous les 10 ans, permettra d'obtenir des données démographiques fiables essentielles pour la planification des politiques publiques.\n\nLe dernier recensement exhaustif remonte à 1993, et les projections démographiques actuelles nécessitent une actualisation urgente. Les données collectées permettront de connaître avec précision la taille, la structure et la répartition géographique de la population malgache, ainsi que les conditions de vie des ménages.\n\nCe recensement constitue un investissement stratégique pour l'avenir du pays. Les résultats orienteront les décisions en matière d'éducation, de santé, d'infrastructures, d'emploi et de protection sociale. Le coût total de l'opération est estimé à 50 milliards d'Ariary, financé par l'État malgache avec l'appui de partenaires internationaux."
+          },
+          {
+            "title": "Mobilisation massive d'agents sur le terrain",
+            "content": "Plus de 10 000 agents recenseurs ont été recrutés et formés pour couvrir l'ensemble du territoire national. Ces agents, sélectionnés sur la base de critères stricts, ont suivi une formation intensive de deux semaines sur les techniques d'enquête, l'utilisation des tablettes numériques et la confidentialité des données.\n\nLes agents seront déployés dans les 119 districts de Madagascar, y compris dans les zones les plus reculées. Ils travailleront par équipes de 5 personnes sous la supervision de 2 000 contrôleurs et 200 coordinateurs régionaux. Chaque agent sera identifiable par un badge officiel et une tenue spécifique.\n\nLa collecte des données s'effectuera via des tablettes numériques équipées d'une application spécialement développée pour ce recensement. Cette modernisation technologique permettra une transmission en temps réel des données vers les serveurs centraux, réduisant considérablement les délais de traitement par rapport aux recensements précédents effectués sur papier."
+          },
+          {
+            "title": "Questionnaire complet pour des données exhaustives",
+            "content": "Le questionnaire du recensement comprend plus de 80 questions réparties en plusieurs modules : caractéristiques démographiques (âge, sexe, état civil), niveau d'instruction, activité économique, conditions de logement, équipements des ménages et accès aux services de base.\n\nDes questions spécifiques porteront sur l'accès à l'eau potable, à l'électricité, aux services de santé et d'éducation. Le recensement permettra également de mesurer le taux d'alphabétisation, le niveau de chômage et les flux migratoires internes. Ces informations sont cruciales pour évaluer l'impact des politiques publiques.\n\nLe questionnaire a été testé lors d'une enquête pilote menée en septembre 2025 dans trois districts représentatifs. Les ajustements nécessaires ont été apportés pour garantir la clarté des questions et la qualité des réponses. La durée moyenne de remplissage du questionnaire est estimée à 30 minutes par ménage."
+          },
+          {
+            "title": "Confidentialité garantie et appel à la participation",
+            "content": "Le Ministère assure que toutes les données collectées seront strictement confidentielles et utilisées uniquement à des fins statistiques. Conformément à la loi sur la protection des données personnelles, aucune information individuelle ne sera divulguée. Seules les données agrégées et anonymisées seront publiées.\n\nLe Ministre de l'Intérieur lance un appel solennel à tous les citoyens malgaches pour qu'ils réservent un accueil favorable aux agents recenseurs et répondent avec sincérité aux questions posées. La réussite de cette opération dépend de la participation active de chaque famille. Le recensement est un devoir civique qui bénéficiera à l'ensemble de la nation.\n\nUne vaste campagne de sensibilisation a été lancée à travers les médias traditionnels et les réseaux sociaux. Des spots radio et télévisés en plusieurs langues expliquent l'importance du recensement et les modalités de son déroulement. Les chefs de quartier et les autorités locales ont été mobilisés pour relayer l'information au niveau communautaire."
+          }
+        ]
+      },
+      {
+        "id": "int-002",
+        "title": "🚓 450 gendarmes déployés dans le Sud pour stopper les bandits",
+        "date": "2025-11-07",
+        "author": "Direction Générale de la Sécurité Publique",
+        "category": "Sécurité",
+        "summary": "Le ministère déploie un dispositif renforcé de sécurisation des zones rurales avec la création de nouvelles brigades de gendarmerie et l'augmentation des patrouilles.",
+        "image": "/images/interieur.png",
+        "images": [
+          "/images/interieur.png"
+        ],
+        "sections": [
+          {
+            "title": "Un plan de sécurisation ambitieux pour les zones rurales",
+            "content": "Face à la recrudescence de l'insécurité dans certaines régions rurales de Madagascar, le Ministère de l'Intérieur met en œuvre un plan global de sécurisation doté d'un budget de 20 milliards d'Ariary. Ce plan vise à protéger les populations et leurs biens, particulièrement dans les zones touchées par le banditisme et le vol de bétail.\n\nLes régions du Sud et du Sud-Ouest, historiquement confrontées à des problèmes sécuritaires, bénéficieront d'une attention prioritaire. Le Ministre a souligné que la sécurité est un droit fondamental pour tous les citoyens, qu'ils vivent en ville ou en milieu rural, et que l'État a le devoir d'assurer leur protection.\n\nCe plan s'inscrit dans une stratégie à long terme visant à restaurer l'autorité de l'État dans les zones les plus vulnérables. Il combine des mesures répressives contre les délinquants avec des actions de prévention et de développement socio-économique pour s'attaquer aux causes profondes de l'insécurité."
+          },
+          {
+            "title": "Déploiement de nouvelles brigades de gendarmerie",
+            "content": "Le dispositif central de ce plan est la création de 15 nouvelles brigades territoriales de gendarmerie dans les districts les plus exposés à l'insécurité. Ces brigades, comprenant chacune 25 à 30 gendarmes, seront implantées de manière stratégique pour couvrir un maximum de territoire et réduire les temps d'intervention.\n\nUn total de 450 gendarmes supplémentaires seront affectés dans ces zones rurales, dont 100 issus de la dernière promotion de l'École Nationale de Gendarmerie. Ces effectifs s'ajoutent aux forces déjà présentes sur place et permettront d'intensifier les patrouilles et les opérations de contrôle.\n\nChaque brigade sera équipée de véhicules tout-terrain, de moyens de communication radio performants et de matériel moderne pour les opérations de maintien de l'ordre. Des logements de fonction seront construits pour permettre aux gendarmes de résider sur place avec leurs familles, garantissant une présence permanente et une meilleure connaissance du terrain."
+          },
+          {
+            "title": "Intensification des patrouilles et des contrôles",
+            "content": "Les patrouilles terrestres seront multipliées par trois dans les zones sensibles, avec des opérations quotidiennes sur les axes routiers et dans les villages reculés. Des patrouilles mixtes associant gendarmes et policiers municipaux seront organisées pour renforcer la proximité avec les populations locales.\n\nDes opérations de contrôle d'identité et de fouille des véhicules seront systématisées aux points de passage stratégiques pour intercepter les malfaiteurs et les armes illégales. Un système de barrages mobiles sera mis en place pour surprendre les bandes organisées qui sévissent notamment dans le transport de bétail volé.\n\nLe Ministère mettra également à disposition des moyens aériens pour les missions de reconnaissance et d'intervention rapide dans les zones difficiles d'accès. Deux hélicoptères seront spécialement affectés aux opérations de sécurisation du Sud, permettant de réagir rapidement en cas d'incident grave."
+          },
+          {
+            "title": "Coopération avec les communautés locales",
+            "content": "La réussite de ce plan nécessite une collaboration étroite entre les forces de sécurité et les populations rurales. Des comités de vigilance citoyenne seront créés dans chaque commune pour établir un lien direct entre les habitants et les forces de l'ordre. Ces comités permettront de signaler rapidement les activités suspectes.\n\nDes sessions de formation et de sensibilisation seront organisées pour enseigner aux populations les gestes de prévention et les moyens de se protéger. Un numéro vert gratuit sera mis en place pour permettre aux citoyens de signaler anonymement les cas d'insécurité ou de présence de bandits.\n\nLe Ministre a également annoncé un programme de développement économique complémentaire pour offrir des alternatives aux jeunes tentés par la délinquance. Ce programme comprend la création de coopératives agricoles, l'accès au microcrédit et la formation professionnelle. La sécurité durable passe par la création d'opportunités économiques pour tous."
+          }
+        ]
+      },
+      {
+        "id": "int-003",
+        "title": "📲 Guichets uniques digitaux : cartes d'identité en 48h chrono !",
+        "date": "2025-10-30",
+        "author": "Direction de la Modernisation Administrative",
+        "category": "E-gouvernement",
+        "summary": "Le ministère révolutionne l'administration locale avec la création de guichets uniques digitalisés dans tous les chefs-lieux de district pour faciliter les démarches des citoyens.",
+        "image": "/images/interieur.png",
+        "images": [
+          "/images/interieur.png"
+        ],
+        "sections": [
+          {
+            "title": "Une révolution administrative au service des citoyens",
+            "content": "Le Ministère de l'Intérieur lance un programme ambitieux de modernisation des services administratifs locaux avec un investissement de 30 milliards d'Ariary. Ce programme vise à transformer radicalement la relation entre l'administration et les usagers en simplifiant les procédures et en réduisant les délais de traitement.\n\nLe concept de guichet unique sera déployé dans les 119 chefs-lieux de district à partir de janvier 2026. Ces guichets regrouperont en un seul lieu tous les services administratifs de proximité : état civil, cartes d'identité, casiers judiciaires, autorisations diverses et certificats administratifs. Plus besoin de courir entre différents bureaux.\n\nCette réforme répond à une demande forte des citoyens qui se plaignent depuis longtemps de la complexité des démarches administratives, des délais excessifs et parfois de pratiques peu transparentes. Le Ministre a promis une administration plus efficace, plus accessible et totalement numérisée d'ici trois ans."
+          },
+          {
+            "title": "Digitalisation complète des procédures",
+            "content": "La pierre angulaire de cette modernisation est la digitalisation intégrale des procédures administratives. Un système informatique centralisé sera mis en place, interconnectant tous les services de l'État civil, de la police et de l'administration territoriale. Cette interconnexion permettra d'éliminer les redondances et d'accélérer le traitement des dossiers.\n\nLes citoyens pourront déposer leurs demandes en ligne via un portail web sécurisé accessible 24h/24 et 7j/7. Une application mobile sera également développée pour permettre le suivi en temps réel de l'avancement des dossiers. Les usagers recevront des notifications SMS et email à chaque étape du traitement.\n\nLes paiements des frais administratifs se feront exclusivement par voie électronique (carte bancaire, mobile money) pour garantir la traçabilité et éliminer la manipulation d'espèces, source potentielle de corruption. Chaque transaction générera un reçu électronique certifié, consultable à tout moment sur le portail."
+          },
+          {
+            "title": "Infrastructure moderne et personnel formé",
+            "content": "Chaque guichet unique sera installé dans un local réhabilité et équipé selon des standards modernes : climatisation, accès pour personnes à mobilité réduite, salle d'attente confortable avec affichage numérique des numéros. Les guichets disposeront d'ordinateurs performants, d'imprimantes multifonctions et de connexion internet haut débit.\n\nUn total de 2 500 agents administratifs bénéficieront d'une formation intensive de trois mois sur les nouveaux systèmes informatiques, les techniques d'accueil et la gestion de la relation client. L'objectif est de développer une véritable culture du service public orientée vers la satisfaction de l'usager.\n\nDes superviseurs régionaux seront désignés pour assurer le contrôle qualité des services rendus. Des enquêtes de satisfaction seront régulièrement menées auprès des usagers, et les résultats seront publiés publiquement. Les agents les mieux notés bénéficieront de primes de performance."
+          },
+          {
+            "title": "Délais garantis et sanctions en cas de retard",
+            "content": "Le Ministère s'engage sur des délais maximums pour chaque type de document : 48 heures pour un acte de naissance, 5 jours pour une carte d'identité nationale, 72 heures pour un casier judiciaire. Ces délais seront affichés dans chaque guichet et sur le portail en ligne, constituant un véritable engagement de service.\n\nEn cas de dépassement des délais sans motif légitime, l'usager pourra déposer une réclamation qui sera traitée par une cellule spéciale dans un délai de 48 heures. Si le retard est avéré, le document sera délivré gratuitement et l'agent responsable fera l'objet de sanctions pouvant aller de l'avertissement à la suspension.\n\nUn mécanisme de suivi statistique permettra de monitorer la performance de chaque guichet : nombre de demandes traitées, délais moyens, taux de satisfaction, nombre de réclamations. Ces données seront compilées dans un tableau de bord national accessible aux autorités et au grand public, garantissant une totale transparence."
+          }
+        ]
+      }
+    ]
+  }
+]

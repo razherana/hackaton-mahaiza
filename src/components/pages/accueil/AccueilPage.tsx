@@ -19,8 +19,8 @@ import { Button } from "@/components/ui/button"
 
 const modules = [
   {
-    title: "Étudier avec l'IA",
-    subtitle: "EducHub didactique",
+    title: "TurboCours IA",
+    subtitle: "Booster pédagogique",
     description:
       "Importer vos PDF, transformer vos cours et laissez l'IA préparer résumés, quiz et fiches personnalisées.",
     points: [
@@ -32,8 +32,8 @@ const modules = [
     icon: BookOpenCheck
   },
   {
-    title: "Newspaper avec l'IA",
-    subtitle: "Fil d'actualité intelligent",
+    title: "ActuFlash IA",
+    subtitle: "Veille intelligente",
     description:
       "Visionne les nouvelles essentielles classées par thématique avec résumés et explications pour aller droit au but.",
     points: [
@@ -45,8 +45,8 @@ const modules = [
     icon: Newspaper
   },
   {
-    title: "Quiz Politique & Économie",
-    subtitle: "Madagascar en action",
+    title: "Civique Challenge Mada",
+    subtitle: "Quiz citoyen",
     description:
       "Renforcez votre culture civique avec des quiz, QCM et vidéos sur la politique et l'économie malgache.",
     points: [
