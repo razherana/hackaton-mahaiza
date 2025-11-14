@@ -1,118 +1,74 @@
-{
-  "greetings": [
-    {
-      "id": "greeting-1",
-      "keywords": ["bonjour", "salut", "hello", "coucou", "hey"],
-      "responses": [
-        "🎉 Bonjour ! Je suis Lummy, votre assistant ActuFlash IA ! Comment puis-je vous aider aujourd'hui ?",
-        "👋 Salut ! Bienvenue sur ActuFlash IA ! Je suis là pour répondre à vos questions sur les actualités gouvernementales.",
-        "🌟 Hello ! Je suis Lummy, la mascotte d'ActuFlash. Posez-moi vos questions sur les ministères et institutions !"
-      ]
-    }
-  ],
-  "farewell": [
-    {
-      "id": "farewell-1",
-      "keywords": ["au revoir", "bye", "merci", "à bientôt", "adieu"],
-      "responses": [
-        "👋 Au revoir ! N'hésitez pas à revenir pour plus d'actualités !",
-        "🌟 À bientôt ! Restez informé avec ActuFlash IA !",
-        "😊 Merci de votre visite ! Revenez quand vous voulez !"
-      ]
-    }
-  ],
-  "questions": [
-    {
-      "id": "q1",
-      "keywords": ["éducation", "école", "université", "étudiant", "enseignement"],
-      "question": "Parlez-moi de l'éducation à Madagascar",
-      "answer": "📚 Le Ministère de l'Éducation travaille activement sur plusieurs fronts ! Récemment, nous avons annoncé la distribution de 50,000 tablettes numériques dans les écoles rurales. De plus, le nouveau programme de formation des enseignants vise à améliorer la qualité de l'enseignement dans tout le pays. Le taux d'alphabétisation progresse constamment grâce à ces initiatives.",
-      "relatedTopics": ["ministère de l'éducation", "programme numérique", "formation enseignants"]
-    },
-    {
-      "id": "q2",
-      "keywords": ["santé", "hôpital", "médecin", "vaccin", "maladie", "covid"],
-      "question": "Quelle est la situation sanitaire actuelle ?",
-      "answer": "🏥 Le Ministère de la Santé a fait d'énormes progrès ! La campagne de vaccination contre la rougeole a atteint 85% de couverture nationale. Nous avons également ouvert 15 nouveaux centres de santé communautaires dans les régions isolées. Le système de santé se modernise avec l'introduction de la télémédecine dans 50 districts.",
-      "relatedTopics": ["ministère de la santé", "vaccination", "centres de santé"]
-    },
-    {
-      "id": "q3",
-      "keywords": ["budget", "finance", "économie", "impôt", "fiscalité"],
-      "question": "Comment vont les finances publiques ?",
-      "answer": "💰 Le Ministère des Finances annonce de bonnes nouvelles ! La réforme fiscale numérique a augmenté les recettes de 15%. Le nouveau système de déclaration en ligne simplifie les démarches pour les entreprises. L'investissement dans les infrastructures représente 30% du budget national 2025, favorisant la croissance économique.",
-      "relatedTopics": ["ministère des finances", "réforme fiscale", "budget 2025"]
-    },
-    {
-      "id": "q4",
-      "keywords": ["justice", "tribunal", "loi", "droit", "avocat"],
-      "question": "Quelles sont les réformes judiciaires en cours ?",
-      "answer": "⚖️ Le Ministère de la Justice modernise le système judiciaire ! La numérisation des tribunaux permet un traitement plus rapide des dossiers. Le programme de formation continue des magistrats renforce la qualité des décisions. L'accès à l'aide juridique gratuite s'étend à 12 nouvelles régions, garantissant l'égalité devant la justice.",
-      "relatedTopics": ["ministère de la justice", "numérisation judiciaire", "aide juridique"]
-    },
-    {
-      "id": "q5",
-      "keywords": ["sécurité", "police", "gendarmerie", "ordre", "criminalité"],
-      "question": "Comment évolue la sécurité publique ?",
-      "answer": "🚔 Le Ministère de l'Intérieur renforce la sécurité ! Le nouveau système de surveillance urbaine a réduit la criminalité de 20% dans les grandes villes. 500 nouveaux policiers ont été recrutés et formés. Les patrouilles de proximité créent un lien de confiance avec les citoyens dans tous les quartiers.",
-      "relatedTopics": ["ministère de l'intérieur", "police de proximité", "surveillance"]
-    },
-    {
-      "id": "q6",
-      "keywords": ["transport", "route", "infrastructure", "circulation", "taxi"],
-      "question": "Où en sont les infrastructures de transport ?",
-      "answer": "🚗 Le Ministère des Transports investit massivement ! 200 km de routes nationales sont en réfection. Le projet de Bus Rapid Transit (BRT) à Antananarivo avance bien avec 3 lignes prévues d'ici 2026. La modernisation du port de Toamasina augmente notre capacité commerciale de 40%.",
-      "relatedTopics": ["ministère des transports", "routes nationales", "BRT"]
-    },
-    {
-      "id": "q7",
-      "keywords": ["présidence", "président", "gouvernement", "ministre"],
-      "question": "Quelles sont les priorités de la Présidence ?",
-      "answer": "🏛️ La Présidence de la République met l'accent sur le développement durable ! Les 3 piliers prioritaires sont : l'éducation pour tous, la création d'emplois et la protection de l'environnement. Le programme 'Madagascar Vert' vise à planter 60 millions d'arbres d'ici 2026. La lutte contre la corruption s'intensifie avec de nouvelles mesures de transparence.",
-      "relatedTopics": ["présidence", "développement durable", "madagascar vert"]
-    },
-    {
-      "id": "q8",
-      "keywords": ["assemblée", "député", "parlement", "loi", "législatif"],
-      "question": "Que fait l'Assemblée Nationale ?",
-      "answer": "🏛️ L'Assemblée Nationale est très active ! 25 nouvelles lois ont été votées ce trimestre, dont la loi sur la protection des données personnelles. Les députés organisent des consultations citoyennes dans toutes les régions pour être à l'écoute du peuple. La transparence des débats parlementaires est renforcée avec la diffusion en direct sur internet.",
-      "relatedTopics": ["assemblée nationale", "législation", "consultations citoyennes"]
-    },
-    {
-      "id": "q9",
-      "keywords": ["sénat", "sénateur", "chambre haute"],
-      "question": "Quel est le rôle du Sénat ?",
-      "answer": "🏛️ Le Sénat joue un rôle crucial dans la stabilité institutionnelle ! Il examine actuellement 15 projets de loi importants. Les sénateurs mènent des missions d'enquête sur la gestion des fonds publics dans les régions. Le Sénat organise des forums régionaux pour rapprocher les institutions des citoyens.",
-      "relatedTopics": ["sénat", "contrôle législatif", "forums régionaux"]
-    },
-    {
-      "id": "q10",
-      "keywords": ["actualité", "news", "information", "dernière"],
-      "question": "Quelles sont les dernières actualités ?",
-      "answer": "📰 Voici les actualités phares de la semaine ! Le Ministère de l'Éducation lance le programme de tablettes numériques. La Santé ouvre 15 nouveaux centres communautaires. Les Finances présentent un budget record pour 2025. L'Assemblée vote la loi sur la protection des données. Consultez les pages des ministères pour plus de détails !",
-      "relatedTopics": ["toutes les actualités", "ministères", "institutions"]
-    },
-    {
-      "id": "q11",
-      "keywords": ["aide", "comment", "utiliser", "fonctionnement"],
-      "question": "Comment utiliser ActuFlash IA ?",
-      "answer": "💡 C'est très simple ! Vous pouvez : 1️⃣ Parcourir les actualités par ministère en cliquant sur les cartes. 2️⃣ Lire les articles complets en cliquant sur chaque actualité. 3️⃣ Me poser des questions sur n'importe quel sujet gouvernemental. 4️⃣ Filtrer les actualités par date et rechercher par mots-clés. Je suis toujours là pour vous aider !",
-      "relatedTopics": ["guide d'utilisation", "navigation", "fonctionnalités"]
-    },
-    {
-      "id": "q12",
-      "keywords": ["madagascar", "pays", "nation", "malgache"],
-      "question": "Parlez-moi de Madagascar",
-      "answer": "🇲🇬 Madagascar est une île extraordinaire ! Avec 28 millions d'habitants, notre pays regorge de biodiversité unique au monde. Le gouvernement s'engage pour un développement durable qui préserve notre patrimoine naturel tout en créant des opportunités économiques. ActuFlash IA vous tient informé de tous les progrès réalisés par nos institutions !",
-      "relatedTopics": ["madagascar", "développement", "biodiversité"]
-    }
-  ],
-  "fallback": {
-    "responses": [
-      "🤔 Hmm, je ne suis pas sûr d'avoir bien compris. Pouvez-vous reformuler votre question ?",
-      "💭 Intéressant ! Je n'ai pas encore d'information sur ce sujet. Essayez de me demander sur l'éducation, la santé, les finances, ou d'autres ministères !",
-      "🔍 Je n'ai pas trouvé de réponse précise. Consultez les actualités des ministères ou reformulez votre question !",
-      "😊 Je suis encore en apprentissage ! Posez-moi des questions sur les actualités des ministères et institutions de Madagascar."
-    ]
+[
+  {
+    "id": 1,
+    "question": "Qu'est-ce qu'ActuFlash IA ?",
+    "answer": "ActuFlash IA est une plateforme qui centralise toutes les actualités des ministères et institutions de Madagascar. Vous pouvez consulter les dernières informations officielles de 6 ministères et 3 institutions nationales, le tout dans une interface moderne et facile à utiliser.",
+    "keywords": ["actuflash", "plateforme", "actualité", "ministères", "madagascar"]
+  },
+  {
+    "id": 2,
+    "question": "Quels ministères sont couverts ?",
+    "answer": "ActuFlash IA couvre 6 ministères malgaches : Éducation Nationale, Santé Publique, Finances et Budget, Justice, Intérieur et Décentralisation, et Transport. Nous couvrons également 3 institutions : la Présidence, l'Assemblée Nationale et le Sénat.",
+    "keywords": ["ministères", "couverture", "institutions", "liste"]
+  },
+  {
+    "id": 3,
+    "question": "Comment naviguer sur ActuFlash ?",
+    "answer": "C'est très simple ! Sur la page d'accueil ActuFlash, vous verrez des cartes pour chaque ministère et institution. Cliquez sur celle qui vous intéresse pour voir la liste des actualités. Ensuite, cliquez sur un article pour lire le contenu complet avec images et détails.",
+    "keywords": ["navigation", "utilisation", "comment", "guide"]
+  },
+  {
+    "id": 4,
+    "question": "Puis-je rechercher des articles spécifiques ?",
+    "answer": "Oui ! Sur chaque page de ministère, vous trouverez une barre de recherche en haut. Tapez des mots-clés et les articles seront filtrés en temps réel. Vous pouvez aussi trier par date (plus récents ou plus anciens).",
+    "keywords": ["recherche", "filtrer", "trouver", "articles"]
+  },
+  {
+    "id": 5,
+    "question": "Les actualités sont-elles mises à jour régulièrement ?",
+    "answer": "Absolument ! ActuFlash IA fonctionne 24/7 pour vous apporter les informations les plus récentes. Chaque article affiche sa date de publication, et vous pouvez toujours voir les dernières nouvelles en premier grâce au tri par date.",
+    "keywords": ["mise à jour", "fréquence", "actualisation", "nouvelles"]
+  },
+  {
+    "id": 6,
+    "question": "Qui suis-je ?",
+    "answer": "Je m'appelle Lummy, votre assistant virtuel lémurien ! 🐵 Je suis là pour vous aider à naviguer sur ActuFlash IA, répondre à vos questions sur les actualités malgaches et vous guider dans votre exploration de la plateforme Mahaiza.",
+    "keywords": ["lummy", "assistant", "qui", "identité", "présentation"]
+  },
+  {
+    "id": 7,
+    "question": "Qu'est-ce que la plateforme Mahaiza ?",
+    "answer": "Mahaiza est une plateforme éducative innovante qui comprend trois modules : TurboCours IA (cours accélérés), ActuFlash IA (actualités gouvernementales) et Civique Challenge Mada (quiz sur la citoyenneté). C'est un écosystème complet pour apprendre et rester informé !",
+    "keywords": ["mahaiza", "plateforme", "modules", "éducation"]
+  },
+  {
+    "id": 8,
+    "question": "Comment puis-je contacter les ministères ?",
+    "answer": "Chaque page de ministère sur ActuFlash IA contient des informations sur l'institution. Pour des contacts officiels, je vous recommande de visiter les sites web officiels des ministères ou de consulter les communiqués de presse qui incluent souvent des coordonnées.",
+    "keywords": ["contact", "ministère", "coordonnées", "joindre"]
+  },
+  {
+    "id": 9,
+    "question": "Puis-je partager des articles ?",
+    "answer": "Bien sûr ! Chaque article dispose d'options de partage. Vous pouvez facilement partager les informations importantes avec vos proches, collègues ou sur les réseaux sociaux pour diffuser les actualités officielles.",
+    "keywords": ["partager", "partage", "diffuser", "réseaux sociaux"]
+  },
+  {
+    "id": 10,
+    "question": "Y a-t-il une version mobile ?",
+    "answer": "ActuFlash IA est entièrement responsive ! Que vous soyez sur ordinateur, tablette ou smartphone, l'interface s'adapte parfaitement à votre écran. Vous pouvez consulter les actualités n'importe où, n'importe quand.",
+    "keywords": ["mobile", "responsive", "smartphone", "tablette", "adaptation"]
+  },
+  {
+    "id": 11,
+    "question": "Comment fonctionne le tri par date ?",
+    "answer": "Sur chaque page de ministère, vous verrez un menu déroulant de filtrage. Choisissez 'Plus récentes' pour voir les derniers articles en premier, ou 'Plus anciennes' pour remonter dans le temps. Le tri est instantané !",
+    "keywords": ["tri", "date", "filtrage", "ordre", "chronologique"]
+  },
+  {
+    "id": 12,
+    "question": "Que faire si je ne trouve pas l'information recherchée ?",
+    "answer": "N'hésitez pas à utiliser la barre de recherche avec différents mots-clés, ou à explorer les différents ministères. Vous pouvez aussi me poser la question directement, et je ferai de mon mieux pour vous orienter vers les bonnes ressources !",
+    "keywords": ["aide", "support", "problème", "information"]
   }
-}
+]

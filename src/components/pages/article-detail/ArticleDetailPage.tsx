@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams, useNavigate } from "react-router-dom"
 import { ArrowLeft, Calendar, User, Tag, Share2, Bookmark, ArrowUp, ArrowDown } from "lucide-react"
-import ChatBot from "@/components/chatbot/ChatBot"
+import { ChatBot, ChatBotButton, TextSelectionMenu } from "@/components/chatbot"
 import "./ArticleDetailPage.css"
 
 interface ArticleSection {
@@ -33,6 +33,8 @@ export default function ArticleDetailPage() {
   const [article, setArticle] = useState<Article | null>(null)
   const [ministereName, setMinistereName] = useState<string>("")
   const [loading, setLoading] = useState(true)
+  const [chatbotOpen, setChatbotOpen] = useState(false)
+  const [chatbotInitialMessage, setChatbotInitialMessage] = useState<string | undefined>()
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -255,7 +257,16 @@ export default function ArticleDetailPage() {
       </div>
 
       {/* Chatbot */}
-      <ChatBot />
+      <ChatBotButton onClick={() => setChatbotOpen(true)} />
+      <ChatBot 
+        isOpen={chatbotOpen} 
+        onClose={() => setChatbotOpen(false)}
+        initialMessage={chatbotInitialMessage}
+      />
+      <TextSelectionMenu onAskLummy={(text) => {
+        setChatbotInitialMessage(`Que penses-tu de ce texte : "${text}" ?`)
+        setChatbotOpen(true)
+      }} />
     </div>
   )
 }

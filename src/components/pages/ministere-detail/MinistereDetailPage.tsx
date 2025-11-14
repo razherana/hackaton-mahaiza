@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useNavigate, useLocation } from "react-router-dom"
 import { ArrowLeft, Calendar, X, Menu, Newspaper, Home, Search, Filter } from "lucide-react"
-import ChatBot from "@/components/chatbot/ChatBot"
+import { ChatBot, ChatBotButton, TextSelectionMenu } from "@/components/chatbot"
 import "./MinistereDetailPage.css"
 
 interface News {
@@ -45,6 +45,8 @@ export default function MinistereDetailPage() {
   const [sidebarOpen, setSidebarOpen] = useState(true)
   const [searchQuery, setSearchQuery] = useState("")
   const [sortOrder, setSortOrder] = useState<"recent" | "oldest">("recent")
+  const [chatbotOpen, setChatbotOpen] = useState(false)
+  const [chatbotInitialMessage, setChatbotInitialMessage] = useState<string | undefined>()
 
   useEffect(() => {
     const fetchData = async () => {
@@ -338,7 +340,16 @@ export default function MinistereDetailPage() {
       )}
 
       {/* Chatbot */}
-      <ChatBot />
+      <ChatBotButton onClick={() => setChatbotOpen(true)} />
+      <ChatBot 
+        isOpen={chatbotOpen} 
+        onClose={() => setChatbotOpen(false)}
+        initialMessage={chatbotInitialMessage}
+      />
+      <TextSelectionMenu onAskLummy={(text) => {
+        setChatbotInitialMessage(`Que penses-tu de ce texte : "${text}" ?`)
+        setChatbotOpen(true)
+      }} />
     </div>
   )
 }

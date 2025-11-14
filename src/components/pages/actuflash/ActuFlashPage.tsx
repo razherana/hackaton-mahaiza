@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { Newspaper, TrendingUp, Clock } from "lucide-react"
-import ChatBot from "@/components/chatbot/ChatBot"
+import { ChatBot, ChatBotButton, TextSelectionMenu } from "@/components/chatbot"
 import "./ActuFlashPage.css"
 
 interface Ministere {
@@ -16,6 +16,8 @@ interface Ministere {
 export default function ActuFlashPage() {
   const [ministeres, setMinisteres] = useState<Ministere[]>([])
   const [currentTime, setCurrentTime] = useState(new Date())
+  const [chatbotOpen, setChatbotOpen] = useState(false)
+  const [chatbotInitialMessage, setChatbotInitialMessage] = useState<string | undefined>()
 
   useEffect(() => {
     fetch("/src/data/ministeres.json")
@@ -40,6 +42,11 @@ export default function ActuFlashPage() {
       month: 'long',
       day: 'numeric'
     })
+  }
+
+  const handleAskLummy = (selectedText: string) => {
+    setChatbotInitialMessage(`Que penses-tu de ce texte : "${selectedText}" ?`)
+    setChatbotOpen(true)
   }
 
   return (
@@ -144,7 +151,13 @@ export default function ActuFlashPage() {
       </footer>
 
       {/* Chatbot */}
-      <ChatBot />
+      <ChatBotButton onClick={() => setChatbotOpen(true)} />
+      <ChatBot 
+        isOpen={chatbotOpen} 
+        onClose={() => setChatbotOpen(false)}
+        initialMessage={chatbotInitialMessage}
+      />
+      <TextSelectionMenu onAskLummy={handleAskLummy} />
     </div>
   )
 }
