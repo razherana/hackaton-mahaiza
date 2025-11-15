@@ -1,20 +1,24 @@
 import type { RouteObject } from "react-router-dom";
+import { EducationLayout } from "../components/layouts/EducationLayout";
+import { EducationImportPage } from "../components/pages/education/import";
+import { EducationAnalysePage } from "../components/pages/education/analyse";
+import { EducationQuizPage } from "../components/pages/education/quiz";
 
 export const educationRoutes: RouteObject[] = [
   {
     path: "education/",
-    element: await import("../components/pages/education/import").then(module => <module.EducationImportPage />)
+    element: <EducationLayout><EducationImportPage /></EducationLayout>
   },
   {
     path: "education/import/",
-    element: await import("../components/pages/education/import").then(module => <module.EducationImportPage />)
+    element: <EducationLayout><EducationImportPage /></EducationLayout>
   },
   {
     path: "education/analyse/",
-    element: await import("../components/pages/education/analyse").then(module => <module.EducationAnalysePage />)
+    element: <EducationLayout><EducationAnalysePage /></EducationLayout>
   },
   {
     path: "education/quiz/",
-    element: await import("../components/pages/education/quiz").then(module => <module.EducationQuizPage />)
+    element: <EducationLayout><EducationQuizPage /></EducationLayout>
   },
 ];

@@ -5,7 +5,6 @@ import { AnalysisSidebar } from "./components/AnalysisSidebar"
 import { AnalysisContent } from "./components/AnalysisContent"
 import { PDFPreview } from "./components/PDFPreview"
 import type { DocumentAnalysisResult, EducationDocument } from "../import/types"
-import { AnalysisProvider } from "./providers/AnalysisProvide"
 import { getAnalysisByDocumentId } from "./data/analysisResults"
 import { documentDatas } from "../import/data/hub"
 
@@ -61,9 +60,5 @@ function AnalysisPageContent() {
 }
 
 export function EducationAnalysePage() {
-  return (
-    <AnalysisProvider>
-      <AnalysisPageContent />
-    </AnalysisProvider>
-  )
+  return <AnalysisPageContent />
 }
