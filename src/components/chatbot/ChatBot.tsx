@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react"
-import { MessageCircle, Send, Trash2, Menu, X, Plus } from "lucide-react"
+import { Send, Trash2, Menu, X, Plus } from "lucide-react"
+// import Logo from "../common/Logo"
 import "./ChatBot.css"
 import chatbotData from "@/data/chatbot-qa.json"
 
@@ -362,8 +363,8 @@ export default function ChatBot({ isOpen, onClose, initialMessage }: ChatBotProp
               <Menu size={20} />
             </button>
 
-            <div className="chatbot-header-info">
-              <MessageCircle className="chatbot-icon" size={28} />
+            <div className="chatbot-header-info chatbot-header-center">
+              <img src="/images/lemur.png" alt="Lummy" className="chatbot-lummy-avatar" />
               <div>
                 <h2 className="chatbot-title">Lummy</h2>
                 <p className="chatbot-subtitle">Assistant IA ActuFlash</p>
@@ -382,22 +383,7 @@ export default function ChatBot({ isOpen, onClose, initialMessage }: ChatBotProp
             </button>
           </div>
 
-          {/* Mascotte */}
-          <div className="chatbot-mascot">
-            <div className="mascot-container">
-              <img
-                src="/images/lemur.png"
-                alt="Lummy le lémurien"
-                className="mascot-image"
-                onError={e => {
-                  e.currentTarget.style.display = 'none';
-                  const name = e.currentTarget.nextElementSibling;
-                  if (name) name.innerHTML = '🐒 Lummy';
-                }}
-              />
-              <p className="mascot-name">Lummy</p>
-            </div>
-          </div>
+
 
           {/* Messages */}
           <div className="chatbot-messages">

@@ -217,7 +217,18 @@
   flex: 1;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.75rem;
+}
+
+.chatbot-lummy-avatar {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #3A8A2A;
+  background: #fff;
+  margin-right: 0.75rem;
 }
 
 .chatbot-icon {
