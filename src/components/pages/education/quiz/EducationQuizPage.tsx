@@ -1,65 +1,18 @@
-import { ArrowLeft, CheckCircle, Clock, Trophy } from "lucide-react"
+import { ArrowLeft, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { useNavigate, useSearchParams } from "react-router-dom"
 import { hardcodedQuizzes } from "../analyse/data/quizData"
-
-// Mock data for quiz completion status
-interface QuizProgress {
-  quizId: number
-  completed: boolean
-  score?: number
-  totalQuestions?: number
-  lastAttempt?: Date
-}
-
-// Simulated quiz progress data
-const mockQuizProgress: QuizProgress[] = [
-  {
-    quizId: 1,
-    completed: true,
-    score: 8,
-    totalQuestions: 10,
-    lastAttempt: new Date('2024-11-10')
-  },
-  {
-    quizId: 2,
-    completed: false
-  },
-  {
-    quizId: 3,
-    completed: true,
-    score: 6,
-    totalQuestions: 8,
-    lastAttempt: new Date('2024-11-12')
-  },
-  {
-    quizId: 4,
-    completed: true,
-    score: 10,
-    totalQuestions: 10,
-    lastAttempt: new Date('2024-11-14')
-  }
-]
-
-function getScoreColor(score: number, total: number) {
-  const percentage = (score / total) * 100
-  if (percentage >= 80) return "text-[#3a8a2a]"
-  if (percentage >= 60) return "text-[#3a8a2a]"
-  return "text-[#3a8a2a]"
-}
-
-function getScoreBadgeVariant(score: number, total: number) {
-  const percentage = (score / total) * 100
-  if (percentage >= 80) return "default"
-  if (percentage >= 60) return "outline"
-  return "default"
-}
+import type { DocumentQuiz } from "../analyse/data/quizData"
+import { useState } from "react"
+import { mockQuizProgress } from "./data"
+import type { QuizProgress } from "./types"
+import { QuizModal, QuizCard } from "./components"
 
 export function EducationQuizPage() {
   const navigate = useNavigate()
   const [searchParams] = useSearchParams()
+  const [selectedQuiz, setSelectedQuiz] = useState<DocumentQuiz | null>(null)
+  const [isQuizModalOpen, setIsQuizModalOpen] = useState(false)
 
   // Get documentId from URL parameters if available
   const currentDocumentId = searchParams.get("documentId") ? parseInt(searchParams.get("documentId")!, 10) : null
@@ -74,13 +27,22 @@ export function EducationQuizPage() {
   }
 
   const handleStartQuiz = (quizId: number) => {
-    // Navigate to specific quiz (to be implemented)
-    console.log(`Starting quiz ${quizId}`)
+    const quiz = Object.values(hardcodedQuizzes).find(q => q.documentId === quizId)
+    if (quiz) {
+      setSelectedQuiz(quiz)
+      setIsQuizModalOpen(true)
+    }
   }
 
-  const handleRetakeQuiz = (quizId: number) => {
-    // Navigate to specific quiz for retaking (to be implemented)
-    console.log(`Retaking quiz ${quizId}`)
+  const handleQuizComplete = (score: number, totalQuestions: number, matchPercentage: number) => {
+    // Here you would typically save the quiz results to your backend/state management
+    console.log(`Quiz completed: ${score}/${totalQuestions}, ${matchPercentage}% match`)
+    // You could update the mockQuizProgress or trigger a refetch of quiz data
+  }
+
+  const handleCloseModal = () => {
+    setIsQuizModalOpen(false)
+    setSelectedQuiz(null)
   }
 
   return (
@@ -119,103 +81,14 @@ export function EducationQuizPage() {
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {availableQuizzes.map((quiz) => {
             const progress = getQuizProgress(quiz.documentId)
-            const isCompleted = progress?.completed || false
 
             return (
-              <Card
+              <QuizCard
                 key={quiz.documentId}
-                className="bg-[#1b1b1b] border-[#3a8a2a] hover:border-[#3a8a2a] transition-colors"
-              >
-                <CardHeader className="pb-4">
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
-                      <CardTitle className="text-white text-lg mb-1">
-                        {quiz.title}
-                      </CardTitle>
-                      <CardDescription className="text-white text-sm">
-                        {quiz.description}
-                      </CardDescription>
-                    </div>
-                    {isCompleted && (
-                      <CheckCircle className="h-5 w-5 text-[#3a8a2a] mt-1 shrink-0" />
-                    )}
-                  </div>
-                </CardHeader>
-
-                <CardContent className="pt-0">
-                  <div className="space-y-4">
-                    {/* Quiz Info */}
-                    <div className="flex items-center gap-4 text-sm text-white">
-                      <div className="flex items-center gap-1">
-                        <Clock className="h-4 w-4" />
-                        <span>{quiz.questions.length} questions</span>
-                      </div>
-                      {isCompleted && progress?.lastAttempt && (
-                        <div className="text-xs">
-                          Dernière tentative: {progress.lastAttempt.toLocaleDateString('fr-FR')}
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Score Display */}
-                    {isCompleted && progress?.score !== undefined && progress?.totalQuestions && (
-                      <div className="space-y-2">
-                        <div className="flex items-center justify-between">
-                          <span className="text-sm text-white">Score:</span>
-                          <div className="flex items-center gap-2">
-                            <span className={`font-semibold ${getScoreColor(progress.score, progress.totalQuestions)}`}>
-                              {progress.score}/{progress.totalQuestions}
-                            </span>
-                            <Badge
-                              variant={getScoreBadgeVariant(progress.score, progress.totalQuestions)}
-                              className="text-xs bg-[#3a8a2a] text-white border-[#3a8a2a]"
-                            >
-                              {Math.round((progress.score / progress.totalQuestions) * 100)}%
-                            </Badge>
-                          </div>
-                        </div>
-                        {progress.score === progress.totalQuestions && (
-                          <div className="flex items-center gap-1 text-[#3a8a2a] text-xs">
-                            <Trophy className="h-3 w-3" />
-                            <span>Score parfait !</span>
-                          </div>
-                        )}
-                      </div>
-                    )}
-
-                    {/* Action Buttons */}
-                    <div className="flex gap-2 pt-2">
-                      {isCompleted ? (
-                        <>
-                          <Button
-                            onClick={() => handleRetakeQuiz(quiz.documentId)}
-                            variant="outline"
-                            size="sm"
-                            className="flex-1 border-[#3a8a2a] text-white hover:bg-[#3a8a2a]"
-                          >
-                            Refaire
-                          </Button>
-                          <Button
-                            onClick={() => handleStartQuiz(quiz.documentId)}
-                            size="sm"
-                            className="flex-1 bg-[#3a8a2a] hover:bg-[#3a8a2a] text-white"
-                          >
-                            Voir les résultats
-                          </Button>
-                        </>
-                      ) : (
-                        <Button
-                          onClick={() => handleStartQuiz(quiz.documentId)}
-                          size="sm"
-                          className="w-full bg-[#3a8a2a] hover:bg-[#3a8a2a] text-white"
-                        >
-                          Commencer le quiz
-                        </Button>
-                      )}
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+                quiz={quiz}
+                progress={progress}
+                onStartQuiz={handleStartQuiz}
+              />
             )
           })}
         </div>
@@ -247,6 +120,14 @@ export function EducationQuizPage() {
           </div>
         )}
       </main>
+
+      {/* Quiz Modal */}
+      <QuizModal
+        quiz={selectedQuiz}
+        isOpen={isQuizModalOpen}
+        onClose={handleCloseModal}
+        onComplete={handleQuizComplete}
+      />
     </div>
   )
 }

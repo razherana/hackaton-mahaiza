@@ -1,1 +1,5 @@
-export { EducationQuizPage } from "./EducationQuizPage"
+export { EducationQuizPage } from './EducationQuizPage'
+export * from './types'
+export * from './data'
+export * from './utils'
+export * from './components'
