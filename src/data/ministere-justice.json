@@ -63,6 +63,27 @@
           }
         ]
       }
+      ,
+      {
+        "id": "jus-003",
+        "title": "Tribunal spécialisé lutte anti-corruption : premiers dossiers reçus",
+        "date": "2025-11-13",
+        "author": "Ministère de la Justice",
+        "category": "Justice",
+        "summary": "Le nouveau tribunal spécialisé dans la lutte contre la corruption commence à instruire les premiers dossiers présentés par la Haute Autorité Anticorruption.",
+        "image": "/images/justice.png",
+        "images": ["/images/justice.png"],
+        "sections": [
+          {
+            "title": "Mise en place et compétences",
+            "content": "Le tribunal accueille des magistrats formés aux enquêtes économiques complexes et bénéficie d'un secrétariat spécialisé. Sa compétence porte sur les infractions économiques et les faits de corruption impliquant des hauts responsables publics."
+          },
+          {
+            "title": "Transparence et procédures renforcées",
+            "content": "Les audiences comporteront des garanties procédurales pour les accusés tout en accélérant l'instruction des dossiers sensibles. Un portail public permettra de suivre l'avancement des procédures non confidentielles pour garantir la transparence."
+          }
+        ]
+      }
     ]
   }
 ]

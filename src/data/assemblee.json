@@ -62,6 +62,132 @@
             "content": "Au-delà de l'urgence, les députés ont insisté sur la nécessité de solutions durables. Un programme pluriannuel de 300 milliards d'Ariary sur cinq ans sera lancé pour développer l'irrigation dans le Sud. L'objectif est d'aménager 20 000 hectares de périmètres irrigués permettant des cultures de contre-saison et la diversification agricole.\n\nLe désenclavement des régions du Sud constitue une priorité avec la réhabilitation de 500 km de pistes rurales et la construction de 10 marchés de collecte. Ces infrastructures permettront aux agriculteurs de vendre leurs produits et de se procurer des intrants agricoles. Un système de prévision et d'alerte précoce des crises alimentaires sera mis en place.\n\nUn programme de distribution de semences améliorées résistantes à la sécheresse (maïs, sorgho, niébé) bénéficiera à 50 000 agriculteurs. Des formations sur les techniques d'agriculture climato-intelligente (zaï, demi-lunes, compostage) seront dispensées. L'élevage sera développé avec la distribution de 100 000 petits ruminants (chèvres, moutons) aux familles vulnérables comme source de revenus et de protéines."
           }
         ]
+      },
+      {
+        "id": "ass-003",
+        "title": "🏛️ Budget 2026 : positions des groupes parlementaires",
+        "date": "2025-11-09",
+        "author": "Bureau de l'Assemblée - Débats parlementaires",
+        "category": "Politique",
+        "summary": "Compte-rendu des positions exprimées par les principaux groupes parlementaires lors des débats sur le projet de budget 2026.",
+        "image": "/images/assemblee.png",
+        "images": [
+          "/images/assemblee.png"
+        ],
+        "sections": [
+          {
+            "title": "IRD : soutien conditionnel à l'orientation budgétaire",
+            "content": "Le groupe IRD a exprimé son soutien à l'effort d'investissement, en insistant sur la rapidité de mise en œuvre des projets d'infrastructures. Les députés IRD demandent des indicateurs de performance et un calendrier serré pour le démarrage des chantiers."
+          },
+          {
+            "title": "Tiako I Madagasikara (TIM) : demandes de transparence et ciblage social",
+            "content": "Le groupe TIM a salué les priorités mais a demandé des garanties sur la transparence de l'exécution et une augmentation des dépenses ciblées pour les ménages vulnérables. TIM propose des amendements pour renforcer les contrôles des marchés publics et la protection sociale."
+          },
+          {
+            "title": "MAPAR et alliés : prioriser la croissance locale",
+            "content": "Les députés proches de MAPAR ont appelé à une priorité sur les projets générateurs d'emplois et sur le soutien aux PME locales. Ils demandent des instruments pour faciliter l'accès au crédit et des mesures favorisant l'investissement privé national."
+          },
+          {
+            "title": "Indépendants et petits partis : vigilance sur la dette",
+            "content": "Les députés indépendants et des petits partis (AVI, MFM, autres) ont exprimé des réserves sur la trajectoire d'endettement. Ils insistent sur la nécessité de prioriser la mobilisation des recettes internes avant toute nouvelle dette externe."
+          }
+        ]
+      },
+      {
+        "id": "ass-004",
+        "title": "📣 Communiqués des partis : plan de relance économique",
+        "date": "2025-11-06",
+        "author": "Services de communication de l'Assemblée",
+        "category": "Économie",
+        "summary": "Synthèse des communiqués officiels des principaux partis et groupes parlementaires au sujet du plan de relance économique annoncé par le gouvernement.",
+        "image": "/images/assemblee.png",
+        "images": [
+          "/images/assemblee.png"
+        ],
+        "sections": [
+          {
+            "title": "IRD : approbation conditionnelle et suivi",
+            "content": "Le groupe IRD soutient le plan à condition d'un suivi strict des indicateurs de performance. Le groupe demande la publication semestrielle de rapports d'avancement et le suivi des objectifs d'emploi."
+          },
+          {
+            "title": "TIM : priorité aux PME et à l'emploi des jeunes",
+            "content": "Le groupe TIM invite le gouvernement à allouer une part significative du plan aux PME et aux programmes de formation, afin de générer des emplois durables pour les jeunes et stimuler l'économie locale."
+          },
+          {
+            "title": "AVI / MFM / Petits partis : demandes sociales immédiates",
+            "content": "Les petits partis (AVI, MFM et autres) demandent que le plan intègre des mesures immédiates pour l'accès à l'eau, l'électricité rurale et des filets sociaux pour les populations vulnérables."
+          }
+        ]
+      },
+      {
+        "id": "ass-005",
+        "title": "📝 Rapport de la Commission des Finances : réponses des groupes politiques",
+        "date": "2025-10-28",
+        "author": "Commission des Finances - Assemblée Nationale",
+        "category": "Contrôle",
+        "summary": "La Commission des Finances publie son rapport préliminaire sur l'exécution budgétaire et les groupes politiques réagissent aux recommandations.",
+        "image": "/images/assemblee.png",
+        "images": [
+          "/images/assemblee.png"
+        ],
+        "sections": [
+          {
+            "title": "Constats de la Commission",
+            "content": "La Commission relève des retards dans certains paiements, des marchés publics insuffisamment documentés et recommande la mise en place d'un calendrier de publication des audits."
+          },
+          {
+            "title": "Position de l'IRD",
+            "content": "L'IRD reconnaît les retards tout en soulignant la nécessité d'accompagner les réformes par des investissements productifs. Le groupe propose la digitalisation accélérée des paiements pour réduire les délais."
+          },
+          {
+            "title": "Position de TIM",
+            "content": "Le groupe TIM demande des sanctions en cas de manquements avérés et réclame la publication intégrale des rapports de la Cour des Comptes. TIM appelle à la création d'un comité multipartite de suivi."
+          }
+        ]
+      },
+      {
+        "id": "ass-006",
+        "title": "📢 Communiqué TIM : amendements proposés au budget",
+        "date": "2025-11-11",
+        "author": "Groupe Tiako I Madagasikara (TIM)",
+        "category": "Politique",
+        "summary": "Le groupe TIM détaille une série d'amendements visant à renforcer la protection sociale et le financement des PME dans le budget 2026.",
+        "image": "/images/assemblee.png",
+        "images": [
+          "/images/assemblee.png"
+        ],
+        "sections": [
+          {
+            "title": "Amendements clés",
+            "content": "TIM propose d'augmenter le budget des programmes de formation professionnelle, d'instaurer des crédits dédiés aux PME innovantes et de renforcer les transferts monétaires ciblés pour les ménages vulnérables."
+          },
+          {
+            "title": "Mécanismes de mise en œuvre",
+            "content": "Le groupe recommande la création d'un fonds de soutien aux PME et un suivi public trimestriel des dépenses allouées aux programmes de formation."
+          }
+        ]
+      },
+      {
+        "id": "ass-007",
+        "title": "🗣️ Déclaration MAPAR : soutien aux investissements locaux",
+        "date": "2025-11-07",
+        "author": "Groupe MAPAR",
+        "category": "Économie",
+        "summary": "MAPAR publie une déclaration demandant des mesures pour faciliter l'investissement privé national et l'accès au crédit des PME.",
+        "image": "/images/assemblee.png",
+        "images": [
+          "/images/assemblee.png"
+        ],
+        "sections": [
+          {
+            "title": "Mesures demandées",
+            "content": "MAPAR propose des garanties publiques pour les prêts aux PME, des réductions fiscales temporaires pour les startups locales et des programmes d'appui à l'innovation."
+          },
+          {
+            "title": "Suivi et responsabilité",
+            "content": "Le groupe demande un tableau de bord de suivi des investissements accessibles au public et des comités locaux de suivi pour chaque projet majeur."
+          }
+        ]
       }
     ]
   }

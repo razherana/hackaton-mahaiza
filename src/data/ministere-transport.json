@@ -93,6 +93,27 @@
           }
         ]
       }
+      ,
+      {
+        "id": "trans-004",
+        "title": "Port de Toamasina modernisé : automatisation des terminaux pour accélérer le commerce",
+        "date": "2025-11-14",
+        "author": "Autorité Portuaire de Toamasina",
+        "category": "Infrastructures",
+        "summary": "Un programme de modernisation et d'automatisation des terminaux du port de Toamasina vise à réduire les délais de déchargement et à attirer de nouveaux investisseurs.",
+        "image": "/images/transport.png",
+        "images": ["/images/transport.png"],
+        "sections": [
+          {
+            "title": "Un port plus rapide et plus compétitif",
+            "content": "Le projet porte sur l'automatisation progressive des terminaux conteneurs et la mise en place d'un système de gestion électronique des cargaisons. L'objectif est de réduire les délais d'escale et d'augmenter la capacité de manutention afin de soutenir la croissance des exportations agricoles et minières."
+          },
+          {
+            "title": "Impact économique",
+            "content": "La modernisation devrait réduire les coûts logistiques et attirer des lignes maritimes régulières. Des formations seront proposées aux opérateurs locaux pour faciliter la transition vers ces nouveaux outils. La phase initiale sera financée par un partenariat public-privé."
+          }
+        ]
+      }
     ]
   }
 ]

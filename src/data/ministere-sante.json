@@ -55,25 +55,54 @@
         "id": "sante-003",
         "title": "Journée mondiale de la santé : actions de sensibilisation",
         "date": "2025-04-07",
-        "summary": "Des campagnes de sensibilisation sur la prévention des maladies non transmissibles.",
-        "content": "Le ministère a organisé des ateliers et des conférences dans tout le pays pour promouvoir la prévention des maladies cardiovasculaires et du diabète.",
-        "image": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd21?auto=format&fit=crop&w=600&q=80"
+        "author": "Ministère de la Santé Publique",
+        "category": "Prévention",
+        "summary": "Des campagnes de sensibilisation sur la prévention des maladies non transmissibles ont été déployées dans tout le pays.",
+        "image": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd21?auto=format&fit=crop&w=600&q=80",
+        "sections": [
+          {
+            "title": "Ateliers et conférences",
+            "content": "Le ministère a organisé des ateliers et des conférences dans tout le pays pour promouvoir la prévention des maladies cardiovasculaires et du diabète. Ces actions ont ciblé les écoles, les centres de santé et les collectivités locales avec des messages sur l'alimentation saine, l'activité physique et le dépistage précoce."
+          }
+        ]
       },
       {
         "id": "sante-004",
         "title": "Recrutement de 500 nouveaux agents de santé",
         "date": "2025-10-15",
-        "summary": "Le ministère renforce les effectifs dans les centres de santé ruraux.",
-        "content": "Un appel à candidatures a été lancé pour recruter 500 agents de santé afin d'améliorer la couverture médicale dans les zones reculées.",
-        "image": "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80"
+        "author": "Ministère de la Santé Publique",
+        "category": "Ressources Humaines",
+        "summary": "Le ministère renforce les effectifs dans les centres de santé ruraux pour améliorer la couverture sanitaire.",
+        "image": "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80",
+        "sections": [
+          {
+            "title": "Appel à candidatures",
+            "content": "Un appel à candidatures a été lancé pour recruter 500 agents de santé afin d'améliorer la couverture médicale dans les zones reculées. Les postes concernent les infirmiers, agents communautaires et techniciens de laboratoire."
+          },
+          {
+            "title": "Déploiement et formation",
+            "content": "Les candidats retenus suivront une formation intensive avant d'être affectés aux centres de santé locaux. Un plan d'accompagnement et des primes d'installation sont prévus pour encourager les affectations en zones rurales."
+          }
+        ]
       },
       {
         "id": "sante-005",
         "title": "Lutte contre le paludisme : distribution de moustiquaires",
         "date": "2025-09-20",
-        "summary": "Distribution gratuite de moustiquaires imprégnées dans les régions à risque.",
-        "content": "Plus de 1 million de moustiquaires ont été distribuées dans les régions du sud pour lutter contre le paludisme.",
-        "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80"
+        "author": "Ministère de la Santé Publique",
+        "category": "Lutte contre les maladies",
+        "summary": "Distribution gratuite de moustiquaires imprégnées dans les régions à risque pour réduire l'incidence du paludisme.",
+        "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80",
+        "sections": [
+          {
+            "title": "Campagne de distribution",
+            "content": "Plus de 1 million de moustiquaires ont été distribuées dans les régions du Sud pour lutter contre le paludisme. Les opérations se font en coordination avec les autorités locales et les ONG partenaires."
+          },
+          {
+            "title": "Suivi et prévention",
+            "content": "Des actions de sensibilisation à l'utilisation correcte des moustiquaires et des mesures anti-larvaires complètent la distribution. Un suivi épidémiologique est mis en place pour mesurer l'impact de la campagne."
+          }
+        ]
       }
     ]
   }

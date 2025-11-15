@@ -1,0 +1,20 @@
+# Contexte de l'application ActuFlash IA
+
+ActuFlash IA est une plateforme d'actualités moderne dédiée à Madagascar, intégrant un chatbot intelligent nommé Lummy pour accompagner les utilisateurs dans leur navigation et leur recherche d'informations.
+
+Fonctionnalités principales :
+- Consultation d'articles d'actualité par ministère ou institution.
+- Suggestions d'articles similaires en bas de chaque article.
+- Chatbot Lummy (Assistant IA) accessible partout, avec bulle flottante déplaçable et historique de conversation.
+- Interface moderne avec pied de page fixe, navigation fluide et responsive.
+- Gestion robuste des erreurs et des cas de données manquantes.
+
+Public cible :
+- Citoyens malgaches, journalistes, étudiants, et toute personne souhaitant s'informer sur l'actualité institutionnelle de Madagascar.
+
+Technologies :
+- React 18, TypeScript, Vite, CSS modules, React Router.
+- Données d'articles en JSON, importées par ministère.
+
+Objectif :
+- Offrir une expérience d'information enrichie, interactive et fiable, avec une assistance IA accessible à tout moment.
