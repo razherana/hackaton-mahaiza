@@ -23,6 +23,7 @@ export interface ReviewPoint {
   }
   createdAt: string
   lastReviewed?: string
+  documentId: string
 }
 
 // PDF.js types

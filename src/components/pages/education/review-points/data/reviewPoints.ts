@@ -3,6 +3,7 @@ import type { ReviewPoint } from "../../analyse/types"
 export const sampleReviewPoints: ReviewPoint[] = [
   {
     id: "rp-1",
+    documentId: "doc-1",
     title: "Photosynthèse - Équation chimique",
     description: "L'équation fondamentale de la photosynthèse",
     content: "6CO₂ + 6H₂O + énergie lumineuse → C₆H₁₂O₆ + 6O₂",
@@ -19,6 +20,7 @@ export const sampleReviewPoints: ReviewPoint[] = [
   },
   {
     id: "rp-2", 
+    documentId: "doc-1",
     title: "Mitose - Phases",
     description: "Les quatre phases principales de la mitose",
     content: "Prophase, Métaphase, Anaphase, Télophase - chacune avec ses caractéristiques spécifiques",
@@ -36,6 +38,7 @@ export const sampleReviewPoints: ReviewPoint[] = [
   },
   {
     id: "rp-3",
+    documentId: "doc-2",
     title: "ADN - Structure double hélice",
     description: "La structure en double hélice de l'ADN découverte par Watson et Crick",
     content: "Deux brins antiparallèles reliés par des liaisons hydrogène entre bases complémentaires",
@@ -52,6 +55,7 @@ export const sampleReviewPoints: ReviewPoint[] = [
   },
   {
     id: "rp-4",
+    documentId: "doc-2",
     title: "Respiration cellulaire",
     description: "Le processus de respiration cellulaire aérobie",
     content: "Glycolyse → Cycle de Krebs → Chaîne de transport d'électrons = 36-38 ATP",
@@ -68,6 +72,7 @@ export const sampleReviewPoints: ReviewPoint[] = [
   },
   {
     id: "rp-5",
+    documentId: "doc-1",
     title: "Méiose - Brassage génétique",
     description: "Les mécanismes de brassage génétique lors de la méiose",
     content: "Crossing-over en prophase I et ségrégation indépendante des chromosomes",

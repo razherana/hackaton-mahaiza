@@ -114,6 +114,10 @@ export function ReviewPointsPage() {
   
   const documentId = searchParams.get('documentId')
 
+  const pointsForDocument = documentId 
+    ? reviewPoints.filter(p => p.documentId === documentId)
+    : reviewPoints
+
   const handleToggleLearned = (pointId: string) => {
     const updatedPoints = toggleReviewPointLearned(pointId)
     setReviewPoints([...updatedPoints])
@@ -134,7 +138,7 @@ export function ReviewPointsPage() {
     }
   }
 
-  const filteredPoints = reviewPoints.filter(point => {
+  const filteredPoints = pointsForDocument.filter(point => {
     switch (filter) {
       case 'learned': return point.isLearned
       case 'unlearned': return !point.isLearned
@@ -142,8 +146,8 @@ export function ReviewPointsPage() {
     }
   })
 
-  const learnedCount = reviewPoints.filter(p => p.isLearned).length
-  const totalCount = reviewPoints.length
+  const learnedCount = pointsForDocument.filter(p => p.isLearned).length
+  const totalCount = pointsForDocument.length
 
   return (
     <div className="min-h-screen bg-[#0f0f0f] text-[#f5f5f5]">
