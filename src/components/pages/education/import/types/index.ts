@@ -5,3 +5,15 @@ export interface EducationDocument {
   description?: string;
   dateUploaded: Date;
 }
+
+export interface DocumentAnalysisResult {
+  fileName: string;
+  title: string | null;
+  pageCount: number | null;
+  wordCount: number;
+  readingTimeMinutes: number;
+  keywords: string[];
+  summaryParagraphs: string[];
+  excerpt: string;
+  createdAt: string;
+}

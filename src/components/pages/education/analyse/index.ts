@@ -1,0 +1,1 @@
+export { EducationAnalysePage } from "./EducationAnalysePage"
