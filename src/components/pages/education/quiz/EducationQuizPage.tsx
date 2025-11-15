@@ -1,8 +1,8 @@
 import { ArrowLeft, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useNavigate, useSearchParams } from "react-router-dom"
-import { hardcodedQuizzes } from "../analyse/data/quizData"
-import type { DocumentQuiz } from "../analyse/data/quizData"
+import { educationData, getDocumentQuiz } from "@/data/education"
+import type { DocumentQuiz } from "@/data/education"
 import { useState } from "react"
 import { mockQuizProgress } from "./data"
 import type { QuizProgress } from "./types"
@@ -21,20 +21,20 @@ export function EducationQuizPage() {
 
   // Filter quizzes by documentId if provided, otherwise show all
   const availableQuizzes = currentDocumentId
-    ? Object.values(hardcodedQuizzes).filter(quiz => quiz.documentId === currentDocumentId)
-    : Object.values(hardcodedQuizzes)
+    ? Object.values(educationData.quizzes).filter(quiz => quiz.documentId === currentDocumentId)
+    : Object.values(educationData.quizzes)
 
   const getQuizProgress = (quizId: number): QuizProgress | undefined => {
     return mockQuizProgress.find(progress => progress.quizId === quizId)
   }
 
   const handleStartQuiz = (quizId: number) => {
-    const quiz = Object.values(hardcodedQuizzes).find(q => q.documentId === quizId)
+    const quiz = getDocumentQuiz(quizId)
     const progress = getQuizProgress(quizId)
-    
+
     if (quiz) {
       setSelectedQuiz(quiz)
-      
+
       // If quiz is completed, show results modal
       if (progress?.completed) {
         setSelectedQuizProgress(progress)

@@ -14,7 +14,7 @@ export interface QuizResults {
 }
 
 export interface QuizModalProps {
-  quiz: import("../../analyse/data/quizData").DocumentQuiz | null;
+  quiz: import("@/data/education").DocumentQuiz | null;
   isOpen: boolean;
   onClose: () => void;
   onComplete: (

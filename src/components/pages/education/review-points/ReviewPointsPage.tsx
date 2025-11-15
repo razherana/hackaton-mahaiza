@@ -4,7 +4,7 @@ import { ArrowLeft, Eye, CheckCircle, Circle, Target, Clock, BookMarked } from "
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
-import { sampleReviewPoints, toggleReviewPointLearned } from "./data/reviewPoints"
+import { getAllReviewPoints, getDocumentReviewPoints } from "@/data/education"
 import type { ReviewPoint } from "../analyse/types"
 import { useAnalysis } from "../analyse/context/useAnalysis"
 
@@ -109,18 +109,23 @@ export function ReviewPointsPage() {
   const navigate = useNavigate()
   const [searchParams] = useSearchParams()
   const { setIsPreviewOpen, setIsFloating, setCurrentHighlightRequest } = useAnalysis()
-  const [reviewPoints, setReviewPoints] = useState(sampleReviewPoints)
+  const [reviewPoints, setReviewPoints] = useState(getAllReviewPoints())
   const [filter, setFilter] = useState<'all' | 'learned' | 'unlearned'>('all')
   
   const documentId = searchParams.get('documentId')
 
   const pointsForDocument = documentId 
-    ? reviewPoints.filter(p => p.documentId === documentId)
+    ? getDocumentReviewPoints(documentId)
     : reviewPoints
 
   const handleToggleLearned = (pointId: string) => {
-    const updatedPoints = toggleReviewPointLearned(pointId)
-    setReviewPoints([...updatedPoints])
+    // Update the local state (in a real app this would update the central store)
+    const updatedPoints = reviewPoints.map(rp => 
+      rp.id === pointId 
+        ? { ...rp, isLearned: !rp.isLearned, lastReviewed: new Date().toISOString() }
+        : rp
+    )
+    setReviewPoints(updatedPoints)
   }
 
   const handleShowInPDF = (point: ReviewPoint) => {

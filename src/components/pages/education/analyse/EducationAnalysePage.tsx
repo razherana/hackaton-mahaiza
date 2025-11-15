@@ -5,8 +5,7 @@ import { AnalysisSidebar } from "./components/AnalysisSidebar"
 import { AnalysisContent } from "./components/AnalysisContent"
 import { PDFPreview } from "./components/PDFPreview"
 import type { DocumentAnalysisResult, EducationDocument } from "../import/types"
-import { getAnalysisByDocumentId } from "./data/analysisResults"
-import { documentDatas } from "../import/data/hub"
+import { getDocument, getDocumentAnalysis } from "@/data/education"
 
 function AnalysisPageContent() {
   const [searchParams] = useSearchParams()
@@ -17,8 +16,8 @@ function AnalysisPageContent() {
     const documentIdParam = searchParams.get("documentId")
     if (documentIdParam) {
       const documentId = parseInt(documentIdParam, 10)
-      const document = documentDatas.find(d => d.id === documentId)
-      const analysis = getAnalysisByDocumentId(documentId)
+      const document = getDocument(documentId)
+      const analysis = getDocumentAnalysis(documentId)
 
       if (document && analysis) {
         setSessionData({

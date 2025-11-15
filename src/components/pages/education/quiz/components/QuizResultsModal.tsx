@@ -1,7 +1,7 @@
 import { Trophy, BookOpen, Calendar } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
-import type { DocumentQuiz } from "../../analyse/data/quizData"
+import type { DocumentQuiz } from "@/data/education"
 import type { QuizProgress } from "../types"
 import { generateReviewNotes } from "../utils"
 

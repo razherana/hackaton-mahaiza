@@ -2,7 +2,7 @@ import { CheckCircle, Clock, Trophy } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import type { DocumentQuiz } from "../../analyse/data/quizData"
+import type { DocumentQuiz } from "@/data/education"
 import type { QuizProgress } from "../types"
 import { getScoreColor, getScoreBadgeVariant } from "../utils"
 

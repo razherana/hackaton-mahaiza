@@ -45,8 +45,8 @@ export function EducationImportPage() {
         // Simulate API call delay
         await new Promise(resolve => setTimeout(resolve, 2000))
 
-        // Import the simulation function dynamically to avoid issues
-        const { simulateAIAnalysis } = await import("../analyse/data/analysisResults")
+        // Import the simulation function from unified data
+        const { simulateAIAnalysis } = await import("@/data/education")
         const data: DocumentAnalysisResult = simulateAIAnalysis(selectedFile.name)
 
         setAnalysisResult(data)

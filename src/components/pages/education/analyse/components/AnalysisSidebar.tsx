@@ -35,7 +35,7 @@ export function AnalysisSidebar() {
             className="w-full justify-start gap-2 border-[#3a8a2a] text-white hover:bg-[#3a8a2a]"
           >
             <BookOpen className="h-4 w-4" />
-            Try Quiz
+            Essayer Quiz
           </Button>
 
           <Button

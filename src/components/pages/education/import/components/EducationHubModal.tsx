@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { FileText, Calendar, ArrowRight } from "lucide-react"
-import { documentDatas } from "../data/hub"
+import { getAllDocuments } from "@/data/education"
 import type { EducationDocument } from "../types"
 import {
   Dialog,
@@ -24,7 +24,7 @@ export function EducationHubModal({
   onOpenChange, 
   onSelectedDocument 
 }: EducationHubModalProps) {
-  const [docs] = useState(documentDatas)
+  const [docs] = useState(getAllDocuments())
 
   const handleDocumentSelect = (doc: EducationDocument) => {
     onSelectedDocument(doc)
