@@ -1,11 +1,9 @@
 import { ArrowLeft, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useNavigate, useSearchParams } from "react-router-dom"
-import { educationData, getDocumentQuiz } from "@/data/education"
-import type { DocumentQuiz } from "@/data/education"
+import { educationData, getDocumentQuiz, mockQuizProgress } from "@/data/education"
+import type { DocumentQuiz, QuizProgress } from "@/data/education"
 import { useState } from "react"
-import { mockQuizProgress } from "./data"
-import type { QuizProgress } from "./types"
 import { QuizModal, QuizCard, QuizResultsModal } from "./components"
 
 export function EducationQuizPage() {

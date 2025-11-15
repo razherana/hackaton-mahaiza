@@ -1,10 +1,10 @@
-import { useState, useRef, useCallback, useEffect } from "react"
+import { useState, useRef, useCallback, useEffect, useId } from "react"
 import { Minimize2, Move, Search, ChevronLeft, ChevronRight, ZoomIn, ZoomOut } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useAnalysis } from "../context/useAnalysis"
-import type { 
-  SearchResult, 
-  PDFDocumentProxy, 
+import type {
+  SearchResult,
+  PDFDocumentProxy,
   RenderTask
 } from "../types"
 import { drawHighlights, type TextMatch } from "../utils/pdfHighlights"
@@ -20,6 +20,8 @@ interface DragState {
 // PDF Viewer Component with search for floating window
 function FloatingPDFViewer({ fileName, className }: { fileName: string; className?: string }) {
   const { currentHighlightRequest } = useAnalysis()
+  const canvasKey = useId()
+  const highlightCanvasKey = useId()
   const [pdfDoc, setPdfDoc] = useState<PDFDocumentProxy | null>(null);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [totalPages, setTotalPages] = useState<number>(0);
@@ -30,12 +32,25 @@ function FloatingPDFViewer({ fileName, className }: { fileName: string; classNam
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>('');
   const [currentHighlights, setCurrentHighlights] = useState<TextMatch[]>([]);
-  const [isRendering, setIsRendering] = useState<boolean>(false);
+  const isRenderingRef = useRef(false);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const highlightCanvasRef = useRef<HTMLCanvasElement>(null);
   const renderTaskRef = useRef<RenderTask | null>(null);
   const scriptLoadedRef = useRef<boolean>(false);
   const currentRenderIdRef = useRef<number>(0);
+  const cancelRenderTask = useCallback(async () => {
+    if (renderTaskRef.current) {
+      try {
+        if (renderTaskRef.current.cancel) {
+          renderTaskRef.current.cancel();
+        }
+        await renderTaskRef.current.promise.catch(() => { });
+      } finally {
+        renderTaskRef.current = null;
+        isRenderingRef.current = false;
+      }
+    }
+  }, []);
 
   const loadPDFFromUrl = useCallback(async (url: string) => {
     if (!window.pdfjsLib) {
@@ -67,46 +82,32 @@ function FloatingPDFViewer({ fileName, className }: { fileName: string; classNam
     const renderId = ++currentRenderIdRef.current;
 
     // Cancel any existing render task
-    if (renderTaskRef.current) {
-      try {
-        // Try to cancel the render task if it has a cancel method
-        if (renderTaskRef.current.cancel) {
-          renderTaskRef.current.cancel();
-        }
-        // Wait for the promise to resolve/reject
-        await renderTaskRef.current.promise.catch(() => {
-          // Ignore cancellation errors
-        });
-      } catch {
-        // Ignore any errors from cancellation
-      }
-      renderTaskRef.current = null;
-    }
+    await cancelRenderTask();
 
     // Check if this render is still current
     if (currentRenderIdRef.current !== renderId) {
       return;
     }
 
-    if (isRendering) {
+    if (isRenderingRef.current) {
       return;
     }
 
     try {
-      setIsRendering(true);
+      isRenderingRef.current = true;
       const page = await pdf.getPage(pageNum);
       const canvas = canvasRef.current;
       const highlightCanvas = highlightCanvasRef.current;
 
       if (!canvas || !highlightCanvas) {
-        setIsRendering(false);
+        isRenderingRef.current = false;
         return;
       }
 
       const context = canvas.getContext('2d');
       const highlightContext = highlightCanvas.getContext('2d');
       if (!context || !highlightContext) {
-        setIsRendering(false);
+        isRenderingRef.current = false;
         return;
       }
 
@@ -144,14 +145,14 @@ function FloatingPDFViewer({ fileName, className }: { fileName: string; classNam
         drawHighlights(highlightContext, currentHighlights, viewport, scale);
       }
 
-      setIsRendering(false);
+      isRenderingRef.current = false;
     } catch (err) {
-      setIsRendering(false);
+      isRenderingRef.current = false;
       if (err && typeof err === 'object' && 'name' in err && err.name !== 'RenderingCancelledException') {
         setError(`Failed to render page: ${err instanceof Error ? err.message : 'Unknown error'}`);
       }
     }
-  }, [scale, currentHighlights, isRendering]);
+  }, [scale, currentHighlights, cancelRenderTask]);
 
   // Load PDF.js library
   useEffect(() => {
@@ -190,23 +191,17 @@ function FloatingPDFViewer({ fileName, className }: { fileName: string; classNam
       return () => {
         clearTimeout(timeoutId);
         // Cancel any ongoing render task
-        if (renderTaskRef.current) {
-          renderTaskRef.current.promise.catch(() => { });
-          renderTaskRef.current = null;
-        }
+        cancelRenderTask();
       };
     }
-  }, [pdfDoc, currentPage, renderPage, isLoading]);
+  }, [pdfDoc, currentPage, renderPage, isLoading, cancelRenderTask]);
 
   // Cleanup effect to cancel render tasks on unmount
   useEffect(() => {
     return () => {
-      if (renderTaskRef.current) {
-        renderTaskRef.current.promise.catch(() => { });
-        renderTaskRef.current = null;
-      }
+      cancelRenderTask();
     };
-  }, []);
+  }, [cancelRenderTask]);
 
   const goToPage = useCallback((pageNum: number, highlights: TextMatch[] = []) => {
     if (pdfDoc && pageNum >= 1 && pageNum <= totalPages) {
@@ -419,8 +414,9 @@ function FloatingPDFViewer({ fileName, className }: { fileName: string; classNam
             {/* PDF Canvas */}
             <div className="flex-1 bg-[#f5f5f5] overflow-auto">
               <div style={{ position: 'relative', display: 'inline-block' }}>
-                <canvas ref={canvasRef} className="mx-auto" />
+                <canvas key={canvasKey} ref={canvasRef} className="mx-auto" />
                 <canvas
+                  key={highlightCanvasKey}
                   ref={highlightCanvasRef}
                   className="mx-auto"
                   style={{

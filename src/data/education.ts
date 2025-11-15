@@ -1,4 +1,7 @@
-import type { EducationDocument, DocumentAnalysisResult } from "../components/pages/education/import/types";
+import type {
+  EducationDocument,
+  DocumentAnalysisResult,
+} from "../components/pages/education/import/types";
 import type { ReviewPoint } from "../components/pages/education/analyse/types";
 
 // Quiz related types
@@ -18,6 +21,14 @@ export interface DocumentQuiz {
   questions: QuizQuestion[];
 }
 
+export interface QuizProgress {
+  quizId: number;
+  completed: boolean;
+  score?: number;
+  totalQuestions?: number;
+  lastAttempt?: Date;
+}
+
 // Unified education data structure
 export interface EducationData {
   documents: EducationDocument[];
@@ -32,32 +43,45 @@ export const educationData: EducationData = {
     {
       id: 1,
       fileName: "Mathématiques_Algèbre_Base.pdf",
-      description: "Introduction aux concepts fondamentaux de l'algèbre, équations du premier degré et résolution de problèmes.",
+      description:
+        "Introduction aux concepts fondamentaux de l'algèbre, équations du premier degré et résolution de problèmes.",
       dateUploaded: new Date("2024-10-15"),
     },
     {
       id: 2,
       fileName: "Histoire_Madagascar_Colonisation.pdf",
-      description: "L'histoire de Madagascar pendant la période coloniale française (1896-1960) et les mouvements d'indépendance.",
+      description:
+        "L'histoire de Madagascar pendant la période coloniale française (1896-1960) et les mouvements d'indépendance.",
       dateUploaded: new Date("2024-11-02"),
     },
     {
       id: 3,
       fileName: "Physique_Mécanique_Classique.pdf",
-      description: "Cours de physique sur la mécanique classique : forces, mouvement et lois de Newton.",
+      description:
+        "Cours de physique sur la mécanique classique : forces, mouvement et lois de Newton.",
       dateUploaded: new Date("2024-11-08"),
     },
     {
       id: 4,
       fileName: "Économie_Madagascar_Développement.pdf",
-      description: "Analyse économique du développement de Madagascar : secteurs clés, défis et opportunités.",
+      description:
+        "Analyse économique du développement de Madagascar : secteurs clés, défis et opportunités.",
       dateUploaded: new Date("2024-11-10"),
     },
     {
       id: 5,
       fileName: "Littérature_Française_XIXe.pdf",
-      description: "Panorama de la littérature française du XIXe siècle : romantisme, réalisme et naturalisme.",
+      description:
+        "Panorama de la littérature française du XIXe siècle : romantisme, réalisme et naturalisme.",
       dateUploaded: new Date("2024-11-12"),
+    },
+    // --- NOUVEAU DOCUMENT AJOUTÉ (ID 6) ---
+    {
+      id: 6,
+      fileName: "Seconde guerre mondiale.pdf",
+      description:
+        "Analyse de la Seconde Guerre mondiale, de ses victoires à la violence de masse, et l'impact sur la France.",
+      dateUploaded: new Date("2025-11-15"),
     },
   ],
 
@@ -187,21 +211,50 @@ export const educationData: EducationData = {
         "Le XIXe siècle français révolutionne la littérature par sa diversité de mouvements et la richesse de ses œuvres.",
       createdAt: new Date("2024-11-12T11:30:00").toISOString(),
     },
+    // --- NOUVELLE ANALYSE AJOUTÉE (ID 6) ---
+    6: {
+      fileName: "Seconde guerre mondiale.pdf",
+      title: "H1-3 LA SECONDE GUERRE MONDIALE",
+      pageCount: 6,
+      wordCount: 2150,
+      readingTimeMinutes: 9,
+      keywords: [
+        "Seconde Guerre mondiale",
+        "violence de masse",
+        "génocide",
+        "Axe",
+        "Alliés",
+        "France",
+        "collaboration",
+        "résistance",
+        "Shoah",
+      ],
+      summaryParagraphs: [
+        "Ce document analyse la Seconde Guerre mondiale, un conflit débuté en 1939 caractérisé par la violence de masse et la volonté d'anéantissement.",
+        "Il aborde le plus grand génocide de l'histoire, celui des juifs et des tsiganes, de l'isolement dans les ghettos à la 'Solution finale' et la mort industrielle.",
+        "Enfin, le cours examine la France durant la guerre, choquée par la défaite de juin 1940 et déchirée entre le régime de collaboration de Vichy et les mouvements de Résistance.",
+      ],
+      excerpt:
+        "Ce conflit, bien plus encore que la Première Guerre mondiale, est caractérisé par la violence de masse et la volonté d'anéantir totalement l'adversaire.",
+      createdAt: new Date("2025-11-15T21:15:00").toISOString(),
+    },
   },
 
   quizzes: {
     1: {
       documentId: 1,
       title: "Quiz - Algèbre de Base",
-      description: "Testez vos connaissances sur les concepts fondamentaux de l'algèbre",
+      description:
+        "Testez vos connaissances sur les concepts fondamentaux de l'algèbre",
       questions: [
         {
           id: "math-1-1",
           question: "Quelle est la valeur de x dans l'équation 2x + 5 = 13 ?",
           options: ["3", "4", "5", "6"],
           correctAnswer: 1,
-          explanation: "En soustrayant 5 des deux côtés : 2x = 8, puis en divisant par 2 : x = 4",
-          difficulty: "easy"
+          explanation:
+            "En soustrayant 5 des deux côtés : 2x = 8, puis en divisant par 2 : x = 4",
+          difficulty: "easy",
         },
         {
           id: "math-1-2",
@@ -210,11 +263,12 @@ export const educationData: EducationData = {
             "Un nombre fixe",
             "Un symbole représentant une valeur inconnue",
             "Une opération mathématique",
-            "Une équation"
+            "Une équation",
           ],
           correctAnswer: 1,
-          explanation: "Une variable est un symbole (généralement une lettre) qui représente une valeur inconnue ou qui peut changer.",
-          difficulty: "easy"
+          explanation:
+            "Une variable est un symbole (généralement une lettre) qui représente une valeur inconnue ou qui peut changer.",
+          difficulty: "easy",
         },
         {
           id: "math-1-3",
@@ -223,48 +277,53 @@ export const educationData: EducationData = {
             "En additionnant 7 et soustrayant 2x",
             "En soustrayant 2x et additionnant 7",
             "En multipliant par 3",
-            "En divisant par x"
+            "En divisant par x",
           ],
           correctAnswer: 1,
           explanation: "3x - 7 = 2x + 5 → 3x - 2x = 5 + 7 → x = 12",
-          difficulty: "medium"
-        }
-      ]
+          difficulty: "medium",
+        },
+      ],
     },
 
     2: {
       documentId: 2,
       title: "Quiz - Histoire de Madagascar",
-      description: "Évaluez vos connaissances sur la période coloniale malgache",
+      description:
+        "Évaluez vos connaissances sur la période coloniale malgache",
       questions: [
         {
           id: "hist-2-1",
-          question: "En quelle année Madagascar devient-elle une colonie française ?",
+          question:
+            "En quelle année Madagascar devient-elle une colonie française ?",
           options: ["1894", "1896", "1898", "1900"],
           correctAnswer: 1,
-          explanation: "Madagascar devient officiellement une colonie française en 1896 après l'établissement du protectorat.",
-          difficulty: "easy"
+          explanation:
+            "Madagascar devient officiellement une colonie française en 1896 après l'établissement du protectorat.",
+          difficulty: "easy",
         },
         {
           id: "hist-2-2",
           question: "Quelle révolte marque le tournant vers l'indépendance ?",
           options: [
             "La révolte de 1945",
-            "La révolte de 1947", 
+            "La révolte de 1947",
             "La révolte de 1950",
-            "La révolte de 1955"
+            "La révolte de 1955",
           ],
           correctAnswer: 1,
-          explanation: "La révolte de 1947 constitue un événement majeur dans la lutte pour l'indépendance malgache.",
-          difficulty: "medium"
-        }
-      ]
+          explanation:
+            "La révolte de 1947 constitue un événement majeur dans la lutte pour l'indépendance malgache.",
+          difficulty: "medium",
+        },
+      ],
     },
 
     3: {
       documentId: 3,
       title: "Quiz - Mécanique Classique",
-      description: "Testez votre compréhension des lois de Newton et de la mécanique",
+      description:
+        "Testez votre compréhension des lois de Newton et de la mécanique",
       questions: [
         {
           id: "phys-3-1",
@@ -273,11 +332,12 @@ export const educationData: EducationData = {
             "F = ma",
             "Un objet au repos reste au repos sauf si une force agit sur lui",
             "À toute action correspond une réaction égale et opposée",
-            "L'énergie se conserve"
+            "L'énergie se conserve",
           ],
           correctAnswer: 1,
-          explanation: "La première loi de Newton, ou principe d'inertie, stipule qu'un objet conserve son état de mouvement sauf si une force extérieure agit sur lui.",
-          difficulty: "easy"
+          explanation:
+            "La première loi de Newton, ou principe d'inertie, stipule qu'un objet conserve son état de mouvement sauf si une force extérieure agit sur lui.",
+          difficulty: "easy",
         },
         {
           id: "phys-3-2",
@@ -286,14 +346,69 @@ export const educationData: EducationData = {
             "La première loi de Newton",
             "La deuxième loi de Newton",
             "La troisième loi de Newton",
-            "La loi de conservation de l'énergie"
+            "La loi de conservation de l'énergie",
           ],
           correctAnswer: 1,
-          explanation: "F = ma est la formulation mathématique de la deuxième loi de Newton, reliant force, masse et accélération.",
-          difficulty: "medium"
-        }
-      ]
-    }
+          explanation:
+            "F = ma est la formulation mathématique de la deuxième loi de Newton, reliant force, masse et accélération.",
+          difficulty: "medium",
+        },
+      ],
+    },
+    // --- NOUVEAU QUIZ AJOUTÉ (ID 4) ---
+    4: {
+      documentId: 6,
+      title: "Quiz - Seconde Guerre mondiale",
+      description:
+        "Testez vos connaissances sur les événements majeurs et les aspects de la 2nde Guerre mondiale.",
+      questions: [
+        {
+          id: "hist-6-1",
+          question:
+            "Quelle date marque le début officiel de la Seconde Guerre mondiale avec l'invasion de la Pologne ?",
+          options: [
+            "1er septembre 1939",
+            "7 décembre 1941",
+            "22 juin 1940",
+            "10 mai 1940",
+          ],
+          correctAnswer: 0,
+          explanation:
+            "L'Allemagne nazie envahit la Pologne le 1er septembre 1939, marquant le début officiel de la guerre en Europe.",
+          difficulty: "easy",
+        },
+        {
+          id: "hist-6-2",
+          question:
+            "Quelle conférence a officialisé la 'Solution finale' pour l'extermination des Juifs ?",
+          options: [
+            "Conférence de Téhéran",
+            "Conférence de Wannsee",
+            "Conférence de Yalta",
+            "Conférence de Potsdam",
+          ],
+          correctAnswer: 1,
+          explanation:
+            "La 'Solution finale' a été officialisée par Reinhard Heydrich lors de la conférence de Wannsee, le 20 janvier 1942.",
+          difficulty: "medium",
+        },
+        {
+          id: "hist-6-3",
+          question:
+            "Quel maréchal a pris les pleins pouvoirs en France le 10 juillet 1940 et mis en place la 'Révolution Nationale' ?",
+          options: [
+            "Charles de Gaulle",
+            "Paul Reynaud",
+            "Philippe Pétain",
+            "Pierre Laval",
+          ],
+          correctAnswer: 2,
+          explanation:
+            "Le maréchal Pétain prend les pleins pouvoirs le 10 juillet 1940 et met en place la Révolution Nationale, basée sur la devise 'Travail, Famille Patrie'.",
+          difficulty: "medium",
+        },
+      ],
+    },
   },
 
   reviewPoints: [
@@ -310,16 +425,17 @@ export const educationData: EducationData = {
       highlights: {
         searchText: "équation premier degré",
         page: 12,
-        matches: []
+        matches: [],
       },
-      createdAt: "2024-11-15T10:00:00Z"
+      createdAt: "2024-11-15T10:00:00Z",
     },
     {
-      id: "rp-2", 
+      id: "rp-2",
       documentId: "1",
       title: "Variables et constantes",
       description: "Différence entre variables et constantes en algèbre",
-      content: "Une variable (x, y, z) peut changer de valeur, une constante (5, π) reste fixe",
+      content:
+        "Une variable (x, y, z) peut changer de valeur, une constante (5, π) reste fixe",
       pageNumber: 5,
       isLearned: true,
       difficulty: "easy",
@@ -327,17 +443,18 @@ export const educationData: EducationData = {
       highlights: {
         searchText: "variables",
         page: 5,
-        matches: []
+        matches: [],
       },
       createdAt: "2024-11-14T15:30:00Z",
-      lastReviewed: "2024-11-15T09:15:00Z"
+      lastReviewed: "2024-11-15T09:15:00Z",
     },
     {
       id: "rp-3",
       documentId: "2",
       title: "Colonisation française - 1896",
       description: "Établissement du protectorat français à Madagascar",
-      content: "En 1896, la France établit officiellement son protectorat sur Madagascar après plusieurs années de négociations et conflits.",
+      content:
+        "En 1896, la France établit officiellement son protectorat sur Madagascar après plusieurs années de négociations et conflits.",
       pageNumber: 23,
       isLearned: false,
       difficulty: "medium",
@@ -345,16 +462,17 @@ export const educationData: EducationData = {
       highlights: {
         searchText: "1896 protectorat",
         page: 23,
-        matches: []
+        matches: [],
       },
-      createdAt: "2024-11-14T14:20:00Z"
+      createdAt: "2024-11-14T14:20:00Z",
     },
     {
       id: "rp-4",
       documentId: "3",
       title: "Première loi de Newton",
       description: "Principe d'inertie en mécanique classique",
-      content: "Un objet au repos reste au repos et un objet en mouvement reste en mouvement à vitesse constante, sauf si une force externe agit sur lui.",
+      content:
+        "Un objet au repos reste au repos et un objet en mouvement reste en mouvement à vitesse constante, sauf si une force externe agit sur lui.",
       pageNumber: 15,
       isLearned: false,
       difficulty: "medium",
@@ -362,19 +480,105 @@ export const educationData: EducationData = {
       highlights: {
         searchText: "première loi Newton",
         page: 15,
-        matches: []
+        matches: [],
       },
-      createdAt: "2024-11-13T16:45:00Z"
-    }
-  ]
+      createdAt: "2024-11-13T16:45:00Z",
+    },
+    // --- NOUVEAUX POINTS DE RÉVISION AJOUTÉS (DOC 6) ---
+    {
+      id: "rp-5",
+      documentId: "6",
+      title: "Opération Barbarossa",
+      description: "Invasion de l'URSS par l'Allemagne.",
+      content:
+        "Le 22 juin 1941, Hitler lance la guerre contre l'URSS (opération Barbarossa), l'armée rouge est débordée.",
+      pageNumber: 1,
+      isLearned: false,
+      difficulty: "medium",
+      category: "Histoire",
+      highlights: {
+        searchText: "opération Barbarossa",
+        page: 1,
+        matches: [],
+      },
+      createdAt: "2025-11-15T21:20:00Z",
+    },
+    {
+      id: "rp-6",
+      documentId: "6",
+      title: "Pearl Harbor",
+      description: "Attaque japonaise et entrée en guerre des USA.",
+      content:
+        "Le Japon lance un raid surprise sur la base de Pearl Harbor le 7 décembre 1941, poussant les États-Unis à entrer en guerre.",
+      pageNumber: 1,
+      isLearned: false,
+      difficulty: "easy",
+      category: "Histoire",
+      highlights: {
+        searchText: "Pearl Harbor",
+        page: 1,
+        matches: [],
+      },
+      createdAt: "2025-11-15T21:21:00Z",
+    },
+    {
+      id: "rp-7",
+      documentId: "6",
+      title: "Appel du 18 Juin",
+      description: "Appel à la Résistance par De Gaulle.",
+      content:
+        "Face à la défaite, le général De Gaulle lance le 18 juin 1940 de Londres un appel à la Résistance.",
+      pageNumber: 5,
+      isLearned: false,
+      difficulty: "easy",
+      category: "Histoire",
+      highlights: {
+        searchText: "18 juin 1940",
+        page: 5,
+        matches: [],
+      },
+      createdAt: "2025-11-15T21:22:00Z",
+    },
+  ],
 };
+
+// Simulated quiz progress data
+export const mockQuizProgress: QuizProgress[] = [
+  {
+    quizId: 1,
+    completed: true,
+    score: 8,
+    totalQuestions: 10,
+    lastAttempt: new Date("2024-11-10"),
+  },
+  {
+    quizId: 2,
+    completed: false,
+  },
+  {
+    quizId: 3,
+    completed: true,
+    score: 6,
+    totalQuestions: 8,
+    lastAttempt: new Date("2024-11-12"),
+  },
+  {
+    quizId: 4,
+    completed: true,
+    score: 10,
+    totalQuestions: 10,
+    lastAttempt: new Date("2024-11-14"),
+  },
+];
 
 // Helper functions to access data
 export const getDocument = (id: number): EducationDocument | undefined => {
-  return educationData.documents.find(doc => doc.id === id);
+  return educationData.documents.find((doc) => doc.id === id);
 };
 
-export const getDocumentAnalysis = (id: number): DocumentAnalysisResult | undefined => {
+export const getDocumentAnalysis = (
+  id: number
+): DocumentAnalysisResult | undefined => {
   return educationData.analysisResults[id];
 };
 
@@ -383,7 +587,9 @@ export const getDocumentQuiz = (id: number): DocumentQuiz | undefined => {
 };
 
 export const getDocumentReviewPoints = (documentId: string): ReviewPoint[] => {
-  return educationData.reviewPoints.filter(rp => rp.documentId === documentId);
+  return educationData.reviewPoints.filter(
+    (rp) => rp.documentId === documentId
+  );
 };
 
 export const getAllDocuments = (): EducationDocument[] => {
@@ -409,7 +615,7 @@ export function simulateAIAnalysis(fileName: string): DocumentAnalysisResult {
     summaryParagraphs: [
       "Ce document présente une analyse approfondie du sujet traité avec une méthodologie rigoureuse.",
       "Les résultats montrent des tendances intéressantes qui méritent une attention particulière.",
-      "Les conclusions ouvrent de nouvelles perspectives pour la recherche future."
+      "Les conclusions ouvrent de nouvelles perspectives pour la recherche future.",
     ],
     excerpt: "Analyse automatique générée par l'IA pour ce document.",
     createdAt: new Date().toISOString(),

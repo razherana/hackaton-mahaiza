@@ -1,11 +1,3 @@
-export interface QuizProgress {
-  quizId: number;
-  completed: boolean;
-  score?: number;
-  totalQuestions?: number;
-  lastAttempt?: Date;
-}
-
 export interface QuizResults {
   score: number;
   total: number;
