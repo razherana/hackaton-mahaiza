@@ -6,6 +6,25 @@ export interface AnalysisSessionData {
   analysis: DocumentAnalysisResult
 }
 
+// Review Points types
+export interface ReviewPoint {
+  id: string
+  title: string
+  description: string
+  content: string
+  pageNumber: number
+  isLearned: boolean
+  difficulty: 'easy' | 'medium' | 'hard'
+  category: string
+  highlights?: {
+    searchText: string
+    page: number
+    matches: TextMatch[]
+  }
+  createdAt: string
+  lastReviewed?: string
+}
+
 // PDF.js types
 export interface SearchResult {
   page: number;

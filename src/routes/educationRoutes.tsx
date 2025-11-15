@@ -3,6 +3,7 @@ import { EducationLayout } from "../components/layouts/EducationLayout";
 import { EducationImportPage } from "../components/pages/education/import";
 import { EducationAnalysePage } from "../components/pages/education/analyse";
 import { EducationQuizPage } from "../components/pages/education/quiz";
+import { ReviewPointsPage } from "../components/pages/education/review-points";
 
 export const educationRoutes: RouteObject[] = [
   {
@@ -20,5 +21,9 @@ export const educationRoutes: RouteObject[] = [
   {
     path: "education/quiz/",
     element: <EducationLayout><EducationQuizPage /></EducationLayout>
+  },
+  {
+    path: "education/review-points/",
+    element: <EducationLayout><ReviewPointsPage /></EducationLayout>
   },
 ];

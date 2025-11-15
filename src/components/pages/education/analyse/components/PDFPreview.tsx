@@ -12,6 +12,7 @@ import { drawHighlights, type TextMatch } from "../utils/pdfHighlights"
 
 // PDF Viewer Component with search
 function PDFViewer({ fileName, className }: { fileName: string; className?: string }) {
+  const { currentHighlightRequest } = useAnalysis()
   const [pdfDoc, setPdfDoc] = useState<PDFDocumentProxy | null>(null);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [totalPages, setTotalPages] = useState<number>(0);
@@ -200,14 +201,14 @@ function PDFViewer({ fileName, className }: { fileName: string; className?: stri
     };
   }, []);
 
-  const goToPage = (pageNum: number, highlights: TextMatch[] = []) => {
+  const goToPage = useCallback((pageNum: number, highlights: TextMatch[] = []) => {
     if (pdfDoc && pageNum >= 1 && pageNum <= totalPages) {
       setCurrentPage(pageNum);
       setCurrentHighlights(highlights);
     }
-  };
+  }, [pdfDoc, totalPages]);
 
-  const searchInPDF = async (text: string) => {
+  const searchInPDF = useCallback(async (text: string) => {
     if (!pdfDoc || !text.trim()) {
       setSearchResults([]);
       setCurrentHighlights([]);
@@ -266,7 +267,7 @@ function PDFViewer({ fileName, className }: { fileName: string; className?: stri
       setError(`Search failed: ${err instanceof Error ? err.message : 'Unknown error'}`);
       setIsSearching(false);
     }
-  };
+  }, [pdfDoc, totalPages, goToPage]);
 
   const handleSearch = () => {
     searchInPDF(searchText);
@@ -281,6 +282,22 @@ function PDFViewer({ fileName, className }: { fileName: string; className?: stri
     const newScale = Math.max(scale - 0.25, 0.5);
     setScale(newScale);
   };
+
+  // Handle highlight requests from external sources (like review points)
+  useEffect(() => {
+    if (currentHighlightRequest && pdfDoc) {
+      // Use setTimeout to avoid synchronous state update in effect
+      setTimeout(() => {
+        setSearchText(currentHighlightRequest.searchText)
+        if (currentHighlightRequest.page) {
+          goToPage(currentHighlightRequest.page, currentHighlightRequest.matches || [])
+        } else {
+          // Perform search if no specific page is provided
+          searchInPDF(currentHighlightRequest.searchText)
+        }
+      }, 0)
+    }
+  }, [currentHighlightRequest, pdfDoc, goToPage, searchInPDF])
 
   return (
     <div className={`h-screen bg-[#0f0f0f] ${className}`}>

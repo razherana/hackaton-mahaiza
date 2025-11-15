@@ -1,4 +1,4 @@
-import { BookOpen, Eye, EyeOff, LogOut } from "lucide-react"
+import { BookOpen, Eye, EyeOff, LogOut, BookMarked } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useAnalysis } from "../context/useAnalysis"
 import {
@@ -36,6 +36,15 @@ export function AnalysisSidebar() {
           >
             <BookOpen className="h-4 w-4" />
             Try Quiz
+          </Button>
+
+          <Button
+            onClick={() => navigate(sessionData?.document?.id ? `/education/review-points?documentId=${sessionData.document.id}` : "/education/review-points")}
+            variant="outline"
+            className="w-full justify-start gap-2 border-[#3a8a2a] text-white hover:bg-[#3a8a2a]"
+          >
+            <BookMarked className="h-4 w-4" />
+            Points à réviser
           </Button>
         </div>
 
