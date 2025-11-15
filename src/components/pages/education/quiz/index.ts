@@ -1,0 +1,1 @@
+export { EducationQuizPage } from "./EducationQuizPage"

@@ -13,4 +13,8 @@ export const educationRoutes: RouteObject[] = [
     path: "education/analyse/",
     element: await import("../components/pages/education/analyse").then(module => <module.EducationAnalysePage />)
   },
+  {
+    path: "education/quiz/",
+    element: await import("../components/pages/education/quiz").then(module => <module.EducationQuizPage />)
+  },
 ];

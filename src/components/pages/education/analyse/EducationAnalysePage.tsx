@@ -52,7 +52,7 @@ function AnalysisPageContent() {
   }, [searchParams, setSessionData])
 
   return (
-    <div className="flex h-screen w-full bg-[#0f0f0f] text-[#f5f5f5]">
+    <div className="flex h-screen w-full bg-[#1b1b1b] text-white">
       <AnalysisSidebar />
       <AnalysisContent />
       <PDFPreview />

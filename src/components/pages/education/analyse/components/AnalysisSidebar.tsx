@@ -12,7 +12,7 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 export function AnalysisSidebar() {
-  const { isPreviewOpen, setIsPreviewOpen } = useAnalysis()
+  const { isPreviewOpen, setIsPreviewOpen, sessionData } = useAnalysis()
   const [isQuitDialogOpen, setIsQuitDialogOpen] = useState(false)
   const navigate = useNavigate()
 
@@ -23,15 +23,16 @@ export function AnalysisSidebar() {
 
   return (
     <>
-      <aside className="w-64 border-r border-[#2a2a2a] bg-[#1a1a1a] py-6 px-4 flex flex-col gap-4 h-full">
+      <aside className="w-64 border-r border-[#3a8a2a] bg-[#1b1b1b] py-6 px-4 flex flex-col gap-4 h-full">
         <div className="space-y-2">
-          <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-[#b0b0b0] px-2">
+          <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-white px-2">
             Apprendre
           </h3>
 
           <Button
+            onClick={() => navigate(sessionData?.document?.id ? `/education/quiz?documentId=${sessionData.document.id}` : "/education/quiz")}
             variant="outline"
-            className="w-full justify-start gap-2 border-[#2a2a2a] text-[#f5f5f5] hover:bg-[#2a2a2a]"
+            className="w-full justify-start gap-2 border-[#3a8a2a] text-white hover:bg-[#3a8a2a]"
           >
             <BookOpen className="h-4 w-4" />
             Try Quiz
@@ -39,14 +40,14 @@ export function AnalysisSidebar() {
         </div>
 
         <div className="space-y-2 mt-3">
-          <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-[#b0b0b0] px-2">
+          <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-white px-2">
             Options
           </h3>
 
           <Button
             onClick={() => setIsPreviewOpen(!isPreviewOpen)}
             variant="outline"
-            className="w-full justify-start gap-2 border-[#2a2a2a] text-[#f5f5f5] hover:bg-[#2a2a2a]"
+            className="w-full justify-start gap-2 border-[#3a8a2a] text-white hover:bg-[#3a8a2a]"
           >
             {isPreviewOpen ? (
               <>
@@ -62,11 +63,11 @@ export function AnalysisSidebar() {
           </Button>
         </div>
 
-        <div className="mt-auto space-y-2 pt-4 border-t border-[#2a2a2a]">
+        <div className="mt-auto space-y-2 pt-4 border-t border-[#3a8a2a]">
           <Button
             onClick={() => setIsQuitDialogOpen(true)}
             variant="outline"
-            className="w-full justify-start gap-2 border-[#2a2a2a] text-red-400 hover:bg-red-400/10 hover:text-red-400"
+            className="w-full justify-start gap-2 border-[#3a8a2a] text-[#3a8a2a] hover:bg-[#3a8a2a] hover:text-white"
           >
             <LogOut className="h-4 w-4" />
             Quitter la session
@@ -75,10 +76,10 @@ export function AnalysisSidebar() {
       </aside>
 
       <Dialog open={isQuitDialogOpen} onOpenChange={setIsQuitDialogOpen}>
-        <DialogContent className="bg-[#1a1a1a] border-[#2a2a2a] text-[#f5f5f5]">
+        <DialogContent className="bg-[#1b1b1b] border-[#3a8a2a] text-white">
           <DialogHeader>
-            <DialogTitle className="text-[#f5f5f5]">Quitter la session</DialogTitle>
-            <DialogDescription className="text-[#b0b0b0]">
+            <DialogTitle className="text-white">Quitter la session</DialogTitle>
+            <DialogDescription className="text-white">
               Êtes-vous sûr de vouloir quitter ? Vos données de session seront perdues.
             </DialogDescription>
           </DialogHeader>
@@ -86,13 +87,13 @@ export function AnalysisSidebar() {
             <Button
               onClick={() => setIsQuitDialogOpen(false)}
               variant="outline"
-              className="border-[#2a2a2a] text-[#f5f5f5] hover:bg-[#2a2a2a]"
+              className="border-[#3a8a2a] text-white hover:bg-[#3a8a2a]"
             >
               Annuler
             </Button>
             <Button
               onClick={handleQuitConfirm}
-              className="bg-red-600 text-white hover:bg-red-700"
+              className="bg-[#3a8a2a] text-white hover:bg-[#3a8a2a]"
             >
               Quitter
             </Button>
