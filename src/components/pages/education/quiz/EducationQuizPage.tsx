@@ -34,9 +34,10 @@ export function EducationQuizPage() {
     }
   }
 
-  const handleQuizComplete = (score: number, totalQuestions: number, matchPercentage: number) => {
+  const handleQuizComplete = (score: number, totalQuestions: number, matchPercentage: number, reviewNotes: string[]) => {
     // Here you would typically save the quiz results to your backend/state management
     console.log(`Quiz completed: ${score}/${totalQuestions}, ${matchPercentage}% match`)
+    console.log("Review notes:", reviewNotes)
     // You could update the mockQuizProgress or trigger a refetch of quiz data
   }
 

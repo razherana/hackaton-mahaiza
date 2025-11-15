@@ -1,9 +1,9 @@
 import { useState } from "react"
-import { Trophy, Loader2 } from "lucide-react"
+import { Trophy, Loader2, BookOpen } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import type { QuizModalProps, QuizResults } from "../types"
-import { calculateQuizScore, generateMatchPercentage } from "../utils"
+import { calculateQuizScore, generateMatchPercentage, generateReviewNotes } from "../utils"
 
 export function QuizModal({ quiz, isOpen, onClose, onComplete }: QuizModalProps) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
@@ -56,14 +56,16 @@ export function QuizModal({ quiz, isOpen, onClose, onComplete }: QuizModalProps)
     // Simulate processing time
     await new Promise(resolve => setTimeout(resolve, 2000))
 
-    // Calculate score
+    // Calculate score and generate review notes
     const { score, total } = calculateQuizScore(quiz.questions, selectedAnswers)
     const matchPercentage = generateMatchPercentage()
+    const reviewNotes = generateReviewNotes(quiz.questions, selectedAnswers)
 
     const finalResults: QuizResults = {
       score,
       total,
-      matchPercentage
+      matchPercentage,
+      reviewNotes
     }
 
     setResults(finalResults)
@@ -73,7 +75,7 @@ export function QuizModal({ quiz, isOpen, onClose, onComplete }: QuizModalProps)
 
   const handleFinish = () => {
     if (results) {
-      onComplete(results.score, results.total, results.matchPercentage)
+      onComplete(results.score, results.total, results.matchPercentage, results.reviewNotes)
       resetQuizState()
       onClose()
     }
@@ -115,6 +117,21 @@ export function QuizModal({ quiz, isOpen, onClose, onComplete }: QuizModalProps)
               </div>
               <div className="text-xs text-white mt-1">
                 Vos réponses correspondent bien au contenu analysé
+              </div>
+            </div>
+
+            {/* Review Notes */}
+            <div className="bg-[#2a2a2a] rounded-lg p-4">
+              <div className="flex items-center gap-2 mb-3">
+                <BookOpen className="h-5 w-5 text-[#3a8a2a]" />
+                <span className="font-medium text-white">Points à réviser</span>
+              </div>
+              <div className="space-y-2">
+                {results.reviewNotes.map((note, index) => (
+                  <div key={index} className="text-sm text-white bg-[#1b1b1b] rounded p-2">
+                    {note}
+                  </div>
+                ))}
               </div>
             </div>
 
