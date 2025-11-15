@@ -2,57 +2,13 @@ import React, { useState, useRef, useCallback, useEffect } from "react"
 import { Maximize2, Search, ChevronLeft, ChevronRight, ZoomIn, ZoomOut } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useAnalysis } from "../context/useAnalysis"
-import type { AnalysisSessionData } from "../types"
-import { drawHighlights, type TextMatch, type PDFViewport } from "../utils/pdfHighlights"
-
-// PDF.js types
-interface SearchResult {
-  page: number;
-  preview: string;
-  matches: TextMatch[];
-}
-
-interface PDFDocumentProxy {
-  numPages: number;
-  getPage: (pageNumber: number) => Promise<PDFPageProxy>;
-}
-
-interface PDFPageProxy {
-  getViewport: (params: { scale: number }) => PDFViewport;
-  render: (params: RenderParameters) => RenderTask;
-  getTextContent: () => Promise<TextContent>;
-}
-
-interface RenderParameters {
-  canvasContext: CanvasRenderingContext2D;
-  viewport: PDFViewport;
-}
-
-interface RenderTask {
-  promise: Promise<void>;
-}
-
-interface TextContent {
-  items: Array<{
-    str: string;
-    transform: number[];
-    width: number;
-    height: number;
-  }>;
-}
-
-declare global {
-  interface Window {
-    pdfjsLib: {
-      GlobalWorkerOptions: {
-        workerSrc: string;
-      };
-      getDocument: (params: { data: ArrayBuffer }) => {
-        promise: Promise<PDFDocumentProxy>;
-      };
-    };
-  }
-}
+import type {
+  AnalysisSessionData,
+  SearchResult,
+  PDFDocumentProxy,
+  RenderTask
+} from "../types"
+import { drawHighlights, type TextMatch } from "../utils/pdfHighlights"
 
 // PDF Viewer Component with search
 function PDFViewer({ fileName, className }: { fileName: string; className?: string }) {
@@ -71,6 +27,7 @@ function PDFViewer({ fileName, className }: { fileName: string; className?: stri
   const highlightCanvasRef = useRef<HTMLCanvasElement>(null);
   const renderTaskRef = useRef<RenderTask | null>(null);
   const scriptLoadedRef = useRef<boolean>(false);
+  const currentRenderIdRef = useRef<number>(0);
 
   const loadPDFFromUrl = useCallback(async (url: string) => {
     if (!window.pdfjsLib) {
@@ -98,13 +55,29 @@ function PDFViewer({ fileName, className }: { fileName: string; className?: stri
   }, []);
 
   const renderPage = useCallback(async (pdf: PDFDocumentProxy, pageNum: number) => {
+    // Generate a unique render ID for this render operation
+    const renderId = ++currentRenderIdRef.current;
+
+    // Cancel any existing render task
     if (renderTaskRef.current) {
       try {
-        renderTaskRef.current.promise.catch(() => { });
+        // Try to cancel the render task if it has a cancel method
+        if (renderTaskRef.current.cancel) {
+          renderTaskRef.current.cancel();
+        }
+        // Wait for the promise to resolve/reject
+        await renderTaskRef.current.promise.catch(() => {
+          // Ignore cancellation errors
+        });
       } catch {
-        // Ignore
+        // Ignore any errors from cancellation
       }
       renderTaskRef.current = null;
+    }
+
+    // Check if this render is still current
+    if (currentRenderIdRef.current !== renderId) {
+      return;
     }
 
     if (isRendering) {
@@ -147,7 +120,16 @@ function PDFViewer({ fileName, className }: { fileName: string; className?: stri
       renderTaskRef.current = renderTask;
 
       await renderTask.promise;
-      renderTaskRef.current = null;
+
+      // Only proceed if this render is still current
+      if (currentRenderIdRef.current !== renderId) {
+        return;
+      }
+
+      // Only proceed if this is still the current render task
+      if (renderTaskRef.current === renderTask) {
+        renderTaskRef.current = null;
+      }
 
       // Draw highlights if any for current page
       if (currentHighlights.length > 0) {
@@ -197,9 +179,26 @@ function PDFViewer({ fileName, className }: { fileName: string; className?: stri
       const timeoutId = setTimeout(() => {
         renderPage(pdfDoc, currentPage);
       }, 0);
-      return () => clearTimeout(timeoutId);
+      return () => {
+        clearTimeout(timeoutId);
+        // Cancel any ongoing render task
+        if (renderTaskRef.current) {
+          renderTaskRef.current.promise.catch(() => { });
+          renderTaskRef.current = null;
+        }
+      };
     }
   }, [pdfDoc, currentPage, renderPage, isLoading]);
+
+  // Cleanup effect to cancel render tasks on unmount
+  useEffect(() => {
+    return () => {
+      if (renderTaskRef.current) {
+        renderTaskRef.current.promise.catch(() => { });
+        renderTaskRef.current = null;
+      }
+    };
+  }, []);
 
   const goToPage = (pageNum: number, highlights: TextMatch[] = []) => {
     if (pdfDoc && pageNum >= 1 && pageNum <= totalPages) {
@@ -454,7 +453,7 @@ function PDFContent({
   const documentTitle = sessionData.analysis?.title || sessionData.document.fileName
 
   return (
-    <div className="h-full flex flex-col">
+    <div className="h-screen flex flex-col overflow-hidden">
       <div className="p-4 border-b border-[#2a2a2a] bg-[#1a1a1a]">
         <div className="flex items-center justify-between">
           <div className="flex-1 min-w-0">
