@@ -6,13 +6,15 @@ import type { DocumentQuiz } from "../analyse/data/quizData"
 import { useState } from "react"
 import { mockQuizProgress } from "./data"
 import type { QuizProgress } from "./types"
-import { QuizModal, QuizCard } from "./components"
+import { QuizModal, QuizCard, QuizResultsModal } from "./components"
 
 export function EducationQuizPage() {
   const navigate = useNavigate()
   const [searchParams] = useSearchParams()
   const [selectedQuiz, setSelectedQuiz] = useState<DocumentQuiz | null>(null)
   const [isQuizModalOpen, setIsQuizModalOpen] = useState(false)
+  const [isResultsModalOpen, setIsResultsModalOpen] = useState(false)
+  const [selectedQuizProgress, setSelectedQuizProgress] = useState<QuizProgress | null>(null)
 
   // Get documentId from URL parameters if available
   const currentDocumentId = searchParams.get("documentId") ? parseInt(searchParams.get("documentId")!, 10) : null
@@ -28,9 +30,19 @@ export function EducationQuizPage() {
 
   const handleStartQuiz = (quizId: number) => {
     const quiz = Object.values(hardcodedQuizzes).find(q => q.documentId === quizId)
+    const progress = getQuizProgress(quizId)
+    
     if (quiz) {
       setSelectedQuiz(quiz)
-      setIsQuizModalOpen(true)
+      
+      // If quiz is completed, show results modal
+      if (progress?.completed) {
+        setSelectedQuizProgress(progress)
+        setIsResultsModalOpen(true)
+      } else {
+        // If quiz is not completed, show quiz modal
+        setIsQuizModalOpen(true)
+      }
     }
   }
 
@@ -44,6 +56,12 @@ export function EducationQuizPage() {
   const handleCloseModal = () => {
     setIsQuizModalOpen(false)
     setSelectedQuiz(null)
+  }
+
+  const handleCloseResultsModal = () => {
+    setIsResultsModalOpen(false)
+    setSelectedQuiz(null)
+    setSelectedQuizProgress(null)
   }
 
   return (
@@ -128,6 +146,14 @@ export function EducationQuizPage() {
         isOpen={isQuizModalOpen}
         onClose={handleCloseModal}
         onComplete={handleQuizComplete}
+      />
+
+      {/* Quiz Results Modal */}
+      <QuizResultsModal
+        quiz={selectedQuiz}
+        progress={selectedQuizProgress}
+        isOpen={isResultsModalOpen}
+        onClose={handleCloseResultsModal}
       />
     </div>
   )
