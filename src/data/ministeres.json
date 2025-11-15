@@ -1,0 +1,74 @@
+[
+  {
+    "id": "min-education",
+    "name": "Ministère de l'Éducation Nationale",
+    "type": "ministere",
+    "link": "/ministeres/education",
+    "newsFile": "ministere-education.json",
+    "image": "/images/education.png"
+  },
+  {
+    "id": "min-sante",
+    "name": "Ministère de la Santé Publique",
+    "type": "ministere",
+    "link": "/ministeres/sante",
+    "newsFile": "ministere-sante.json",
+    "image": "/images/sante.png"
+  },
+  {
+    "id": "min-finances",
+    "name": "Ministère de l'Économie et des Finances",
+    "type": "ministere",
+    "link": "/ministeres/finances",
+    "newsFile": "ministere-finances.json",
+    "image": "/images/finances.png"
+  },
+  {
+    "id": "min-justice",
+    "name": "Ministère de la Justice",
+    "type": "ministere",
+    "link": "/ministeres/justice",
+    "newsFile": "ministere-justice.json",
+    "image": "/images/justice.png"
+  },
+  {
+    "id": "min-interieur",
+    "name": "Ministère de l'Intérieur et de la Décentralisation",
+    "type": "ministere",
+    "link": "/ministeres/interieur",
+    "newsFile": "ministere-interieur.json",
+    "image": "/images/interieur.png"
+  },
+  {
+    "id": "min-transport",
+    "name": "Ministère des Transports et de la Météorologie",
+    "type": "ministere",
+    "link": "/ministeres/transport",
+    "newsFile": "ministere-transport.json",
+    "image": "/images/transport.png"
+  },
+  {
+    "id": "instit-presidence",
+    "name": "Présidence de la République",
+    "type": "institution",
+    "link": "/institutions/presidence",
+    "newsFile": "presidence.json",
+      "image": "/images/presidence.png"
+  },
+  {
+    "id": "instit-assemblee",
+    "name": "Assemblée Nationale",
+    "type": "institution",
+    "link": "/institutions/assemblee",
+    "newsFile": "assemblee.json",
+    "image": "/images/assemblee.png"
+  },
+  {
+    "id": "instit-senat",
+    "name": "Sénat",
+    "type": "institution",
+    "link": "/institutions/senat",
+    "newsFile": "senat.json",
+      "image": "/images/senat.png"
+  }
+]

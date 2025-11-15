@@ -34,9 +34,9 @@ const modules = [
     icon: BookOpenCheck
   },
   {
-    title: "Newspaper avec l'IA",
+    title: "ActuFlash",
     subtitle: "Fil d'actualité intelligent",
-    link: '',
+    link: '/actuflash',
     description:
       "Visionne les nouvelles essentielles classées par thématique avec résumés et explications pour aller droit au but.",
     points: [
@@ -48,9 +48,9 @@ const modules = [
     icon: Newspaper
   },
   {
-    title: "PolityVerse",
+    title: "Quiz Politique & Économique",
     subtitle: "Madagascar en action",
-    link: '/polity-verse',
+    link: '',
     description:
       "Renforcez votre culture civique avec des QCM, des jeux sur la politique et l'économie malgache.",
     points: [

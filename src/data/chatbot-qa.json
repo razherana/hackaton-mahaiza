@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "question": "Qu'est-ce qu'ActuFlash IA ?",
+    "answer": "ActuFlash IA est une plateforme qui centralise toutes les actualités des ministères et institutions de Madagascar. Vous pouvez consulter les dernières informations officielles de 6 ministères et 3 institutions nationales, le tout dans une interface moderne et facile à utiliser.",
+    "keywords": ["actuflash", "plateforme", "actualité", "ministères", "madagascar"]
+  },
+  {
+    "id": 2,
+    "question": "Quels ministères sont couverts ?",
+    "answer": "ActuFlash IA couvre 6 ministères malgaches : Éducation Nationale, Santé Publique, Finances et Budget, Justice, Intérieur et Décentralisation, et Transport. Nous couvrons également 3 institutions : la Présidence, l'Assemblée Nationale et le Sénat.",
+    "keywords": ["ministères", "couverture", "institutions", "liste"]
+  },
+  {
+    "id": 3,
+    "question": "Comment naviguer sur ActuFlash ?",
+    "answer": "C'est très simple ! Sur la page d'accueil ActuFlash, vous verrez des cartes pour chaque ministère et institution. Cliquez sur celle qui vous intéresse pour voir la liste des actualités. Ensuite, cliquez sur un article pour lire le contenu complet avec images et détails.",
+    "keywords": ["navigation", "utilisation", "comment", "guide"]
+  },
+  {
+    "id": 4,
+    "question": "Puis-je rechercher des articles spécifiques ?",
+    "answer": "Oui ! Sur chaque page de ministère, vous trouverez une barre de recherche en haut. Tapez des mots-clés et les articles seront filtrés en temps réel. Vous pouvez aussi trier par date (plus récents ou plus anciens).",
+    "keywords": ["recherche", "filtrer", "trouver", "articles"]
+  },
+  {
+    "id": 5,
+    "question": "Les actualités sont-elles mises à jour régulièrement ?",
+    "answer": "Absolument ! ActuFlash IA fonctionne 24/7 pour vous apporter les informations les plus récentes. Chaque article affiche sa date de publication, et vous pouvez toujours voir les dernières nouvelles en premier grâce au tri par date.",
+    "keywords": ["mise à jour", "fréquence", "actualisation", "nouvelles"]
+  },
+  {
+    "id": 6,
+    "question": "Qui suis-je ?",
+    "answer": "Je m'appelle Lummy, votre assistant virtuel lémurien ! 🐵 Je suis là pour vous aider à naviguer sur ActuFlash IA, répondre à vos questions sur les actualités malgaches et vous guider dans votre exploration de la plateforme Mahaiza.",
+    "keywords": ["lummy", "assistant", "qui", "identité", "présentation"]
+  },
+  {
+    "id": 7,
+    "question": "Qu'est-ce que la plateforme Mahaiza ?",
+    "answer": "Mahaiza est une plateforme éducative innovante qui comprend trois modules : TurboCours IA (cours accélérés), ActuFlash IA (actualités gouvernementales) et Civique Challenge Mada (quiz sur la citoyenneté). C'est un écosystème complet pour apprendre et rester informé !",
+    "keywords": ["mahaiza", "plateforme", "modules", "éducation"]
+  },
+  {
+    "id": 8,
+    "question": "Comment puis-je contacter les ministères ?",
+    "answer": "Chaque page de ministère sur ActuFlash IA contient des informations sur l'institution. Pour des contacts officiels, je vous recommande de visiter les sites web officiels des ministères ou de consulter les communiqués de presse qui incluent souvent des coordonnées.",
+    "keywords": ["contact", "ministère", "coordonnées", "joindre"]
+  },
+  {
+    "id": 9,
+    "question": "Puis-je partager des articles ?",
+    "answer": "Bien sûr ! Chaque article dispose d'options de partage. Vous pouvez facilement partager les informations importantes avec vos proches, collègues ou sur les réseaux sociaux pour diffuser les actualités officielles.",
+    "keywords": ["partager", "partage", "diffuser", "réseaux sociaux"]
+  },
+  {
+    "id": 10,
+    "question": "Y a-t-il une version mobile ?",
+    "answer": "ActuFlash IA est entièrement responsive ! Que vous soyez sur ordinateur, tablette ou smartphone, l'interface s'adapte parfaitement à votre écran. Vous pouvez consulter les actualités n'importe où, n'importe quand.",
+    "keywords": ["mobile", "responsive", "smartphone", "tablette", "adaptation"]
+  },
+  {
+    "id": 11,
+    "question": "Comment fonctionne le tri par date ?",
+    "answer": "Sur chaque page de ministère, vous verrez un menu déroulant de filtrage. Choisissez 'Plus récentes' pour voir les derniers articles en premier, ou 'Plus anciennes' pour remonter dans le temps. Le tri est instantané !",
+    "keywords": ["tri", "date", "filtrage", "ordre", "chronologique"]
+  },
+  {
+    "id": 12,
+    "question": "Que faire si je ne trouve pas l'information recherchée ?",
+    "answer": "N'hésitez pas à utiliser la barre de recherche avec différents mots-clés, ou à explorer les différents ministères. Vous pouvez aussi me poser la question directement, et je ferai de mon mieux pour vous orienter vers les bonnes ressources !",
+    "keywords": ["aide", "support", "problème", "information"]
+  }
+]

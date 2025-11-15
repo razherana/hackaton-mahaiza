@@ -1,0 +1,68 @@
+[
+  {
+    "id": "instit-presidence",
+    "name": "Présidence de la République",
+    "news": [
+      {
+        "id": "pres-001",
+        "title": "🇲🇬 Discours à la Nation : éducation, santé et guerre à la corruption !",
+        "date": "2025-11-12",
+        "author": "Présidence de la République",
+        "category": "Politique Générale",
+        "summary": "Le Chef de l'État présente sa vision pour 2026 lors d'une allocution télévisée solennelle, détaillant les grandes orientations stratégiques pour le développement du pays.",
+        "image": "/images/presidence.png",
+        "images": [
+          "/images/presidence.png"
+        ],
+        "sections": [
+          {
+            "title": "Un discours de vision pour l'avenir de Madagascar",
+            "content": "Le Président de la République a prononcé ce 12 novembre 2025 son discours annuel sur l'état de la Nation depuis le Palais d'Iavoloha. Pendant près de deux heures, devant les membres du gouvernement, les parlementaires, le corps diplomatique et des millions de téléspectateurs, le Chef de l'État a dressé le bilan de l'année écoulée et présenté sa feuille de route pour 2026.\n\nCe discours attendu intervient dans un contexte économique favorable avec une croissance du PIB de 5,2% en 2025, la plus élevée depuis dix ans. Le Président a salué les efforts du gouvernement et du peuple malgache qui ont permis de redresser l'économie malgré les défis mondiaux. Cependant, il a reconnu que beaucoup reste à faire pour améliorer les conditions de vie de tous les citoyens.\n\nLe ton était à la fois solennel et optimiste. Le Président a affirmé sa détermination à poursuivre les réformes structurelles entamées et à accélérer la transformation du pays. Il a lancé un appel à l'unité nationale, rappelant que seul le travail collectif permettra de bâtir le Madagascar que mérite chaque Malgache."
+          },
+          {
+            "title": "Éducation : priorité absolue pour le capital humain",
+            "content": "L'éducation a été placée au cœur du discours présidentiel. Le Chef de l'État a annoncé une augmentation de 30% du budget de l'éducation pour 2026, représentant désormais 24% du budget national. Cette enveloppe financera la construction de 500 nouvelles écoles, la réhabilitation de 1 000 établissements existants et le recrutement de 10 000 enseignants.\n\nLe Président a dévoilé un programme ambitieux de bourses scolaires qui bénéficiera à 500 000 élèves issus de familles défavorisées, de la primaire à l'université. L'objectif est d'atteindre un taux de scolarisation de 100% au primaire et de réduire l'abandon scolaire de 50% d'ici 2027. Chaque enfant malgache doit avoir accès à une éducation de qualité, sans distinction.\n\nLa révolution numérique dans l'éducation a également été annoncée avec la distribution de 100 000 tablettes éducatives et la connexion internet de 1 500 écoles. Le Président a insisté sur l'importance de former la jeunesse aux métiers du futur : informatique, énergies renouvelables, agriculture moderne et tourisme durable."
+          },
+          {
+            "title": "Santé publique : vers la couverture universelle",
+            "content": "Le deuxième pilier du discours concernait la santé publique. Le Président a annoncé le lancement d'un système de couverture maladie universelle qui débutera en 2026 avec un objectif de couvrir 2 millions de personnes la première année, puis progressivement toute la population d'ici 2030. Cette assurance santé garantira l'accès gratuit aux soins de base et aux médicaments essentiels.\n\nLe programme prévoit la construction de 50 nouveaux centres de santé de base dans les zones rurales mal desservies et l'équipement de 15 hôpitaux régionaux avec des technologies médicales modernes. Le recrutement de 2 000 professionnels de santé (médecins, infirmiers, sages-femmes) permettra de rapprocher les soins des populations isolées.\n\nLe Président a également insisté sur la prévention avec le renforcement des campagnes de vaccination contre les maladies évitables. Un plan national de lutte contre la malnutrition infantile sera mis en œuvre avec la distribution gratuite de compléments nutritionnels dans les régions les plus touchées. La santé est un droit fondamental que l'État doit garantir à tous."
+          },
+          {
+            "title": "Lutte implacable contre la corruption",
+            "content": "Le troisième axe majeur du discours présidentiel était la lutte sans merci contre la corruption, qualifiée d'ennemi numéro un du développement. Le Chef de l'État a annoncé la création d'une Haute Autorité Anticorruption indépendante dotée de pouvoirs d'investigation et de poursuites. Cette institution sera composée de magistrats intègres et bénéficiera d'un budget propre pour garantir son autonomie.\n\nDes mesures drastiques seront prises : obligation de déclaration de patrimoine pour tous les hauts fonctionnaires et élus, sanctions exemplaires pouvant aller jusqu'à 20 ans de prison pour les cas de grande corruption, confiscation des biens mal acquis. Le Président a promis qu'aucune personnalité, quelle que soit sa position, ne sera protégée si elle est impliquée dans des actes de corruption.\n\nUn système de dénonciation protégée sera mis en place permettant aux citoyens de signaler les cas de corruption en toute sécurité. Les lanceurs d'alerte bénéficieront d'une protection légale et pourront recevoir une partie des montants récupérés. Le Président a conclu sur ce point en affirmant que la confiance entre l'État et les citoyens ne peut se reconstruire que sur la base de la transparence et de l'intégrité absolues."
+          }
+        ]
+      },
+      {
+        "id": "pres-002",
+        "title": "🇫🇷 Madagascar-France : 300 millions d'euros d'accords signés à Paris",
+        "date": "2025-10-28",
+        "author": "Cabinet Présidentiel",
+        "category": "Relations Internationales",
+        "summary": "Visite d'État du Président malgache en France du 26 au 30 octobre 2025, marquée par la signature d'accords stratégiques dans les domaines économique, éducatif et de la défense.",
+        "image": "/images/presidence.png",
+        "images": [
+          "/images/presidence.png"
+        ],
+        "sections": [
+          {
+            "title": "Une visite d'État historique à Paris",
+            "content": "Le Président de la République de Madagascar a effectué une visite d'État en France du 26 au 30 octobre 2025, à l'invitation de son homologue français. C'est la première visite officielle d'un chef d'État malgache en France depuis 2018, témoignant du renouveau des relations entre les deux pays qui partagent des liens historiques, linguistiques et culturels profonds.\n\nLe Président malgache a été reçu avec tous les honneurs républicains au Palais de l'Élysée où un dîner d'État officiel a rassemblé plus de 200 personnalités politiques, économiques et culturelles. Les deux chefs d'État ont eu des entretiens bilatéraux approfondis de plus de trois heures sur les grands enjeux internationaux et les perspectives de coopération renforcée.\n\nCette visite intervient dans un contexte géopolitique particulier où Madagascar souhaite diversifier ses partenariats internationaux tout en consolidant ses alliances traditionnelles. La France reste un partenaire économique de premier plan avec des échanges commerciaux dépassant 500 millions d'euros annuellement."
+          },
+          {
+            "title": "Signature d'accords économiques majeurs",
+            "content": "Le volet économique de la visite a été particulièrement fructueux avec la signature de huit accords de coopération représentant des engagements financiers de plus de 300 millions d'euros sur cinq ans. Ces accords couvrent les secteurs des infrastructures, de l'énergie, de l'agriculture et du tourisme.\n\nL'Agence Française de Développement (AFD) financera la construction de 200 km de routes rurales, l'électrification de 100 villages par énergie solaire et la modernisation du réseau d'eau potable dans trois grandes villes. Un prêt concessionnel de 150 millions d'euros a été accordé pour ces projets d'infrastructure prioritaires.\n\nDans le domaine privé, plusieurs grandes entreprises françaises ont annoncé des investissements significatifs à Madagascar : un opérateur télécom investira 80 millions d'euros dans la 5G, un groupe hôtelier construira trois complexes touristiques créant 1 500 emplois, et une entreprise agroalimentaire établira une usine de transformation de vanille et de cacao. Le Président a rencontré une délégation du MEDEF regroupant 50 chefs d'entreprises français intéressés par le marché malgache."
+          },
+          {
+            "title": "Partenariat éducatif et culturel renforcé",
+            "content": "L'éducation et la culture ont constitué un axe majeur de cette visite. Un nouvel accord-cadre prévoit l'octroi de 500 bourses d'études annuelles pour des étudiants malgaches souhaitant poursuivre leurs études supérieures en France dans des domaines stratégiques : ingénierie, médecine, agronomie, sciences environnementales.\n\nLa France s'engage également à former 1 000 enseignants malgaches de français sur trois ans pour améliorer la qualité de l'enseignement de cette langue qui reste une matière importante dans le système éducatif malgache. Dix établissements scolaires malgaches seront jumelés avec des lycées français pour favoriser les échanges pédagogiques et culturels.\n\nDans le domaine culturel, les deux pays ont convenu de renforcer la coopération pour la préservation du patrimoine. La France financera la restauration du Palais de la Reine à Antananarivo et la numérisation des archives historiques conservées à Madagascar. Un festival culturel franco-malgache sera organisé alternativement dans les deux pays chaque année."
+          },
+          {
+            "title": "Coopération en matière de défense et de sécurité",
+            "content": "Un volet discret mais important de la visite concernait la coopération militaire et sécuritaire. Un accord de défense a été signé prévoyant la formation de 200 officiers malgaches par an dans les écoles militaires françaises. La France fournira également du matériel et un appui logistique pour renforcer les capacités opérationnelles de l'armée malgache.\n\nDans le domaine maritime, une coopération renforcée vise à lutter contre la pêche illégale dans les eaux territoriales malgaches qui occasionne des pertes économiques considérables. La France mettra à disposition des moyens de surveillance maritime (radars, patrouilleurs) et formera les garde-côtes malgaches. Des opérations conjointes de surveillance seront organisées régulièrement.\n\nLe Président malgache a également visité le siège d'Interpol et rencontré des experts français en cybersécurité. Une coopération sera mise en place pour aider Madagascar à se protéger contre les menaces cybernétiques croissantes et à lutter plus efficacement contre la criminalité transnationale organisée."
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "id": "instit-senat",
+    "name": "Sénat",
+    "news": [
+      {
+        "id": "sen-001",
+        "title": "🏛️ Nouveau président du Sénat : modernisation et transparence au programme",
+        "date": "2025-11-05",
+        "author": "Sénat de la République",
+        "category": "Vie Institutionnelle",
+        "summary": "Le Sénat élit son nouveau président lors d'une session solennelle, marquant le début d'un nouveau chapitre pour la chambre haute du Parlement malgache.",
+        "image": "/images/senat.png",
+        "images": [
+          "/images/senat.png"
+        ],
+        "sections": [
+          {
+            "title": "Une élection démocratique et transparente",
+            "content": "Le Sénat de la République de Madagascar a procédé ce 5 novembre 2025 à l'élection de son nouveau président pour un mandat de cinq ans. Le scrutin s'est déroulé à bulletin secret dans l'hémicycle du Palais d'Ambohitsorohitra devant les 63 sénateurs en exercice, conformément aux dispositions du règlement intérieur de la Haute Assemblée.\n\nTrois candidats s'étaient déclarés pour briguer cette fonction prestigieuse, représentant les différentes sensibilités politiques du Sénat. Après deux tours de scrutin nécessaires pour obtenir la majorité absolue requise, le Sénateur Rakoto Andriamanana, 58 ans, juriste de formation et ancien ministre, a été élu avec 38 voix sur 63. Son élection a été saluée par des applaudissements nourris de l'ensemble des sénateurs.\n\nLe nouveau président du Sénat a prêté serment immédiatement après la proclamation des résultats, en présence du Président de la Cour constitutionnelle. Dans son discours d'investiture, il a remercié ses pairs pour leur confiance et a présenté sa vision pour moderniser l'institution sénatoriale et renforcer son rôle dans l'architecture démocratique malgache."
+          },
+          {
+            "title": "Un programme ambitieux de modernisation",
+            "content": "Dans son discours-programme, le nouveau président du Sénat a présenté trois axes prioritaires pour son mandat. Le premier concerne la modernisation des méthodes de travail du Sénat avec la numérisation complète des procédures législatives. Tous les projets et propositions de loi seront désormais consultables en ligne, les amendements pourront être déposés électroniquement et les votes pourront se faire par voie électronique.\n\nLe deuxième axe vise à renforcer le rôle du Sénat comme chambre de réflexion et d'expertise. Des commissions thématiques permanentes seront créées pour travailler en profondeur sur les grandes questions nationales : développement durable, nouvelles technologies, démographie et migrations, relations internationales. Ces commissions pourront auditionner des experts et produire des rapports prospectifs.\n\nLe troisième axe concerne l'ouverture du Sénat vers la société civile et les citoyens. Des sessions publiques thématiques seront organisées chaque trimestre, permettant aux organisations de la société civile, aux experts universitaires et aux représentants du secteur privé de venir présenter leurs analyses et recommandations devant les sénateurs. Un portail citoyen en ligne permettra aux Malgaches de soumettre des pétitions directement au Sénat."
+          },
+          {
+            "title": "Renforcement du contrôle parlementaire",
+            "content": "Le nouveau président a insisté sur la nécessité de renforcer le rôle de contrôle du Sénat sur l'action gouvernementale. Il a annoncé que les ministres seraient désormais convoqués plus régulièrement devant les commissions sénatoriales pour rendre compte de la mise en œuvre des lois et de l'exécution des budgets. Les questions orales au gouvernement deviendront hebdomadaires au lieu de mensuelles.\n\nUne mission d'information sénatoriale sera créée pour suivre l'exécution des grands projets publics d'infrastructure et s'assurer de la bonne utilisation des fonds publics. Cette mission effectuera des visites de terrain et publiera des rapports d'étape accessibles au public. L'objectif est de lutter contre les gaspillages et les détournements qui minent la confiance des citoyens.\n\nLe Sénat utilisera pleinement son pouvoir constitutionnel de saisine de la Cour des Comptes pour demander des audits sur les institutions et programmes publics suscitant des interrogations. Les rapports de la Cour des Comptes feront systématiquement l'objet de débats en séance plénière suivis de recommandations formelles au gouvernement."
+          },
+          {
+            "title": "Valorisation de la représentation territoriale",
+            "content": "En tant que chambre représentant les collectivités territoriales, le Sénat doit jouer un rôle crucial dans la décentralisation effective du pays. Le nouveau président s'engage à faire du Sénat le défenseur des intérêts des régions et des communes, souvent négligées dans les processus décisionnels centralisés à Antananarivo.\n\nDes assises nationales de la décentralisation seront organisées semestriellement, rassemblant les présidents de régions, les maires des grandes villes, les représentants des communes rurales et les sénateurs. Ces rencontres permettront de faire remonter les préoccupations des territoires et de co-construire des politiques publiques adaptées aux réalités locales.\n\nLe Sénat créera un fonds de solidarité territoriale doté de 5 milliards d'Ariary pour financer des micro-projets de développement local proposés par les communes les plus défavorisées. Un appel à projets sera lancé chaque année, avec une sélection basée sur des critères objectifs : impact social, durabilité, participation communautaire. Cette initiative permettra au Sénat d'avoir un impact concret sur le terrain."
+          }
+        ]
+      },
+      {
+        "id": "sen-002",
+        "title": "⏱️ Lois plus rapides : le Sénat réforme ses procédures pour gagner du temps",
+        "date": "2025-10-25",
+        "author": "Commission du Règlement et des Lois",
+        "category": "Réforme Institutionnelle",
+        "summary": "Adoption d'une réforme majeure du règlement intérieur visant à moderniser le fonctionnement du Sénat, accélérer l'examen des lois et renforcer l'efficacité parlementaire.",
+        "image": "/images/senat.png",
+        "images": [
+          "/images/senat.png"
+        ],
+        "sections": [
+          {
+            "title": "Une modernisation attendue depuis longtemps",
+            "content": "Après six mois de travaux préparatoires menés par la Commission du Règlement et des Lois, le Sénat a adopté le 25 octobre 2025, par 54 voix contre 7, une réforme en profondeur de son règlement intérieur qui n'avait pas été substantiellement modifié depuis 2016. Cette réforme répond aux critiques récurrentes sur la lenteur du processus législatif au Sénat.\n\nL'ancien règlement, jugé obsolète et trop rigide, entraînait des délais excessifs dans l'examen des textes législatifs. Certains projets de loi mettaient plus d'un an entre leur transmission par l'Assemblée Nationale et leur adoption définitive par le Sénat, retardant ainsi la mise en œuvre de réformes importantes attendues par la population.\n\nLa Commission du Règlement a mené une large consultation auprès de tous les groupes parlementaires, des juristes constitutionnalistes et des parlementaires d'autres pays africains ayant récemment modernisé leurs procédures. Le résultat est un règlement modernisé de 250 articles qui concilie efficacité et respect des droits de toutes les sensibilités politiques."
+          },
+          {
+            "title": "Accélération du traitement des projets de loi",
+            "content": "La réforme introduit des délais contraignants à chaque étape de l'examen législatif. Les commissions permanentes disposeront désormais de 30 jours maximum pour examiner un projet de loi ordinaire, contre 60 jours auparavant. Pour les projets de loi de finances et les textes déclarés urgents par le gouvernement, ce délai est ramené à 15 jours.\n\nLe nouveau règlement autorise l'organisation de sessions de commission en visioconférence, permettant aux sénateurs résidant loin d'Antananarivo de participer activement sans se déplacer systématiquement. Cette disposition facilitera le quorum et accélérera les travaux. Les auditions d'experts pourront également se faire à distance, élargissant les possibilités de consultation.\n\nUne procédure législative simplifiée est créée pour les textes techniques ne soulevant pas de débat politique majeur. Ces textes pourront être adoptés directement en commission sans passage en séance plénière, après accord unanime des groupes parlementaires. Cette procédure allégée permettra au Sénat de se concentrer sur les grands débats de société."
+          },
+          {
+            "title": "Renforcement des droits de l'opposition",
+            "content": "Paradoxalement, tout en accélérant les procédures, la réforme renforce les droits des groupes minoritaires. Le droit de tirage pour constituer une commission d'enquête est abaissé : il suffit désormais qu'un tiers des sénateurs (21 sur 63) le demande, contre la majorité absolue auparavant. Cette disposition permettra à l'opposition d'investiguer sur des sujets sensibles même contre l'avis de la majorité.\n\nLe temps de parole en séance plénière sera désormais strictement réparti proportionnellement à l'importance numérique de chaque groupe parlementaire, garantissant à l'opposition un temps d'expression significatif. Les présidents de groupes minoritaires auront un droit de réponse systématique après chaque intervention gouvernementale.\n\nUne nouveauté importante : le droit pour 15 sénateurs de demander une suspension de séance de deux heures pour consultation entre groupes lorsqu'un amendement gouvernemental majeur est déposé en dernière minute. Cette disposition évitera les votes précipités sur des textes mal examinés."
+          },
+          {
+            "title": "Transparence et participation citoyenne accrues",
+            "content": "La réforme fait entrer le Sénat dans l'ère de la transparence numérique. Toutes les séances plénières seront désormais retransmises en direct sur internet et archivées sur le site web du Sénat. Les comptes-rendus intégraux des débats seront mis en ligne dans les 48 heures. Les procès-verbaux des commissions, jusqu'ici confidentiels, seront publiés (hors huis clos justifié).\n\nUn portail citoyen permettra aux Malgaches de suivre en temps réel l'avancement de chaque projet de loi avec son historique complet : dépôt, renvoi en commission, auditions, amendements, votes. Les citoyens pourront s'abonner pour recevoir des alertes sur les textes qui les intéressent. Cette transparence renforcera le contrôle citoyen sur l'activité parlementaire.\n\nLe nouveau règlement instaure un mécanisme de pétitions citoyennes : toute pétition rassemblant 50 000 signatures vérifiées devra obligatoirement être examinée par une commission sénatoriale qui organisera des auditions publiques et rendra un rapport avec ses recommandations dans un délai de trois mois."
+          }
+        ]
+      }
+    ]
+  }
+]

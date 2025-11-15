@@ -1,0 +1,68 @@
+[
+  {
+    "id": "instit-assemblee",
+    "name": "Assemblée Nationale",
+    "news": [
+      {
+        "id": "ass-001",
+        "title": "⚖️ Vote historique : patrimoine des élus bientôt public en ligne !",
+        "date": "2025-11-10",
+        "author": "Assemblée Nationale",
+        "category": "Législation",
+        "summary": "Vote historique à l'Assemblée Nationale d'une loi révolutionnaire imposant la transparence totale dans la gestion des finances publiques et la déclaration de patrimoine des élus.",
+        "image": "/images/assemblee.png",
+        "images": [
+          "/images/assemblee.png"
+        ],
+        "sections": [
+          {
+            "title": "Un vote historique pour la démocratie malgache",
+            "content": "L'Assemblée Nationale a adopté ce 10 novembre 2025, par 105 voix pour, 22 contre et 6 abstentions, la loi relative à la transparence de la vie publique et à la prévention de la corruption. Ce texte législatif majeur, débattu pendant près de trois mois, marque un tournant historique dans la gouvernance démocratique à Madagascar.\n\nLe vote s'est déroulé dans une atmosphère solennelle devant des tribunes publiques remplies de citoyens et de représentants de la société civile qui militaient depuis des années pour une telle loi. Des applaudissements nourris ont salué l'annonce des résultats par le Président de l'Assemblée, témoignant de l'importance symbolique de ce moment.\n\nCette loi répond à une demande forte de la population malgache qui place la lutte contre la corruption parmi ses préoccupations prioritaires. Selon un sondage récent, 89% des Malgaches considèrent que la corruption constitue un frein majeur au développement du pays. L'adoption de cette loi envoie un signal fort de la volonté politique de rompre avec les pratiques opaques du passé."
+          },
+          {
+            "title": "Obligations de déclaration de patrimoine",
+            "content": "Le cœur de la loi réside dans l'obligation pour tous les élus, ministres, hauts fonctionnaires et dirigeants d'entreprises publiques de déclarer leur patrimoine en détail. Cette déclaration devra être effectuée au début et à la fin du mandat ou des fonctions, puis actualisée annuellement. Elle couvrira tous les biens mobiliers et immobiliers, comptes bancaires, parts sociales et revenus du déclarant et de sa famille proche.\n\nLes déclarations seront transmises à une Haute Autorité pour la Transparence de la Vie Publique (HATVP), une institution indépendante créée par la loi et composée de neuf membres nommés par différentes institutions (Parlement, Présidence, Justice, société civile). Cette autorité aura le pouvoir de vérifier l'exactitude des déclarations et d'enquêter sur les enrichissements suspects.\n\nLes déclarations de patrimoine seront rendues publiques et consultables sur un portail en ligne dédié, permettant à tout citoyen d'accéder à ces informations. Seuls les détails pouvant compromettre la sécurité personnelle des déclarants seront occultés. Le non-respect de l'obligation de déclaration ou la fourniture d'informations fausses sera sanctionné par une inéligibilité de 10 ans et des peines de prison pouvant aller jusqu'à 5 ans."
+          },
+          {
+            "title": "Publication obligatoire des finances publiques",
+            "content": "La loi impose la publication trimestrielle détaillée de l'exécution budgétaire de toutes les institutions publiques : ministères, collectivités territoriales, établissements publics et entreprises d'État. Ces rapports devront présenter de manière claire et accessible les recettes collectées, les dépenses effectuées, les marchés publics attribués et l'état d'avancement des projets.\n\nUn portail unique de transparence budgétaire sera créé, permettant à tout citoyen de consulter en quelques clics comment l'argent public est dépensé. Des visualisations graphiques faciliteront la compréhension des données pour le grand public. Chaque projet public financé par des fonds publics devra faire l'objet d'un suivi en temps réel avec photos et indicateurs de performance.\n\nLes marchés publics feront l'objet d'une attention particulière avec l'obligation de publier intégralement les appels d'offres, les critères de sélection, les noms des entreprises soumissionnaires et les raisons du choix final. Tous les contrats publics supérieurs à 10 millions d'Ariary devront être publiés dans leur intégralité. Cette mesure vise à prévenir les commissions occultes et les attributions de marchés truqués."
+          },
+          {
+            "title": "Mécanismes de contrôle et de sanctions",
+            "content": "La loi établit des mécanismes de contrôle rigoureux pour s'assurer de son application effective. La Cour des Comptes verra ses pouvoirs et ses moyens considérablement renforcés pour auditer systématiquement toutes les institutions publiques. Ses rapports, actuellement confidentiels, devront être intégralement publiés et rendus accessibles au public.\n\nUn système de lanceurs d'alerte protégés est institutionnalisé. Tout citoyen, fonctionnaire ou agent public témoin de corruption, de détournement de fonds ou de manquements à la transparence pourra signaler ces faits via une plateforme sécurisée. Les lanceurs d'alerte bénéficieront d'une protection légale contre les représailles et pourront recevoir une récompense financière si leurs informations conduisent à la récupération de fonds détournés.\n\nLes sanctions prévues par la loi sont sévères : confiscation des biens illégalement acquis, amendes pouvant atteindre dix fois la valeur du préjudice causé, peines de prison de 2 à 20 ans selon la gravité, interdiction définitive d'exercer une fonction publique. Le délai de prescription pour les infractions de corruption est porté à 20 ans. Cette loi marque la fin de l'impunité pour les corrompus."
+          }
+        ]
+      },
+      {
+        "id": "ass-002",
+        "title": "🌾 Crise dans le Sud : 100 milliards d'urgence pour 1,3 million de personnes",
+        "date": "2025-10-30",
+        "author": "Commission Agriculture et Développement Rural",
+        "category": "Agriculture",
+        "summary": "L'Assemblée Nationale tient une session extraordinaire d'urgence pour débattre de la crise alimentaire dans le Sud et adopter des mesures d'aide immédiate aux populations affectées.",
+        "image": "/images/assemblee.png",
+        "images": [
+          "/images/assemblee.png"
+        ],
+        "sections": [
+          {
+            "title": "Une session d'urgence face à la crise alimentaire",
+            "content": "Sur demande du gouvernement et de 50 députés, l'Assemblée Nationale a tenu une session extraordinaire le 30 octobre 2025 consacrée exclusivement à la problématique de la sécurité alimentaire, particulièrement dans les régions du Sud confrontées à une sécheresse sévère pour la troisième année consécutive. Cette session témoigne de la gravité de la situation humanitaire dans ces régions.\n\nLes derniers rapports des agences humanitaires estiment que plus de 1,3 million de personnes dans le Sud (régions Androy, Anosy, Atsimo Andrefana) sont en situation d'insécurité alimentaire aiguë, dont 400 000 enfants souffrant de malnutrition sévère. La situation est qualifiée de pré-famine par certaines organisations internationales, nécessitant une réaction immédiate et massive.\n\nLe Président de l'Assemblée a ouvert les débats en rappelant que l'accès à l'alimentation est un droit humain fondamental et que la représentation nationale a le devoir impérieux d'agir rapidement pour sauver des vies. La session de six heures a rassemblé tous les groupes parlementaires dans un rare consensus sur l'urgence d'agir."
+          },
+          {
+            "title": "Diagnostic alarmant de la situation dans le Sud",
+            "content": "Les auditions des ministres de l'Agriculture, de la Santé et des Affaires Sociales ont dressé un tableau préoccupant. La pluviométrie dans le Sud a été inférieure de 60% à la normale pour la troisième saison consécutive, entraînant des récoltes catastrophiques. La production de maïs et de manioc, aliments de base, a chuté de 70%, laissant les populations sans ressources.\n\nLa situation nutritionnelle est critique : 35% des enfants de moins de 5 ans présentent un retard de croissance, 12% souffrent de malnutrition aiguë sévère nécessitant une hospitalisation. Les centres de santé de base sont submergés par l'afflux de cas. Le taux de mortalité infantile a augmenté de 40% en un an dans certains districts.\n\nAu-delà de la sécheresse, les députés ont pointé les causes structurelles de la vulnérabilité du Sud : absence d'infrastructures d'irrigation, enclavement des villages, systèmes de production agricole archaïques, manque d'accès aux marchés. Sans traitement de ces causes profondes, les crises se répéteront cycliquement."
+          },
+          {
+            "title": "Adoption d'un plan d'urgence de 100 milliards d'Ariary",
+            "content": "L'Assemblée a adopté à l'unanimité un plan d'urgence humanitaire doté d'une enveloppe exceptionnelle de 100 milliards d'Ariary (environ 23 millions d'euros). Ce budget sera prélevé sur la réserve de contingence de l'État et complété par des contributions de partenaires internationaux déjà mobilisés (PAM, FAO, UNICEF, Union Européenne).\n\nLes mesures d'urgence comprennent : la distribution immédiate de 50 000 tonnes de riz et de maïs aux familles les plus vulnérables pour couvrir leurs besoins pendant 6 mois ; la mise en place de cantines scolaires dans 500 écoles du Sud avec un repas chaud quotidien pour 200 000 enfants ; la distribution gratuite d'aliments thérapeutiques pour les 50 000 enfants en malnutrition sévère.\n\nUn programme cash-for-work sera lancé, permettant à 30 000 adultes de gagner un revenu en participant à des travaux d'aménagement hydro-agricole, de construction de pistes rurales et de reforestation. Ce programme, d'un montant de 15 milliards d'Ariary, injectera du pouvoir d'achat dans l'économie locale tout en créant des infrastructures utiles."
+          },
+          {
+            "title": "Mesures structurelles pour la résilience à long terme",
+            "content": "Au-delà de l'urgence, les députés ont insisté sur la nécessité de solutions durables. Un programme pluriannuel de 300 milliards d'Ariary sur cinq ans sera lancé pour développer l'irrigation dans le Sud. L'objectif est d'aménager 20 000 hectares de périmètres irrigués permettant des cultures de contre-saison et la diversification agricole.\n\nLe désenclavement des régions du Sud constitue une priorité avec la réhabilitation de 500 km de pistes rurales et la construction de 10 marchés de collecte. Ces infrastructures permettront aux agriculteurs de vendre leurs produits et de se procurer des intrants agricoles. Un système de prévision et d'alerte précoce des crises alimentaires sera mis en place.\n\nUn programme de distribution de semences améliorées résistantes à la sécheresse (maïs, sorgho, niébé) bénéficiera à 50 000 agriculteurs. Des formations sur les techniques d'agriculture climato-intelligente (zaï, demi-lunes, compostage) seront dispensées. L'élevage sera développé avec la distribution de 100 000 petits ruminants (chèvres, moutons) aux familles vulnérables comme source de revenus et de protéines."
+          }
+        ]
+      }
+    ]
+  }
+]
