@@ -27,8 +27,11 @@ export function EducationQuizPage() {
   }
 
   const handleStartQuiz = (quizId: number) => {
+
     const quiz = getDocumentQuiz(quizId)
     const progress = getQuizProgress(quizId)
+
+    console.log("Starting quiz :", quiz)
 
     if (quiz) {
       setSelectedQuiz(quiz)

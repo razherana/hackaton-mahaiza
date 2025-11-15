@@ -24,14 +24,14 @@ export function QuizResultsModal({ quiz, progress, isOpen, onClose }: QuizResult
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="bg-[#1b1b1b] border-[#3a8a2a] text-white max-w-lg max-h-[90vh] overflow-y-auto">
+      <DialogContent className="bg-[#1b1b1b] border-[#3a8a2a] text-white max-w-lg">
         <DialogHeader className="relative">
           <DialogTitle className="text-white text-center text-xl pr-8">
             Résultats du Quiz
           </DialogTitle>
         </DialogHeader>
 
-        <div className="space-y-6 py-4">
+        <div className="space-y-6 py-4 max-h-[90vh] overflow-y-auto">
           {/* Quiz Title */}
           <div className="text-center">
             <h3 className="text-lg font-medium text-white mb-1">{quiz.title}</h3>
