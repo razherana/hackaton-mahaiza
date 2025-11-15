@@ -6,6 +6,7 @@ import { LoiDropdown } from './LoiDropdown';
 import { LoiDetailModal } from './LoiDetailModal';
 import { InstitutionTree } from './InstitutionTree';
 import { InstitutionDetailModal } from './InstitutionDetailModal';
+import { LummyConstatModal } from './LummyConstatModal';
 import { POLITY_VERSE_COLORS } from '../constants';
 import etatData from '../mocks/etat.json';
 import loiDataImport from '../mocks/loi.json';
@@ -27,6 +28,7 @@ export function StateVisualizationModal({ onClose, hymneFile, drapeauFile, devis
   const [selectedInstitution, setSelectedInstitution] = useState<any>(null);
   const [lois, setLois] = useState<any[]>([]);
   const [institutions, setInstitutions] = useState<any[]>([]);
+  const [showLummyConstat, setShowLummyConstat] = useState(false);
 
   useEffect(() => {
     setLois([...loiDataImport]);
@@ -126,11 +128,40 @@ export function StateVisualizationModal({ onClose, hymneFile, drapeauFile, devis
           <LoiDropdown lois={lois} onSelectLoi={handleSelectLoi} onDeleteLoi={handleDeleteLoi} />
         </div>
 
+        {/* Logo Lummy en bas à droite */}
+        <div className="absolute bottom-8 right-8 z-10">
+          <button
+            onClick={() => setShowLummyConstat(true)}
+            className="flex flex-col items-center gap-2 group transition-all hover:scale-105"
+          >
+            <div
+              className="w-20 h-20 rounded-full flex items-center justify-center overflow-hidden transition-all"
+              style={{
+                backgroundColor: POLITY_VERSE_COLORS.dark,
+                border: `3px solid ${POLITY_VERSE_COLORS.green}`,
+                boxShadow: `0 4px 20px ${POLITY_VERSE_COLORS.green}40`
+              }}
+            >
+              <img 
+                src="/lummy_logo.png" 
+                alt="Lummy Logo" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <p 
+              className="text-sm font-semibold text-white group-hover:opacity-80 transition-opacity"
+            >
+              Voir le constat de Lummy
+            </p>
+          </button>
+        </div>
+
         <SystemModal visible={showSystemModal} onClose={() => setShowSystemModal(false)} />
         <AjoutConstitution visible={showAjoutConstitution} onClose={() => setShowAjoutConstitution(false)} />
         <AjoutLoi visible={showAjoutLoi} onClose={() => setShowAjoutLoi(false)} />
         <LoiDetailModal loi={selectedLoi} onClose={() => setSelectedLoi(null)} />
         <InstitutionDetailModal institution={selectedInstitution} onClose={() => setSelectedInstitution(null)} />
+        {showLummyConstat && <LummyConstatModal onClose={() => setShowLummyConstat(false)} />}
       </div>
 
       {hymneUrl && <audio ref={audioRef} src={hymneUrl} loop autoPlay className="hidden" />}

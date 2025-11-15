@@ -5,3 +5,4 @@ export { LoiDropdown } from './LoiDropdown';
 export { LoiDetailModal } from './LoiDetailModal';
 export { InstitutionDetailModal } from './InstitutionDetailModal';
 export { InstitutionTree } from './InstitutionTree';
+export { LummyConstatModal } from './LummyConstatModal';
