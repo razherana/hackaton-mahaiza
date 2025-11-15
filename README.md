@@ -82,6 +82,32 @@ docker compose up -d
 
 The importer will connect to the HTTP server when `CHROMA_HOST`/`CHROMA_PORT` are defined (or passed as CLI flags). Persisted vectors live inside `backend/chroma_data` when using Docker, or under `backend/.chroma` when storing locally.
 
+## PDF Preview Functionality
+
+The application includes a comprehensive PDF viewer in the analysis interface:
+
+### Features
+- **Real-time PDF rendering** using react-pdf and PDF.js
+- **Navigation controls** for multi-page documents
+- **Zoom functionality** (0.5x to 2x scaling)
+- **Error handling** with retry mechanism
+- **Loading states** and visual feedback
+
+### PDF Sources
+PDFs are loaded in this priority order:
+1. Direct URLs or base64 data from `document.image`
+2. Static files from `public/pdfs/{fileName}`
+3. Fallback sample PDF for demonstration
+
+### Adding PDFs
+Place PDF files in the `public/pdfs/` directory:
+```bash
+mkdir -p public/pdfs
+cp your-document.pdf public/pdfs/
+```
+
+The PDF preview automatically appears when analyzing documents in the education module.
+
 ### Next steps
 
 - Wire the indexed vectors into the querying API or serverless functions.

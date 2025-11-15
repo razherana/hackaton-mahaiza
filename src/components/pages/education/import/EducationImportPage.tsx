@@ -18,7 +18,7 @@ export function EducationImportPage() {
   const handleSelectedDocument = (document: EducationDocument) => {
     console.log("Selected document:", document)
     setIsHubModalOpen(false)
-    
+
     // Navigate to analysis page with document ID
     const params = new URLSearchParams({
       documentId: document.id.toString()
@@ -44,11 +44,11 @@ export function EducationImportPage() {
       try {
         // Simulate API call delay
         await new Promise(resolve => setTimeout(resolve, 2000))
-        
+
         // Import the simulation function dynamically to avoid issues
         const { simulateAIAnalysis } = await import("../analyse/data/analysisResults")
         const data: DocumentAnalysisResult = simulateAIAnalysis(selectedFile.name)
-        
+
         setAnalysisResult(data)
       } catch {
         setErrorMessage("Erreur lors de l'analyse du document. Réessayez.")

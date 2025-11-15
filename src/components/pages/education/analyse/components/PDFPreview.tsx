@@ -1,70 +1,549 @@
-import { useAnalysis } from "../context/useAnalysis"
-import { ChevronLeft, ChevronRight, File } from "lucide-react"
+import { useState, useRef, useCallback, useEffect } from "react"
+import { X, Maximize2, Minimize2, Move } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { useState } from "react"
+import { useAnalysis } from "../context/useAnalysis"
+import type { AnalysisSessionData } from "../types"
+
+interface DragState {
+  isDragging: boolean
+  startX: number
+  startY: number
+  startLeft: number
+  startTop: number
+}
+
+// Component for PDF content rendering
+function PDFContent({
+  sessionData,
+  isFloating,
+  onToggleFloating
+}: {
+  sessionData: AnalysisSessionData
+  isFloating: boolean
+  onToggleFloating: () => void
+}) {
+  if (!sessionData?.document) {
+    return (
+      <div className="flex items-center justify-center h-full text-[#b0b0b0]">
+        <p>Aucun document sélectionné</p>
+      </div>
+    )
+  }
+
+  // Get title from analysis or fallback to fileName
+  const documentTitle = sessionData.analysis?.title || sessionData.document.fileName
+
+  return (
+    <div className="h-full flex flex-col">
+      <div className="p-4 border-b border-[#2a2a2a] bg-[#1a1a1a]">
+        <div className="flex items-center justify-between">
+          <div className="flex-1 min-w-0">
+            <h3 className="text-sm font-medium text-[#f5f5f5] truncate">
+              {documentTitle}
+            </h3>
+            <p className="text-xs text-[#b0b0b0] truncate">
+              {sessionData.document.fileName}
+            </p>
+          </div>
+
+          {!isFloating && (
+            <Button
+              onClick={onToggleFloating}
+              variant="ghost"
+              size="sm"
+              className="ml-2 h-8 w-8 p-0 text-[#b0b0b0]"
+              title="Ouvrir dans une fenêtre flottante"
+            >
+              <Maximize2 className="h-4 w-4" />
+            </Button>
+          )}
+        </div>
+      </div>
+
+      <div className="flex-1 bg-[#f5f5f5] overflow-auto">
+        {(() => {
+          // Determine PDF URL based on document or use sample
+          const pdfUrl = `/pdfs/${sessionData.document.fileName}`
+
+          return (
+            <object
+              data={`${pdfUrl}#toolbar=1&navpanes=0&scrollbar=1&page=1&view=FitH`}
+              type="application/pdf"
+              className="w-full h-full border-0"
+              title={`PDF Preview - ${sessionData.document.fileName}`}
+            >
+              <div className="flex items-center justify-center h-full text-gray-500 p-8">
+                <div className="text-center space-y-4 max-w-md">
+                  <div className="text-6xl mb-4">📄</div>
+                  <h3 className="text-lg font-medium">PDF non disponible</h3>
+                  <p className="text-sm text-gray-400">
+                    Votre navigateur ne peut pas afficher ce PDF ou le fichier est indisponible.
+                  </p>
+                  <p className="text-sm font-medium">{sessionData.document.fileName}</p>
+                  <a
+                    href={pdfUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors font-medium"
+                  >
+                    Ouvrir dans un nouvel onglet
+                  </a>
+                </div>
+              </div>
+            </object>
+          )
+        })()}
+      </div>
+    </div>
+  )
+}
 
 export function PDFPreview() {
   const { sessionData, isPreviewOpen } = useAnalysis()
-  const [currentPage, setCurrentPage] = useState(1)
+  const [isFloating, setIsFloating] = useState(false)
+  const [position, setPosition] = useState({ x: 100, y: 100 })
+  const [size, setSize] = useState({ width: 600, height: 800 })
+  const [sidebarWidth, setSidebarWidth] = useState(384) // 96 * 4 = 384px (w-96)
+  const dragRef = useRef<HTMLDivElement>(null)
+  const sidebarRef = useRef<HTMLDivElement>(null)
+  const [dragState, setDragState] = useState<DragState>({
+    isDragging: false,
+    startX: 0,
+    startY: 0,
+    startLeft: 0,
+    startTop: 0
+  })
+  const [isResizingSidebar, setIsResizingSidebar] = useState(false)
 
-  if (!sessionData) {
+  const handleMouseDown = useCallback((e: React.MouseEvent) => {
+    if (!dragRef.current) return
+
+    const rect = dragRef.current.getBoundingClientRect()
+    setDragState({
+      isDragging: true,
+      startX: e.clientX,
+      startY: e.clientY,
+      startLeft: rect.left,
+      startTop: rect.top
+    })
+  }, [])
+
+  const handleMouseMove = useCallback((e: MouseEvent) => {
+    if (!dragState.isDragging) return
+
+    const deltaX = e.clientX - dragState.startX
+    const deltaY = e.clientY - dragState.startY
+
+    setPosition({
+      x: Math.max(0, Math.min(window.innerWidth - size.width, dragState.startLeft + deltaX)),
+      y: Math.max(0, Math.min(window.innerHeight - size.height, dragState.startTop + deltaY))
+    })
+  }, [dragState, size])
+
+  const handleMouseUp = useCallback(() => {
+    setDragState(prev => ({ ...prev, isDragging: false }))
+  }, [])
+
+  // Add event listeners for mouse move and up when dragging
+  useEffect(() => {
+    if (dragState.isDragging) {
+      document.addEventListener('mousemove', handleMouseMove)
+      document.addEventListener('mouseup', handleMouseUp)
+      return () => {
+        document.removeEventListener('mousemove', handleMouseMove)
+        document.removeEventListener('mouseup', handleMouseUp)
+      }
+    }
+  }, [dragState.isDragging, handleMouseMove, handleMouseUp])
+
+  // Sidebar resize handlers
+  const handleSidebarResizeStart = useCallback((e: React.MouseEvent) => {
+    e.preventDefault()
+    setIsResizingSidebar(true)
+
+    const handleSidebarResize = (e: MouseEvent) => {
+      const newWidth = Math.max(250, Math.min(800, window.innerWidth - e.clientX))
+      setSidebarWidth(newWidth)
+    }
+
+    const handleSidebarResizeEnd = () => {
+      setIsResizingSidebar(false)
+      document.removeEventListener('mousemove', handleSidebarResize)
+      document.removeEventListener('mouseup', handleSidebarResizeEnd)
+    }
+
+    document.addEventListener('mousemove', handleSidebarResize)
+    document.addEventListener('mouseup', handleSidebarResizeEnd)
+  }, [])
+
+  // Sidebar preview (original functionality)
+  if (!isPreviewOpen || !sessionData) {
     return null
   }
 
-  return (
-    <div
-      className={`overflow-hidden transition-all duration-300 ${
-        isPreviewOpen ? "w-80 border-l border-[#2a2a2a]" : "w-0"
-      }`}
-    >
-      <div className="bg-[#1a1a1a] h-full p-4 flex flex-col gap-4">
-        <div className="space-y-1">
-          <h3 className="text-sm font-semibold text-[#f5f5f5] truncate">
-            {sessionData.analysis.title ?? sessionData.analysis.fileName}
-          </h3>
-          <p className="text-xs text-[#b0b0b0]">
-            {sessionData.analysis.pageCount ? `${currentPage} / ${sessionData.analysis.pageCount}` : "PDF"}
-          </p>
+  // Floating window mode
+  if (isFloating) {
+    return (
+      <div
+        ref={dragRef}
+        className="fixed z-50 bg-[#0f0f0f] border border-[#2a2a2a] rounded-lg shadow-2xl overflow-hidden"
+        style={{
+          left: position.x,
+          top: position.y,
+          width: size.width,
+          height: size.height,
+          cursor: dragState.isDragging ? 'grabbing' : 'default'
+        }}
+      >
+        {/* Floating window header */}
+        <div
+          className="flex items-center justify-between p-3 bg-[#1a1a1a] border-b border-[#2a2a2a] cursor-grab select-none"
+          onMouseDown={handleMouseDown}
+        >
+          <div className="flex items-center gap-2">
+            <Move className="h-4 w-4 text-[#b0b0b0]" />
+            <span className="text-sm font-medium text-[#f5f5f5]">
+              Aperçu PDF - {sessionData.analysis?.title || sessionData.document.fileName}
+            </span>
+          </div>
+
+          <div className="flex items-center gap-1">
+            <Button
+              onClick={() => setIsFloating(false)}
+              variant="ghost"
+              size="sm"
+              className="h-8 w-8 p-0 text-[#b0b0b0] hover:bg-[#2a2a2a]"
+              title="Ancrer dans la barre latérale"
+            >
+              <Minimize2 className="h-4 w-4" />
+            </Button>
+            <Button
+              onClick={() => setIsFloating(false)}
+              variant="ghost"
+              size="sm"
+              className="h-8 w-8 p-0 hover:bg-red-600/20 text-red-400"
+              title="Fermer"
+            >
+              <X className="h-4 w-4" />
+            </Button>
+          </div>
         </div>
 
-        <Card className="flex-1 bg-[#0f0f0f] border-[#2a2a2a] flex items-center justify-center overflow-hidden">
-          <div className="text-center space-y-3">
-            <div className="rounded-lg bg-[#3a8a2a]/25 p-4 text-[#4ba835] w-fit mx-auto">
-              <File className="h-8 w-8" />
-            </div>
-            <div className="space-y-1">
-              <p className="text-sm text-[#f5f5f5]">Aperçu du PDF</p>
-              <p className="text-xs text-[#b0b0b0]">
-                {sessionData.analysis.fileName}
-              </p>
-            </div>
-          </div>
-        </Card>
+        {/* Floating window content */}
+        <div className="h-full pb-12">
+          <PDFContent
+            sessionData={sessionData}
+            isFloating={isFloating}
+            onToggleFloating={() => setIsFloating(false)}
+          />
+        </div>
 
-        {sessionData.analysis.pageCount && (
-          <div className="flex gap-2">
-            <Button
-              size="sm"
-              variant="outline"
-              onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
-              disabled={currentPage === 1}
-              className="flex-1 border-[#2a2a2a] text-[#f5f5f5] hover:bg-[#2a2a2a]"
-            >
-              <ChevronLeft className="h-4 w-4" />
-            </Button>
-            <Button
-              size="sm"
-              variant="outline"
-              onClick={() => setCurrentPage(Math.min(sessionData.analysis.pageCount!, currentPage + 1))}
-              disabled={currentPage === sessionData.analysis.pageCount}
-              className="flex-1 border-[#2a2a2a] text-[#f5f5f5] hover:bg-[#2a2a2a]"
-            >
-              <ChevronRight className="h-4 w-4" />
-            </Button>
-          </div>
-        )}
+        {/* Resize handles */}
+        {/* Bottom-right corner resize */}
+        <div
+          className="absolute bottom-0 right-0 w-4 h-4 cursor-se-resize bg-[#2a2a2a] hover:bg-[#3a3a3a] rounded-tl z-10"
+          onMouseDown={(e) => {
+            e.stopPropagation()
+            e.preventDefault()
+            const startX = e.clientX
+            const startY = e.clientY
+            const startWidth = size.width
+            const startHeight = size.height
+
+            const handleResize = (e: MouseEvent) => {
+              e.preventDefault()
+              const deltaX = e.clientX - startX
+              const deltaY = e.clientY - startY
+              const newWidth = Math.max(300, Math.min(window.innerWidth - position.x, startWidth + deltaX))
+              const newHeight = Math.max(200, Math.min(window.innerHeight - position.y, startHeight + deltaY))
+              setSize({ width: newWidth, height: newHeight })
+            }
+
+            const handleResizeEnd = () => {
+              document.removeEventListener('mousemove', handleResize)
+              document.removeEventListener('mouseup', handleResizeEnd)
+              document.body.style.cursor = ''
+              document.body.style.userSelect = ''
+            }
+
+            document.body.style.cursor = 'se-resize'
+            document.body.style.userSelect = 'none'
+            document.addEventListener('mousemove', handleResize)
+            document.addEventListener('mouseup', handleResizeEnd)
+          }}
+        />
+
+        {/* Right edge resize */}
+        <div
+          className="absolute top-0 right-0 w-2 h-full cursor-e-resize bg-transparent hover:bg-[#4a4a4a] transition-colors z-10"
+          onMouseDown={(e) => {
+            e.stopPropagation()
+            e.preventDefault()
+            const startX = e.clientX
+            const startWidth = size.width
+
+            const handleResize = (e: MouseEvent) => {
+              e.preventDefault()
+              const deltaX = e.clientX - startX
+              const newWidth = Math.max(300, Math.min(window.innerWidth - position.x, startWidth + deltaX))
+              setSize({ width: newWidth, height: size.height })
+            }
+
+            const handleResizeEnd = () => {
+              document.removeEventListener('mousemove', handleResize)
+              document.removeEventListener('mouseup', handleResizeEnd)
+              document.body.style.cursor = ''
+              document.body.style.userSelect = ''
+            }
+
+            document.body.style.cursor = 'e-resize'
+            document.body.style.userSelect = 'none'
+            document.addEventListener('mousemove', handleResize)
+            document.addEventListener('mouseup', handleResizeEnd)
+          }}
+        />
+
+        {/* Bottom edge resize */}
+        <div
+          className="absolute bottom-0 left-0 w-full h-2 cursor-s-resize bg-transparent hover:bg-[#4a4a4a] transition-colors z-10"
+          onMouseDown={(e) => {
+            e.stopPropagation()
+            e.preventDefault()
+            const startY = e.clientY
+            const startHeight = size.height
+
+            const handleResize = (e: MouseEvent) => {
+              e.preventDefault()
+              const deltaY = e.clientY - startY
+              const newHeight = Math.max(200, Math.min(window.innerHeight - position.y, startHeight + deltaY))
+              setSize({ width: size.width, height: newHeight })
+            }
+
+            const handleResizeEnd = () => {
+              document.removeEventListener('mousemove', handleResize)
+              document.removeEventListener('mouseup', handleResizeEnd)
+              document.body.style.cursor = ''
+              document.body.style.userSelect = ''
+            }
+
+            document.body.style.cursor = 's-resize'
+            document.body.style.userSelect = 'none'
+            document.addEventListener('mousemove', handleResize)
+            document.addEventListener('mouseup', handleResizeEnd)
+          }}
+        />
+
+        {/* Left edge resize */}
+        <div
+          className="absolute top-0 left-0 w-2 h-full cursor-w-resize bg-transparent hover:bg-[#4a4a4a] transition-colors z-10"
+          onMouseDown={(e) => {
+            e.stopPropagation()
+            e.preventDefault()
+            const startX = e.clientX
+            const startWidth = size.width
+            const startLeft = position.x
+
+            const handleResize = (e: MouseEvent) => {
+              e.preventDefault()
+              const deltaX = e.clientX - startX
+              const newWidth = Math.max(300, startWidth - deltaX)
+              const newLeft = Math.max(0, Math.min(startLeft + deltaX, startLeft + startWidth - 300))
+
+              setSize({ width: newWidth, height: size.height })
+              setPosition({ x: newLeft, y: position.y })
+            }
+
+            const handleResizeEnd = () => {
+              document.removeEventListener('mousemove', handleResize)
+              document.removeEventListener('mouseup', handleResizeEnd)
+              document.body.style.cursor = ''
+              document.body.style.userSelect = ''
+            }
+
+            document.body.style.cursor = 'w-resize'
+            document.body.style.userSelect = 'none'
+            document.addEventListener('mousemove', handleResize)
+            document.addEventListener('mouseup', handleResizeEnd)
+          }}
+        />
+
+        {/* Top edge resize */}
+        <div
+          className="absolute top-0 left-0 w-full h-2 cursor-n-resize bg-transparent hover:bg-[#4a4a4a] transition-colors z-10"
+          onMouseDown={(e) => {
+            e.stopPropagation()
+            e.preventDefault()
+            const startY = e.clientY
+            const startHeight = size.height
+            const startTop = position.y
+
+            const handleResize = (e: MouseEvent) => {
+              e.preventDefault()
+              const deltaY = e.clientY - startY
+              const newHeight = Math.max(200, startHeight - deltaY)
+              const newTop = Math.max(0, Math.min(startTop + deltaY, startTop + startHeight - 200))
+
+              setSize({ width: size.width, height: newHeight })
+              setPosition({ x: position.x, y: newTop })
+            }
+
+            const handleResizeEnd = () => {
+              document.removeEventListener('mousemove', handleResize)
+              document.removeEventListener('mouseup', handleResizeEnd)
+              document.body.style.cursor = ''
+              document.body.style.userSelect = ''
+            }
+
+            document.body.style.cursor = 'n-resize'
+            document.body.style.userSelect = 'none'
+            document.addEventListener('mousemove', handleResize)
+            document.addEventListener('mouseup', handleResizeEnd)
+          }}
+        />
+
+        {/* Top-left corner resize */}
+        <div
+          className="absolute top-0 left-0 w-4 h-4 cursor-nw-resize bg-[#2a2a2a] hover:bg-[#3a3a3a] rounded-br z-10"
+          onMouseDown={(e) => {
+            e.stopPropagation()
+            e.preventDefault()
+            const startX = e.clientX
+            const startY = e.clientY
+            const startWidth = size.width
+            const startHeight = size.height
+            const startLeft = position.x
+            const startTop = position.y
+
+            const handleResize = (e: MouseEvent) => {
+              e.preventDefault()
+              const deltaX = e.clientX - startX
+              const deltaY = e.clientY - startY
+
+              const newWidth = Math.max(300, startWidth - deltaX)
+              const newHeight = Math.max(200, startHeight - deltaY)
+              const newLeft = Math.max(0, Math.min(startLeft + deltaX, startLeft + startWidth - 300))
+              const newTop = Math.max(0, Math.min(startTop + deltaY, startTop + startHeight - 200))
+
+              setSize({ width: newWidth, height: newHeight })
+              setPosition({ x: newLeft, y: newTop })
+            }
+
+            const handleResizeEnd = () => {
+              document.removeEventListener('mousemove', handleResize)
+              document.removeEventListener('mouseup', handleResizeEnd)
+              document.body.style.cursor = ''
+              document.body.style.userSelect = ''
+            }
+
+            document.body.style.cursor = 'nw-resize'
+            document.body.style.userSelect = 'none'
+            document.addEventListener('mousemove', handleResize)
+            document.addEventListener('mouseup', handleResizeEnd)
+          }}
+        />
+
+        {/* Top-right corner resize */}
+        <div
+          className="absolute top-0 right-0 w-4 h-4 cursor-ne-resize bg-[#2a2a2a] hover:bg-[#3a3a3a] rounded-bl z-10"
+          onMouseDown={(e) => {
+            e.stopPropagation()
+            e.preventDefault()
+            const startX = e.clientX
+            const startY = e.clientY
+            const startWidth = size.width
+            const startHeight = size.height
+            const startTop = position.y
+
+            const handleResize = (e: MouseEvent) => {
+              e.preventDefault()
+              const deltaX = e.clientX - startX
+              const deltaY = e.clientY - startY
+
+              const newWidth = Math.max(300, Math.min(window.innerWidth - position.x, startWidth + deltaX))
+              const newHeight = Math.max(200, startHeight - deltaY)
+              const newTop = Math.max(0, Math.min(startTop + deltaY, startTop + startHeight - 200))
+
+              setSize({ width: newWidth, height: newHeight })
+              setPosition({ x: position.x, y: newTop })
+            }
+
+            const handleResizeEnd = () => {
+              document.removeEventListener('mousemove', handleResize)
+              document.removeEventListener('mouseup', handleResizeEnd)
+              document.body.style.cursor = ''
+              document.body.style.userSelect = ''
+            }
+
+            document.body.style.cursor = 'ne-resize'
+            document.body.style.userSelect = 'none'
+            document.addEventListener('mousemove', handleResize)
+            document.addEventListener('mouseup', handleResizeEnd)
+          }}
+        />
+
+        {/* Bottom-left corner resize */}
+        <div
+          className="absolute bottom-0 left-0 w-4 h-4 cursor-sw-resize bg-[#2a2a2a] hover:bg-[#3a3a3a] rounded-tr z-10"
+          onMouseDown={(e) => {
+            e.stopPropagation()
+            e.preventDefault()
+            const startX = e.clientX
+            const startY = e.clientY
+            const startWidth = size.width
+            const startHeight = size.height
+            const startLeft = position.x
+
+            const handleResize = (e: MouseEvent) => {
+              e.preventDefault()
+              const deltaX = e.clientX - startX
+              const deltaY = e.clientY - startY
+
+              const newWidth = Math.max(300, startWidth - deltaX)
+              const newHeight = Math.max(200, Math.min(window.innerHeight - position.y, startHeight + deltaY))
+              const newLeft = Math.max(0, Math.min(startLeft + deltaX, startLeft + startWidth - 300))
+
+              setSize({ width: newWidth, height: newHeight })
+              setPosition({ x: newLeft, y: position.y })
+            }
+
+            const handleResizeEnd = () => {
+              document.removeEventListener('mousemove', handleResize)
+              document.removeEventListener('mouseup', handleResizeEnd)
+              document.body.style.cursor = ''
+              document.body.style.userSelect = ''
+            }
+
+            document.body.style.cursor = 'sw-resize'
+            document.body.style.userSelect = 'none'
+            document.addEventListener('mousemove', handleResize)
+            document.addEventListener('mouseup', handleResizeEnd)
+          }}
+        />
       </div>
-    </div>
+    )
+  }
+
+  // Sidebar preview mode (original)
+  return (
+    <aside
+      ref={sidebarRef}
+      className={`border-l border-[#2a2a2a] bg-[#0f0f0f] h-full relative ${isResizingSidebar ? 'select-none' : ''
+        }`}
+      style={{ width: sidebarWidth }}
+    >
+      {/* Resize handle for sidebar */}
+      <div
+        className={`absolute left-0 top-0 w-1 h-full cursor-col-resize transition-colors z-10 ${isResizingSidebar ? 'bg-[#4a4a4a]' : 'bg-transparent hover:bg-[#4a4a4a]'
+          }`}
+        onMouseDown={handleSidebarResizeStart}
+        title="Redimensionner la barre latérale"
+      />
+
+      <PDFContent
+        sessionData={sessionData}
+        isFloating={isFloating}
+        onToggleFloating={() => setIsFloating(true)}
+      />
+    </aside>
   )
 }

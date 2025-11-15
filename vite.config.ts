@@ -11,4 +11,26 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  optimizeDeps: {
+    include: ["pdfjs-dist"],
+  },
+  server: {
+    fs: {
+      allow: ["..", "."],
+    },
+    cors: true,
+  },
+  assetsInclude: ["**/*.pdf"],
+  build: {
+    rollupOptions: {
+      output: {
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name && assetInfo.name.endsWith(".pdf")) {
+            return "pdfs/[name][extname]";
+          }
+          return "assets/[name]-[hash][extname]";
+        },
+      },
+    },
+  },
 });
