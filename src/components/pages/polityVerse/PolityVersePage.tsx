@@ -12,8 +12,8 @@ export function PolityVersePage() {
       <div className="h-full flex">
         {/* Left side - Main content (75%) */}
         <div className="flex-1 flex flex-col justify-center" style={{ width: '75%' }}>
-          {/* Logo at top - absolute positioning */}
-          <div className="absolute top-4 left-6">
+          {/* Logo at top - centered */}
+          <div className="absolute top-4 left-0 flex justify-center" style={{ width: '75%' }}>
             <PolityVerseLogo />
           </div>
 

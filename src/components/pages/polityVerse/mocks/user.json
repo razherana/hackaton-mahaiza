@@ -10,9 +10,7 @@
     { "numero": 9, "reponse": "A", "correct": true },
     { "numero": 15, "reponse": "A", "correct": true },
     { "numero": 16, "reponse": "A", "correct": true },
-    { "numero": 18, "reponse": "A", "correct": true },
     { "numero": 19, "reponse": "A", "correct": true },
-    { "numero": 21, "reponse": "A", "correct": true },
     { "numero": 23, "reponse": "A", "correct": true },
     { "numero": 27, "reponse": "A", "correct": true }
   ],

@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { POLITY_VERSE_COLORS } from '../constants';
 import userData from '../mocks/user.json';
 import qcmData from '../mocks/qcm.json';
@@ -23,10 +24,11 @@ const NODE_SIZE = 40;
 const CONNECTOR_WIDTH = 32;
 
 export function QcmRoadmap() {
-  // Charger les réponses depuis localStorage ou userData
+  const navigate = useNavigate();
+  
+  // Charger les réponses depuis userData
   const loadQcmRealises = () => {
-    const stored = localStorage.getItem('polityverse_qcm_realises');
-    return stored ? JSON.parse(stored) : userData.qcmRealises;
+    return userData.qcmRealises;
   };
 
   const [qcmRealises, setQcmRealises] = useState(loadQcmRealises);
@@ -70,9 +72,6 @@ export function QcmRoadmap() {
     const newAnswer = { numero, reponse, correct };
     const updatedAnswers = [...qcmRealises, newAnswer];
     setQcmRealises(updatedAnswers);
-
-    // Sauvegarder dans localStorage
-    localStorage.setItem('polityverse_qcm_realises', JSON.stringify(updatedAnswers));
     
     console.log('✅ Réponse sauvegardée:', newAnswer);
     console.log('📊 Total réponses:', updatedAnswers.length);
@@ -218,22 +217,22 @@ export function QcmRoadmap() {
   };
 
   return (
-    <div className="flex flex-col gap-3 w-full mx-auto">
+    <div className="flex flex-col w-full mx-auto">
       {/* Two choice cards */}
-      <div className="flex gap-4 mb-4">
+      <div className="flex gap-4 mb-12">
         {/* Know My Nation */}
         <div 
-          className="flex-1 p-6 rounded-xl cursor-pointer transition-all hover:opacity-90 hover:scale-105"
+          className="flex-1 p-6 rounded-xl cursor-pointer transition-all hover:scale-105 group"
           style={{ backgroundColor: POLITY_VERSE_COLORS.dark }}
-          onClick={() => setShowKnowNation(true)}
+          onClick={() => navigate('/polity-verse/know-nation')}
         >
           <h3 
-            className="text-2xl font-bold mb-3"
+            className="text-2xl font-bold mb-3 transition-colors"
             style={{ color: POLITY_VERSE_COLORS.green }}
           >
             Know My Nation
           </h3>
-          <p className="text-white/70 text-sm leading-relaxed">
+          <p className="text-white/70 text-sm leading-relaxed group-hover:text-white transition-colors">
             Découvrez l'histoire fascinante de Madagascar à travers une carte temporelle interactive, 
             des origines jusqu'à nos jours.
           </p>
@@ -241,17 +240,17 @@ export function QcmRoadmap() {
 
         {/* Build a State */}
         <div 
-          className="flex-1 p-6 rounded-xl cursor-pointer transition-all hover:opacity-90 hover:scale-105"
+          className="flex-1 p-6 rounded-xl cursor-pointer transition-all hover:scale-105 group"
           style={{ backgroundColor: POLITY_VERSE_COLORS.dark }}
           onClick={() => setShowBuildState(true)}
         >
           <h3 
-            className="text-2xl font-bold mb-3"
+            className="text-2xl font-bold mb-3 transition-colors"
             style={{ color: POLITY_VERSE_COLORS.green }}
           >
             Build a State
           </h3>
-          <p className="text-white/70 text-sm leading-relaxed">
+          <p className="text-white/70 text-sm leading-relaxed group-hover:text-white transition-colors">
             Créez votre propre système politique depuis zéro : gérez une population, 
             un territoire et bâtissez les institutions de votre État idéal.
           </p>
@@ -261,6 +260,14 @@ export function QcmRoadmap() {
       {/* Modals */}
       {showKnowNation && <KnowNationModal onClose={() => setShowKnowNation(false)} />}
       {showBuildState && <BuildStateModal onClose={() => setShowBuildState(false)} />}
+
+      {/* Titre RoadMap */}
+      <h2 
+        className="text-3xl font-bold text-center mb-10"
+        style={{ color: POLITY_VERSE_COLORS.green }}
+      >
+        Upgrade la culture politique
+      </h2>
 
       {/* Top row: Progress Info & Search - centered */}
       <div className="flex items-center justify-center gap-4">
