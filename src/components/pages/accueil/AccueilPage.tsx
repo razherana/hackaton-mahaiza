@@ -48,9 +48,9 @@ const modules = [
     icon: Newspaper
   },
   {
-    title: "Quiz Politique & Économique",
+    title: "PolityVerse",
     subtitle: "Madagascar en action",
-    link: '',
+    link: '/polity-verse',
     description:
       "Renforcez votre culture civique avec des QCM, des jeux sur la politique et l'économie malgache.",
     points: [
