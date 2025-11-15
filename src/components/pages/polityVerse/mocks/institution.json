@@ -1,0 +1,336 @@
+[
+  {
+    "categorie": "executif",
+    "nom_institution": "Présidence de la République",
+    "hierarchie": 1,
+    "election": "suffrage universel direct",
+    "fonctionnement": "Chef de l'État; garantit la Constitution, nomme le Premier ministre et promulgue les lois.",
+    "interactions": [
+      {"institution": "Gouvernement", "interaction": "nomme le Premier ministre, coordonne la politique générale"},
+      {"institution": "Assemblée nationale", "interaction": "promulgue ou demande une nouvelle délibération des lois"},
+      {"institution": "Armée de Terre", "interaction": "est le chef des armées (commandement suprême)"},
+      {"institution": "Conseil constitutionnel", "interaction": "saisine possible pour contrôle de constitutionnalité"}
+    ],
+    "roles": [
+      {"role": "Garant de la Constitution", "description": "Veille au respect des règles constitutionnelles"},
+      {"role": "Chef des armées", "description": "Dirige les forces armées en temps de paix et de guerre"},
+      {"role": "Arbitre politique", "description": "Peut dissoudre l'Assemblée ou convoquer des référendums selon la Constitution"}
+    ]
+  },
+  {
+    "categorie": "executif",
+    "nom_institution": "Premier Ministre",
+    "hierarchie": 2,
+    "election": "nomination par la Présidence + investiture parlementaire",
+    "fonctionnement": "Chef du Gouvernement; dirige l'action gouvernementale et coordonne les ministères.",
+    "interactions": [
+      {"institution": "Présidence de la République", "interaction": "reçoit ses instructions politiques et nominations"},
+      {"institution": "Assemblée nationale", "interaction": "rend compte devant l'Assemblée, peut être renversé par motion de censure"},
+      {"institution": "Ministères", "interaction": "coordonne et oriente les politiques sectorielles"}
+    ],
+    "roles": [
+      {"role": "Chef du Gouvernement", "description": "Dirige l'exécution des lois et la politique publique"},
+      {"role": "Coordonnateur ministériel", "description": "Assure la cohérence entre ministères"}
+    ]
+  },
+  {
+    "categorie": "executif",
+    "nom_institution": "Gouvernement (Cabinet)",
+    "hierarchie": 3,
+    "election": "nomination des ministres par la Présidence sur proposition du Premier Ministre",
+    "fonctionnement": "Collectif ministériel chargé de mettre en œuvre la politique publique et d'édicter des décrets d'application.",
+    "interactions": [
+      {"institution": "Ministère des Finances", "interaction": "soumet les besoins budgétaires pour financement"},
+      {"institution": "Assemblée nationale", "interaction": "expose les grandes orientations et répond aux questions"}
+    ],
+    "roles": [
+      {"role": "Application des politiques", "description": "Met en œuvre les lois votées"},
+      {"role": "Règlementation", "description": "Prend des décrets et arrêtés d'application"}
+    ]
+  },
+  {
+    "categorie": "executif",
+    "nom_institution": "Ministère des Finances",
+    "hierarchie": 4,
+    "election": "nomination par la Présidence / Premier Ministre",
+    "fonctionnement": "Prépare le budget national, collecte les recettes fiscales et gère la dépense publique.",
+    "interactions": [
+      {"institution": "Assemblée nationale", "interaction": "présente le projet de loi de finances et justifie les crédits"},
+      {"institution": "Banque centrale (si existante)", "interaction": "coordination des politiques monétaires et financières"}
+    ],
+    "roles": [
+      {"role": "Gestion budgétaire", "description": "Élaborer et exécuter le budget de l'État"},
+      {"role": "Recouvrement fiscal", "description": "Assurer la collecte des impôts et taxes"}
+    ]
+  },
+  {
+    "categorie": "executif",
+    "nom_institution": "Ministère des Affaires étrangères",
+    "hierarchie": 4,
+    "election": "nomination par la Présidence / Premier Ministre",
+    "fonctionnement": "Conduit la diplomatie, négocie les traités et représente l'État à l'international.",
+    "interactions": [
+      {"institution": "Présidence de la République", "interaction": "coordination sur la politique étrangère"},
+      {"institution": "Assemblée nationale", "interaction": "information et ratification des traités selon la Constitution"}
+    ],
+    "roles": [
+      {"role": "Représentation internationale", "description": "Défend les intérêts de l'État à l'étranger"},
+      {"role": "Négociation des accords", "description": "Conduit et prépare les traités diplomatiques"}
+    ]
+  },
+  {
+    "categorie": "executif",
+    "nom_institution": "Ministère de l'Intérieur",
+    "hierarchie": 4,
+    "election": "nomination par la Présidence / Premier Ministre",
+    "fonctionnement": "Assure l'ordre public, la sécurité intérieure, l'administration locale et la gestion des élections administratives.",
+    "interactions": [
+      {"institution": "Préfectures", "interaction": "délègue l'administration locale et coordonne les services de l'État au niveau territorial"},
+      {"institution": "Police nationale", "interaction": "supervise les forces de sécurité intérieure"}
+    ],
+    "roles": [
+      {"role": "Sécurité intérieure", "description": "Maintenir l'ordre public et la sécurité des citoyens"},
+      {"role": "Administration territoriale", "description": "Coordonner l'action de l'État au niveau local"}
+    ]
+  },
+  {
+    "categorie": "executif",
+    "nom_institution": "Préfecture (Représentation de l'État)",
+    "hierarchie": 5,
+    "election": "nomination par l'État central",
+    "fonctionnement": "Représente l'État dans la région/département ; met en œuvre les politiques nationales localement.",
+    "interactions": [
+      {"institution": "Maires", "interaction": "coordination des services, contrôle administratif et appui opérationnel"},
+      {"institution": "Ministère de l'Intérieur", "interaction": "rend compte et reçoit directives"}
+    ],
+    "roles": [
+      {"role": "Application locale", "description": "Appliquer les décisions nationales au niveau régional"},
+      {"role": "Coordination des secours", "description": "Gérer les urgences et la protection civile locale"}
+    ]
+  },
+  {
+    "categorie": "executif",
+    "nom_institution": "Mairie / Commune",
+    "hierarchie": 6,
+    "election": "suffrage universel direct (pour le maire et le conseil municipal)",
+    "fonctionnement": "Administration locale élue qui gère les services municipaux, l'état civil et les politiques communales.",
+    "interactions": [
+      {"institution": "Préfecture", "interaction": "contrôle administratif et coordination"},
+      {"institution": "Citoyens", "interaction": "service public local et participation civique"}
+    ],
+    "roles": [
+      {"role": "Gestion municipale", "description": "Assurer les services de proximité (eau, déchets, urbanisme)"},
+      {"role": "État civil", "description": "Tenir les registres des naissances, mariages, décès"}
+    ]
+  },
+  {
+    "categorie": "legislatif",
+    "nom_institution": "Assemblée nationale",
+    "hierarchie": 1,
+    "election": "suffrage universel direct",
+    "fonctionnement": "Chambre basse élue ; propose, débat et vote les lois; contrôle l'action du Gouvernement.",
+    "interactions": [
+      {"institution": "Gouvernement", "interaction": "contrôle, questions au gouvernement, adoption ou rejet des lois"},
+      {"institution": "Sénat", "interaction": "navette législative pour adoption définitive des lois"}
+    ],
+    "roles": [
+      {"role": "Légiférer", "description": "Proposer et voter les lois"},
+      {"role": "Contrôle", "description": "Exercer le contrôle parlementaire sur l'exécutif"}
+    ]
+  },
+  {
+    "categorie": "legislatif",
+    "nom_institution": "Sénat",
+    "hierarchie": 2,
+    "election": "suffrage universel indirect (représentants locaux)",
+    "fonctionnement": "Chambre haute chargée de représenter les collectivités territoriales et de réviser les projets de loi.",
+    "interactions": [
+      {"institution": "Assemblée nationale", "interaction": "examine et propose des amendements; participe à la navette législative"},
+      {"institution": "Collectivités territoriales", "interaction": "représente leurs intérêts au niveau national"}
+    ],
+    "roles": [
+      {"role": "Révision législative", "description": "Revoir et amender les textes votés par l'Assemblée"},
+      {"role": "Représentation territoriale", "description": "Défendre les intérêts des collectivités locales"}
+    ]
+  },
+  {
+    "categorie": "legislatif",
+    "nom_institution": "Bureau de l'Assemblée (Présidence de l'Assemblée)",
+    "hierarchie": 3,
+    "election": "élection interne par les députés",
+    "fonctionnement": "Organe organisateur des travaux parlementaires : agenda, commissions, direction des séances.",
+    "interactions": [
+      {"institution": "Assemblée nationale", "interaction": "organise les débats et l'ordre du jour"},
+      {"institution": "Gouvernement", "interaction": "coordonne l'inscription des textes à l'ordre du jour"}
+    ],
+    "roles": [
+      {"role": "Organisation parlementaire", "description": "Fixer l'agenda et garantir le bon déroulement des séances"},
+      {"role": "Représentation", "description": "Représenter l'Assemblée dans les actes officiels"}
+    ]
+  },
+  {
+    "categorie": "judiciaire",
+    "nom_institution": "Conseil constitutionnel",
+    "hierarchie": 1,
+    "election": "nomination par plusieurs institutions (Présidence, Assemblée, Sénat)",
+    "fonctionnement": "Contrôle de constitutionnalité des lois, arbitrage des élections et protection des droits fondamentaux.",
+    "interactions": [
+      {"institution": "Assemblée nationale", "interaction": "contrôle la conformité des lois votées"},
+      {"institution": "Présidence de la République", "interaction": "saisine possible pour vérification constitutionnelle"}
+    ],
+    "roles": [
+      {"role": "Contrôle de constitutionnalité", "description": "Vérifier la conformité des lois à la Constitution"},
+      {"role": "Arbitrage électoral", "description": "Trancher les contestations relatives aux élections nationales"}
+    ]
+  },
+  {
+    "categorie": "judiciaire",
+    "nom_institution": "Cour suprême / Cour de cassation",
+    "hierarchie": 2,
+    "election": "nomination par des autorités (Présidence / Conseil supérieur de la magistrature)",
+    "fonctionnement": "Juridiction suprême de l'ordre judiciaire; contrôle l'application du droit par les juridictions inférieures.",
+    "interactions": [
+      {"institution": "Cours d'appel", "interaction": "reçoit les pourvois en cassation"},
+      {"institution": "Conseil supérieur de la magistrature", "interaction": "propose et supervise les nominations et carrières"}
+    ],
+    "roles": [
+      {"role": "Unification du droit", "description": "Veiller à l'interprétation uniforme des lois"},
+      {"role": "Juridiction suprême", "description": "Examiner les pourvois et rendre la décision finale"}
+    ]
+  },
+  {
+    "categorie": "judiciaire",
+    "nom_institution": "Cour d'appel",
+    "hierarchie": 3,
+    "election": "nomination par les autorités judiciaires",
+    "fonctionnement": "Juridiction d'appel qui rejuge les décisions des tribunaux de première instance.",
+    "interactions": [
+      {"institution": "Tribunal de première instance", "interaction": "réexamine les jugements en appel"},
+      {"institution": "Cour suprême", "interaction": "peut être saisie en pourvoi contre ses décisions"}
+    ],
+    "roles": [
+      {"role": "Réexamen des décisions", "description": "Contrôler et corriger les jugements de première instance"},
+      {"role": "Garant de procédure", "description": "Veiller au respect des règles de procédure"}
+    ]
+  },
+  {
+    "categorie": "judiciaire",
+    "nom_institution": "Tribunal de première instance",
+    "hierarchie": 4,
+    "election": "nomination des juges par l'autorité judiciaire",
+    "fonctionnement": "Juridiction de droit commun pour les litiges civils et pénaux au premier degré.",
+    "interactions": [
+      {"institution": "Citoyens", "interaction": "juge des litiges et applique la loi"},
+      {"institution": "Cour d'appel", "interaction": "les décisions peuvent être appelées devant la Cour d'appel"}
+    ],
+    "roles": [
+      {"role": "Rendre la justice", "description": "Trancher les conflits entre particuliers et infractions pénales"},
+      {"role": "Instruction locale", "description": "Procéder aux enquêtes et audiences locales"}
+    ]
+  },
+  {
+    "categorie": "judiciaire",
+    "nom_institution": "Conseil d'État (juge administratif)",
+    "hierarchie": 3,
+    "election": "nomination par l'État / autorités compétentes",
+    "fonctionnement": "Juridiction administrative suprême; tranche les litiges entre l'administration et les administrés.",
+    "interactions": [
+      {"institution": "Ministères", "interaction": "contrôle la légalité des actes administratifs"},
+      {"institution": "Tribunaux administratifs (si existants)", "interaction": "reçoit les appels des décisions administratives"}
+    ],
+    "roles": [
+      {"role": "Contrôle administratif", "description": "Vérifier la conformité des décisions administratives au droit"},
+      {"role": "Conseil juridique de l'État", "description": "Rendre des avis sur les projets d'actes administratifs"}
+    ]
+  },
+  {
+    "categorie": "executif",
+    "nom_institution": "Police nationale",
+    "hierarchie": 5,
+    "election": "nomination / recrutement selon procédure administrative",
+    "fonctionnement": "Force de sécurité civile chargée du maintien de l'ordre en zone urbaine et civile.",
+    "interactions": [
+      {"institution": "Ministère de l'Intérieur", "interaction": "opère sous sa tutelle et ses directives"},
+      {"institution": "Tribunaux", "interaction": "transmet dossiers et exécute décisions judiciaires"}
+    ],
+    "roles": [
+      {"role": "Maintien de l'ordre", "description": "Assurer la sécurité publique et la protection des personnes"},
+      {"role": "Enquête", "description": "Mener les enquêtes de police et préparer les dossiers judiciaires"}
+    ]
+  },
+  {
+    "categorie": "armee",
+    "nom_institution": "Armée de Terre",
+    "hierarchie": 1,
+    "election": "nomination de la haute hiérarchie par la Présidence / Conseil de défense",
+    "fonctionnement": "Force armée terrestre chargée de la défense du territoire contre les menaces militaires.",
+    "interactions": [
+      {"institution": "Présidence de la République", "interaction": "reçoit les orientations stratégiques et l'état-major relève au chef de l'État"},
+      {"institution": "Gendarmerie", "interaction": "coordination en zones rurales pour la sécurité intérieure si nécessaire"}
+    ],
+    "roles": [
+      {"role": "Défense du territoire", "description": "Protéger l'intégrité territoriale et la souveraineté"},
+      {"role": "Soutien civil en crise", "description": "Appui logistique lors de catastrophes ou urgences nationales"}
+    ]
+  },
+  {
+    "categorie": "armee",
+    "nom_institution": "État-major des armées",
+    "hierarchie": 2,
+    "election": "nomination par la Présidence / ministre de la Défense",
+    "fonctionnement": "Organe de planification et de commandement interarmées; coordonne les opérations militaires.",
+    "interactions": [
+      {"institution": "Armée de Terre", "interaction": "planification et coordination des opérations terrestres"},
+      {"institution": "Présidence de la République", "interaction": "conseille sur la stratégie militaire"}
+    ],
+    "roles": [
+      {"role": "Planification stratégique", "description": "Élaborer les plans militaires et opérations conjointes"},
+      {"role": "Coordination interarmées", "description": "Assurer la coopération entre armées (terre, air, mer)"}
+    ]
+  },
+  {
+    "categorie": "armee",
+    "nom_institution": "Gendarmerie nationale",
+    "hierarchie": 3,
+    "election": "nomination par l'État (ministère compétent)",
+    "fonctionnement": "Force à statut civil-militaire assurant missions de police en zones rurales et de sécurité intérieure.",
+    "interactions": [
+      {"institution": "Ministère de l'Intérieur", "interaction": "sous tutelle administrative pour missions de sécurité"},
+      {"institution": "Armée de Terre", "interaction": "coopération en matière de défense et opérations conjointes"}
+    ],
+    "roles": [
+      {"role": "Sécurité rurale", "description": "Maintenir l'ordre et la sécurité dans les zones rurales"},
+      {"role": "Soutien à la justice", "description": "Contribuer aux enquêtes judiciaires et exécution des peines"}
+    ]
+  },
+  {
+    "categorie": "executif",
+    "nom_institution": "Commission électorale indépendante",
+    "hierarchie": 6,
+    "election": "composition par nomination par plusieurs institutions (Parlement, Présidence, société civile)",
+    "fonctionnement": "Organise, supervise et garantit la régularité des élections nationales et locales.",
+    "interactions": [
+      {"institution": "Ministère de l'Intérieur", "interaction": "coordonne la logistique électorale avec l'administration"},
+      {"institution": "Conseil constitutionnel", "interaction": "transmet les contentieux électoraux pour arbitrage"}
+    ],
+    "roles": [
+      {"role": "Organisation électorale", "description": "Préparer et tenir les scrutins en respectant la loi"},
+      {"role": "Observation et transparence", "description": "Publier les résultats et garantir la transparence du processus"}
+    ]
+  },
+  {
+    "categorie": "executif",
+    "nom_institution": "Banque centrale",
+    "hierarchie": 4,
+    "election": "gouverneur nommé par l'État (Présidence / Parlement selon les règles nationales)",
+    "fonctionnement": "Institu­tion indépendante en matière monétaire; régule la monnaie, la politique monétaire et supervise le système bancaire.",
+    "interactions": [
+      {"institution": "Ministère des Finances", "interaction": "coordination des politiques budgétaires et monétaires"},
+      {"institution": "Institutions bancaires", "interaction": "supervision et régulation prudentielle"}
+    ],
+    "roles": [
+      {"role": "Stabilité monétaire", "description": "Conserver la valeur de la monnaie et contrôler l'inflation"},
+      {"role": "Régulation bancaire", "description": "Superviser les banques et le système financier national"}
+    ]
+  }
+]

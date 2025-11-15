@@ -1,0 +1,43 @@
+{
+  "nom": "Rakotonjanahary",
+  "prenom": "Jean Sebastien",
+  "age": 25,
+  "qcmRealises": [
+    { "numero": 1, "reponse": "A", "correct": true },
+    { "numero": 2, "reponse": "A", "correct": true },
+    { "numero": 3, "reponse": "A", "correct": false },
+    { "numero": 6, "reponse": "A", "correct": true },
+    { "numero": 9, "reponse": "A", "correct": true },
+    { "numero": 15, "reponse": "A", "correct": true },
+    { "numero": 16, "reponse": "A", "correct": true },
+    { "numero": 19, "reponse": "A", "correct": true },
+    { "numero": 23, "reponse": "A", "correct": true },
+    { "numero": 27, "reponse": "A", "correct": true }
+  ],
+  "connaissances": {
+    "politique": {
+      "niveauGeneral": "Intermédiaire",
+      "institutions": "Avancé",
+      "droit": "Débutant",
+      "democratie": "Intermédiaire",
+      "separationDesPouvoirs": "Avancé",
+      "representationPolitique": "Intermédiaire",
+      "participationCitoyenne": "Débutant avancé",
+      "systemesElectoraux": "Intermédiaire"
+    },
+    "economiesPolitiques": {
+      "niveauGeneral": "Débutant avancé",
+      "capitalisme": "Intermédiaire",
+      "socialisme": "Débutant",
+      "economieMixte": "Débutant avancé",
+      "politiquesFiscales": "Débutant"    },
+    "economieSociale": {
+      "niveauGeneral": "Intermédiaire",
+      "protectionSociale": "Intermédiaire",
+      "solidarite": "Avancé",
+      "cooperatives": "Débutant avancé",
+      "economieSolidaire": "Intermédiaire",
+      "developpementDurable": "Intermédiaire"
+    }
+  }
+}

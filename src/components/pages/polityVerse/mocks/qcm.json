@@ -1,0 +1,588 @@
+[
+    {
+        "question":  "Qu\u0027est-ce qu\u0027une Constitution dans un pays ?",
+        "options":  [
+                        "Un texte qui définit les règles fondamentales du pays.",
+                        "Une liste des lois temporaires du gouvernement.",
+                        "Un traité international.",
+                        "Un impôt payé par les citoyens."
+                    ],
+        "answer":  "A",
+        "explanation":  "La Constitution définit les règles fondamentales du pays et garantit les droits des citoyens.",
+        "numero":  1,
+        "disponible":  true
+    },
+    {
+        "question":  "Pourquoi la Constitution est-elle importante ?",
+        "options":  [
+                        "Parce qu\u0027elle organise le fonctionnement du gouvernement et protège les droits des citoyens.",
+                        "Parce qu\u0027elle fixe les prix des produits au marché.",
+                        "Parce qu\u0027elle désigne le roi.",
+                        "Parce qu\u0027elle organise les fêtes nationales."
+                    ],
+        "answer":  "A",
+        "explanation":  "La Constitution fixe les règles du gouvernement, la séparation des pouvoirs et garantit les libertés publiques.",
+        "numero":  1,
+        "disponible":  true
+    },
+    {
+        "question":  "Pourquoi une Constitution peut-elle aider un pays jeune et post-colonial ?",
+        "options":  [
+                        "Elle empêche la concentration du pouvoir en une seule personne.",
+                        "Elle fait disparaître automatiquement la pauvreté.",
+                        "Elle définit et protège les droits des citoyens.",
+                        "Elle interdit toute critique du gouvernement."
+                    ],
+        "answers":  [
+                        "A",
+                        "C"
+                    ],
+        "explanation":  "Une Constitution claire évite la concentration du pouvoir et définit les droits des citoyens pour protéger l\u0027intérêt général.",
+        "numero":  1,
+        "disponible":  true
+    },
+    {
+        "question":  "La Constitution peut-elle changer avec le temps ?",
+        "options":  [
+                        "Non, elle est immuable et ne peut jamais être modifiée.",
+                        "Oui, elle peut être révisée pour s\u0027adapter aux besoins de la société.",
+                        "Oui, mais seulement si tous les citoyens paient un impôt spécial.",
+                        "Non, seul le chef d\u0027État peut la changer par décret."
+                    ],
+        "answer":  "B",
+        "explanation":  "La Constitution peut évoluer grâce à une procédure démocratique de révision, afin de rester adaptée aux nouveaux défis.",
+        "numero":  1,
+        "disponible":  true
+    },
+    {
+        "question":  "Quel droit fondamental la Constitution protège-t-elle généralement ?",
+        "options":  [
+                        "La liberté d\u0027expression.",
+                        "Le droit de devenir roi.",
+                        "Le droit de ne jamais payer d\u0027impôts.",
+                        "Le droit d\u0027imposer sa volonté sans élection."
+                    ],
+        "answer":  "A",
+        "explanation":  "La Constitution protège en général les libertés fondamentales comme la liberté d\u0027expression et garantit l\u0027égalité devant la loi.",
+        "numero":  1,
+        "disponible":  true
+    },
+    {
+        "question":  "Qu\u0027est-ce qu\u0027une République ?",
+        "options":  [
+                        "Un État où le pouvoir appartient au peuple ou à ses représentants.",
+                        "Un État dirigé par un monarque héréditaire.",
+                        "Une fête nationale célébrant l\u0027indépendance.",
+                        "Un gouvernement secret."
+                    ],
+        "answer":  "A",
+        "explanation":  "Dans une République, le pouvoir appartient au peuple ou à ses représentants élus, contrairement à une monarchie héréditaire.",
+        "numero":  1,
+        "disponible":  true
+    },
+    {
+        "question":  "Dans une République, le pouvoir émane de :",
+        "options":  [
+                        "Du peuple et de la volonté générale.",
+                        "Du roi ou de la reine.",
+                        "D\u0027une entité étrangère.",
+                        "Des dieux ou d\u0027une volonté divine."
+                    ],
+        "answer":  "A",
+        "explanation":  "Dans une République démocratique, la souveraineté appartient au peuple ou au moins à ses représentants élus.",
+        "numero":  1,
+        "disponible":  true
+    },
+    {
+        "question":  "La République reconnaît l\u0027égalité de tous devant la loi. Que cela signifie-t-il ?",
+        "options":  [
+                        "Chacun a les mêmes droits et devoirs face à la loi.",
+                        "Les personnes riches ont plus de droits.",
+                        "La loi ne s\u0027applique qu\u0027à ceux qui en ont besoin.",
+                        "Chaque citoyen peut écrire sa propre loi."
+                    ],
+        "answer":  "A",
+        "explanation":  "Tous les citoyens sont égaux devant la loi, ce qui veut dire qu\u0027ils jouissent des mêmes droits et sont soumis aux mêmes devoirs.",
+        "numero":  1,
+        "disponible":  true
+    },
+    {
+        "question":  "La devise \"Liberté, Égalité, Fraternité\" représente :",
+        "options":  [
+                        "Les valeurs communes d\u0027une République.",
+                        "Le nom d\u0027un parti politique.",
+                        "Une fête civile spécifique.",
+                        "Un hymne national."
+                    ],
+        "answer":  "A",
+        "explanation":  "Elle exprime les valeurs fondamentales d\u0027une République : la liberté individuelle, l\u0027égalité de tous, et la solidarité (fraternité) entre citoyens.",
+        "numero":  1,
+        "disponible":  true
+    },
+    {
+        "question":  "Qui a écrit \"Du Contrat social\" ?",
+        "options":  [
+                        "Jean-Jacques Rousseau.",
+                        "Voltaire.",
+                        "Montesquieu.",
+                        "Karl Marx."
+                    ],
+        "answer":  "A",
+        "explanation":  "Jean-Jacques Rousseau est l\u0027auteur de \"Du Contrat social\", ouvrage fondateur sur la théorie du contrat social.",
+        "numero":  1,
+        "disponible":  true
+    },
+    {
+        "question":  "Le concept de contrat social signifie que :",
+        "options":  [
+                        "Les citoyens acceptent de vivre ensemble pour le bien commun.",
+                        "Les lois viennent directement des dieux.",
+                        "Chacun fait ce qu\u0027il veut sans suivre de règles.",
+                        "Le gouvernement impose sa volonté sans accord du peuple."
+                    ],
+        "answer":  "A",
+        "explanation":  "Le contrat social est l\u0027idée que les individus acceptent de vivre en société en acceptant certaines règles pour le bien collectif.",
+        "numero":  1,
+        "disponible":  true
+    },
+    {
+        "question":  "Les principes du contrat social selon Rousseau incluent :",
+        "options":  [
+                        "La liberté des citoyens.",
+                        "L\u0027égalité entre les citoyens.",
+                        "Le pouvoir absolu d\u0027un chef.",
+                        "La volonté générale du peuple."
+                    ],
+        "answers":  [
+                        "A",
+                        "B",
+                        "D"
+                    ],
+        "explanation":  "Rousseau souligne la liberté et l\u0027égalité des citoyens et l\u0027idée de \"volonté générale\" (intérêt collectif) comme fondements de la société.",
+        "numero":  1,
+        "disponible":  true
+    },
+    {
+        "question":  "Selon le contrat social, pourquoi obéit-on aux lois ?",
+        "options":  [
+                        "Parce que nous avons consenti à un accord collectif en vivant ensemble.",
+                        "Parce que c\u0027est la volonté d\u0027un seul dirigeant.",
+                        "Parce que c\u0027est imposé par une force divine.",
+                        "Parce que nous n\u0027avons pas le droit de choisir."
+                    ],
+        "answer":  "A",
+        "explanation":  "On obéit aux lois parce qu\u0027en vivant en société, nous avons accepté collectivement de nous soumettre à des règles pour vivre ensemble.",
+        "numero":  1,
+        "disponible":  true
+    },
+    {
+        "question":  "Qu\u0027est-ce qu\u0027un citoyen dans une démocratie ?",
+        "options":  [
+                        "Quelqu\u0027un qui possède des droits et des devoirs dans la société.",
+                        "Un étranger résidant dans le pays.",
+                        "Une personne sans aucune responsabilité.",
+                        "Un membre de l\u0027armée."
+                    ],
+        "answer":  "A",
+        "explanation":  "Un citoyen est une personne reconnue par la nation qui possède des droits (comme voter) et des devoirs (comme respecter les lois).",
+        "numero":  1,
+        "disponible":  true
+    },
+    {
+        "question":  "Parmi ces actions, lesquelles sont des devoirs du citoyen ?",
+        "options":  [
+                        "Respecter les lois en vigueur.",
+                        "Payer ses impôts.",
+                        "Ne jamais critiquer le gouvernement.",
+                        "Participer aux élections."
+                    ],
+        "answers":  [
+                        "A",
+                        "B",
+                        "D"
+                    ],
+        "explanation":  "Les devoirs du citoyen incluent respecter les lois, payer les impôts et participer à la vie démocratique (par exemple voter).",
+        "numero":  1,
+        "disponible":  true
+    },
+    {
+        "question":  "Le citoyen protège la République en :",
+        "options":  [
+                        "Respectant les lois.",
+                        "Participant à la vie démocratique.",
+                        "Manquant de respect aux symboles nationaux.",
+                        "Renonçant à ses responsabilités civiques."
+                    ],
+        "answers":  [
+                        "A",
+                        "B"
+                    ],
+        "explanation":  "Un citoyen protège la République en respectant les lois et en participant activement à la vie démocratique (vote, débats, actions civiques).",
+        "numero":  1,
+        "disponible":  true
+    },
+    {
+        "question":  "Parmi ces rôles, lequel n\u0027est pas celui d\u0027un citoyen ?",
+        "options":  [
+                        "S\u0027informer sur la société et les lois.",
+                        "Voter lors des élections.",
+                        "Respecter les autres citoyens.",
+                        "Restreindre les libertés civiles des autres."
+                    ],
+        "answer":  "D",
+        "explanation":  "Restreindre les libertés civiles des autres n\u0027est pas le rôle d\u0027un citoyen. Au contraire, il doit respecter les droits des autres.",
+        "numero":  1,
+        "disponible":  true
+    },
+    {
+        "question":  "Que signifie être un citoyen actif ?",
+        "options":  [
+                        "Participer aux élections et à la vie de la communauté.",
+                        "Parler uniquement dans les médias sociaux.",
+                        "Manifester violemment chaque semaine.",
+                        "Ignorer la vie politique du pays."
+                    ],
+        "answer":  "A",
+        "explanation":  "Un citoyen actif participe aux élections, s\u0027informe et s\u0027engage dans sa communauté pour défendre l\u0027intérêt général.",
+        "numero":  1,
+        "disponible":  true
+    },
+    {
+        "question":  "La démocratie ne se limite pas au vote. Cela signifie que :",
+        "options":  [
+                        "Les citoyens doivent suivre la politique et s\u0027engager activement.",
+                        "Une fois élu, le chef de l\u0027État fait tout seul sans contrôle.",
+                        "Les élections suffisent à résoudre tous les problèmes.",
+                        "On n\u0027a pas besoin de lois après une élection."
+                    ],
+        "answer":  "A",
+        "explanation":  "La démocratie demande un engagement permanent : s\u0027informer, débattre, participer même en dehors des périodes électorales.",
+        "numero":  1,
+        "disponible":  true
+    },
+    {
+        "question":  "Pourquoi la participation civique après les élections est-elle importante ?",
+        "options":  [
+                        "Pour veiller à ce que les élus agissent pour le bien commun.",
+                        "Pour simplement montrer que l\u0027on existe.",
+                        "Pour rejeter la faute sur d\u0027autres.",
+                        "Pour consolider la démocratie et ses institutions."
+                    ],
+        "answers":  [
+                        "A",
+                        "D"
+                    ],
+        "explanation":  "Participer après les élections permet de contrôler les élus et de consolider la démocratie en s\u0027assurant qu\u0027elle reste réactive aux besoins de tous.",
+        "numero":  1,
+        "disponible":  true
+    },
+    {
+        "question":  "Dans une démocratie, les citoyens ont le devoir de :",
+        "options":  [
+                        "Contribuer au bien public et à l\u0027intérêt général.",
+                        "Ignorer les problèmes de la société.",
+                        "Responsabiliser leur gouvernement par le débat et la critique.",
+                        "Suivre aveuglément les ordres d\u0027un parti politique."
+                    ],
+        "answers":  [
+                        "A",
+                        "C"
+                    ],
+        "explanation":  "Ils doivent contribuer au bien commun et participer au débat public pour surveiller leurs gouvernants, pas aveuglément suivre un parti.",
+        "numero":  1,
+        "disponible":  true
+    },
+    {
+        "question":  "Qu\u0027est-ce qui peut affaiblir la démocratie ?",
+        "options":  [
+                        "L\u0027inactivité et le désintérêt des citoyens.",
+                        "Le débat public libre.",
+                        "Une éducation civique insuffisante.",
+                        "La transparence gouvernementale."
+                    ],
+        "answers":  [
+                        "A",
+                        "C"
+                    ],
+        "explanation":  "Le désintérêt citoyen et le manque d\u0027éducation civique affaiblissent la démocratie car ils favorisent la manipulation et la corruption.",
+        "numero":  1,
+        "disponible":  true
+    },
+    {
+        "question":  "Dans une démocratie, les lois sont créées par :",
+        "options":  [
+                        "Le peuple et ses représentants élus.",
+                        "Un chef suprême tout-puissant.",
+                        "Un tribunal seul.",
+                        "La tradition sans vote."
+                    ],
+        "answer":  "A",
+        "explanation":  "Les lois démocratiques sont élaborées soit directement par le peuple (référendum) soit par ses représentants élus au parlement.",
+        "numero":  1,
+        "disponible":  true
+    },
+    {
+        "question":  "Que signifie \"la loi est l\u0027expression de la volonté générale\" ?",
+        "options":  [
+                        "Elle reflète l\u0027accord de l\u0027ensemble des citoyens représentés.",
+                        "Elle vient uniquement de la volonté d\u0027un seul dirigeant.",
+                        "Elle est imposée sans discussion ni consentement.",
+                        "Elle ne concerne que certains groupes."
+                    ],
+        "answer":  "A",
+        "explanation":  "Cela veut dire que la loi est le résultat d\u0027un accord collectif exprimant l\u0027intérêt commun du peuple.",
+        "numero":  1,
+        "disponible":  true
+    },
+    {
+        "question":  "Les lois servent à :",
+        "options":  [
+                        "Organiser la société de façon équitable.",
+                        "Favoriser un petit groupe au détriment des autres.",
+                        "Assurer l\u0027ordre et la justice pour tous.",
+                        "Créer le chaos et l\u0027anarchie."
+                    ],
+        "answers":  [
+                        "A",
+                        "C"
+                    ],
+        "explanation":  "Les lois organisent la vie en société de manière juste et veillent à ce que les droits et l\u0027ordre soient maintenus pour tous.",
+        "numero":  1,
+        "disponible":  true
+    },
+    {
+        "question":  "Lorsqu\u0027une loi est discutée, les citoyens peuvent :",
+        "options":  [
+                        "Donner leur avis via leurs représentants.",
+                        "Être complètement ignorés sans possibilité de s\u0027exprimer.",
+                        "Participer directement à travers des pétitions ou consultations.",
+                        "Obéir aveuglément sans comprendre ce qui se passe."
+                    ],
+        "answers":  [
+                        "A",
+                        "C"
+                    ],
+        "explanation":  "Les citoyens peuvent influencer les lois en exprimant leurs opinions via leurs représentants ou des pétitions.",
+        "numero":  1,
+        "disponible":  true
+    },
+    {
+        "question":  "Pourquoi la participation citoyenne est-elle importante dans un pays pauvre ?",
+        "options":  [
+                        "Elle aide à exiger des dirigeants qu\u0027ils améliorent les conditions de vie.",
+                        "Elle est inutile et n\u0027apporte rien.",
+                        "Elle permet de connaître et de faire remonter les besoins locaux.",
+                        "Elle remplace le travail du gouvernement."
+                    ],
+        "answers":  [
+                        "A",
+                        "C"
+                    ],
+        "explanation":  "En participant, les citoyens peuvent demander des comptes aux dirigeants et faire connaître leurs besoins, ce qui aide à réduire la pauvreté.",
+        "numero":  1,
+        "disponible":  true
+    },
+    {
+        "question":  "Sans la participation du peuple, qui a généralement le plus de pouvoir ?",
+        "options":  [
+                        "Quelques personnes riches ou puissantes.",
+                        "Chaque citoyen individuellement.",
+                        "Une autorité cachée sans contrôle citoyen.",
+                        "Les organisations humanitaires internationales."
+                    ],
+        "answer":  "A",
+        "explanation":  "Si les citoyens ne participent pas, quelques individus (souvent riches ou puissants) peuvent exercer un pouvoir sans contrôle.",
+        "numero":  1,
+        "disponible":  false
+    },
+    {
+        "question":  "Quelles actions citoyennes aident à lutter contre la pauvreté ?",
+        "options":  [
+                        "Encourager la transparence et la responsabilité des dirigeants.",
+                        "Organiser des fêtes sans objectif concret.",
+                        "S\u0027informer et s\u0027éduquer sur les questions sociales.",
+                        "Voter pour des dirigeants irresponsables."
+                    ],
+        "answers":  [
+                        "A",
+                        "C"
+                    ],
+        "explanation":  "En demandant transparence et en s\u0027informant, les citoyens peuvent influencer les politiques pour mieux combattre la pauvreté.",
+        "numero":  1,
+        "disponible":  false
+    },
+    {
+        "question":  "Une démocratie participative est bénéfique car elle peut :",
+        "options":  [
+                        "Rendre le partage des ressources plus juste.",
+                        "Faciliter la corruption sans contrôle.",
+                        "Donner une voix aux communautés marginalisées.",
+                        "Augmenter la désinformation sans débat."
+                    ],
+        "answers":  [
+                        "A",
+                        "C"
+                    ],
+        "explanation":  "La participation de tous rend la distribution des ressources plus équitable et permet aux plus démunis d\u0027être entendus.",
+        "numero":  1,
+        "disponible":  false
+    },
+    {
+        "question":  "Que risque un pays où la majorité des citoyens est mal informée politiquement ?",
+        "options":  [
+                        "Qu\u0027un leader manipulateur prenne le pouvoir.",
+                        "Que la démocratie se renforce.",
+                        "Que tous votent en connaissance de cause.",
+                        "Qu\u0027il n\u0027y ait jamais d\u0027élections."
+                    ],
+        "answer":  "A",
+        "explanation":  "Si les citoyens sont mal informés, ils peuvent être manipulés et élire un dirigeant corrompu ou autoritaire.",
+        "numero":  1,
+        "disponible":  false
+    },
+    {
+        "question":  "L\u0027information et l\u0027éducation civique aident à prévenir :",
+        "options":  [
+                        "La montée de régimes autoritaires.",
+                        "L\u0027amélioration du climat.",
+                        "La manipulation politique et la désinformation.",
+                        "Les maladies infectieuses."
+                    ],
+        "answers":  [
+                        "A",
+                        "C"
+                    ],
+        "explanation":  "Quand le public est éduqué, il est moins susceptible d\u0027être manipulé et le risque de dérive autoritaire diminue.",
+        "numero":  1,
+        "disponible":  false
+    },
+    {
+        "question":  "Si le public est facilement manipulable, cela peut conduire à :",
+        "options":  [
+                        "L\u0027élection de dirigeants corrompus.",
+                        "Un enrichissement égal pour tous.",
+                        "Une augmentation de la pauvreté.",
+                        "Un plus grand engagement citoyen."
+                    ],
+        "answers":  [
+                        "A",
+                        "C"
+                    ],
+        "explanation":  "Dans un tel cas, les dirigeants malhonnêtes peuvent arriver au pouvoir et aggraver la pauvreté en négligeant le bien commun.",
+        "numero":  1,
+        "disponible":  false
+    },
+    {
+        "question":  "Pour lutter contre la dictature et l\u0027abus de pouvoir, on doit :",
+        "options":  [
+                        "Éduquer tous les citoyens à leurs droits et responsabilités.",
+                        "Rendre l\u0027information et les médias accessibles à tous.",
+                        "Demander le silence des citoyens critiques.",
+                        "Censurer tout débat politique."
+                    ],
+        "answers":  [
+                        "A",
+                        "B"
+                    ],
+        "explanation":  "L\u0027éducation civique et la transparence (médias libres) renforcent la vigilance des citoyens face aux abus de pouvoir.",
+        "numero":  1,
+        "disponible":  false
+    },
+    {
+        "question":  "Quel est le rôle de la mémoire historique dans une démocratie ?",
+        "options":  [
+                        "Éviter de répéter les erreurs du passé.",
+                        "Rendre invisibles les anciens événements.",
+                        "Maintenir vivantes les valeurs démocratiques.",
+                        "Encourager à oublier les luttes sociales."
+                    ],
+        "answers":  [
+                        "A",
+                        "C"
+                    ],
+        "explanation":  "La mémoire historique permet de tirer des leçons du passé et de maintenir les valeurs et luttes qui ont façonné la démocratie.",
+        "numero":  1,
+        "disponible":  false
+    },
+    {
+        "question":  "La justice sociale signifie que :",
+        "options":  [
+                        "Les ressources et opportunités sont distribuées équitablement.",
+                        "Seuls les plus forts survivent sans lois.",
+                        "Chacun est protégé par la loi de la même manière.",
+                        "Les inégalités sont acceptées sans contestation."
+                    ],
+        "answers":  [
+                        "A",
+                        "C"
+                    ],
+        "explanation":  "La justice sociale implique l\u0027équité dans la répartition des ressources et la protection universelle par la loi, pour que tout le monde bénéficie des mêmes droits.",
+        "numero":  1,
+        "disponible":  false
+    },
+    {
+        "question":  "Une éducation civique solide fait que les citoyens :",
+        "options":  [
+                        "Connaissent leurs droits et devoirs.",
+                        "Se désintéressent de la politique.",
+                        "Participent activement à la vie politique.",
+                        "N\u0027ont pas besoin de comprendre les lois."
+                    ],
+        "answers":  [
+                        "A",
+                        "C"
+                    ],
+        "explanation":  "Grâce à l\u0027éducation civique, les citoyens comprennent leurs droits et doivent s\u0027engager pour les défendre et améliorer la société.",
+        "numero":  1,
+        "disponible":  false
+    },
+    {
+        "question":  "La démocratie vivante repose sur :",
+        "options":  [
+                        "Un peuple informé et actif.",
+                        "Des institutions fortes mais fermées.",
+                        "La connaissance des luttes passées.",
+                        "Un régime autoritaire."
+                    ],
+        "answers":  [
+                        "A",
+                        "C"
+                    ],
+        "explanation":  "Une démocratie vivante nécessite des citoyens informés et actifs ainsi que la connaissance des luttes passées pour continuer à progresser.",
+        "numero":  1,
+        "disponible":  false
+    },
+    {
+        "question":  "Pourquoi la justice sociale et les droits des minorités sont-ils importants ?",
+        "options":  [
+                        "Ils assurent que personne n\u0027est laissé pour compte.",
+                        "Seul l\u0027intérêt du groupe majoritaire compte.",
+                        "Une inégalité constante peut causer des conflits.",
+                        "Ils ne concernent que les riches."
+                    ],
+        "answers":  [
+                        "A",
+                        "C"
+                    ],
+        "explanation":  "Garantir la justice sociale et les droits de chacun évite que certains groupes soient exclus et réduit les inégalités et tensions.",
+        "numero":  1,
+        "disponible":  false
+    },
+    {
+        "question":  "Qu\u0027est-ce qui soutient une démocratie vivante ?",
+        "options":  [
+                        "La connaissance de l\u0027histoire du pays.",
+                        "La participation active des citoyens.",
+                        "Le rejet des valeurs républicaines.",
+                        "Le débat ouvert sur les questions sociales."
+                    ],
+        "answers":  [
+                        "A",
+                        "B",
+                        "D"
+                    ],
+        "explanation":  "Une démocratie vivante repose sur la mémoire historique, la participation citoyenne et le débat ouvert sur les enjeux sociaux.",
+        "numero":  1,
+        "disponible":  false
+    }
+]

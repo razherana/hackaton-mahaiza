@@ -1,0 +1,197 @@
+[
+  {
+    "date": "1500",
+    "evenement": "Extension des royaumes côtiers",
+    "description": "Multiplication de petits royaumes sakalava, betsileo, antanosy et antankarana."
+  },
+  {
+    "date": "1540",
+    "evenement": "Arrivée des premiers commerçants européens",
+    "description": "Les Portugais explorent les côtes malgaches et établissent les premiers contacts."
+  },
+  {
+    "date": "1600",
+    "evenement": "Formation du royaume sakalava",
+    "description": "Unification progressive sous la dynastie maroseranana."
+  },
+  {
+    "date": "1610",
+    "evenement": "Régne d'Andriantsitakatrandriana",
+    "description": "Consolidation du royaume merina dans les Hautes Terres."
+  },
+  {
+    "date": "1625",
+    "evenement": "Début du commerce avec les pirates",
+    "description": "Les pirates utilisent Madagascar comme base dans l’océan Indien."
+  },
+  {
+    "date": "1660",
+    "evenement": "Expansion du royaume merina",
+    "description": "Début d’une centralisation progressive sur l'Imerina."
+  },
+  {
+    "date": "1675",
+    "evenement": "Influence croissante des ombiasy",
+    "description": "Rôle politique important des devins-guérisseurs dans les décisions royales."
+  },
+  {
+    "date": "1710",
+    "evenement": "Règnes turbulents dans Imerina",
+    "description": "Conflits dynastiques et instabilité politique."
+  },
+  {
+    "date": "1787",
+    "evenement": "Accession d’Andrianampoinimerina",
+    "description": "Roi fondateur de l’unification merina ; réforme politique et administrative majeure."
+  },
+  {
+    "date": "1800",
+    "evenement": "Début de l’unification du pays",
+    "description": "Andrianampoinimerina pose les bases d’un État centralisé."
+  },
+  {
+    "date": "1810",
+    "evenement": "Avènement de Radama I",
+    "description": "Modernisation de Madagascar avec l’aide des Britanniques."
+  },
+  {
+    "date": "1818",
+    "evenement": "Reconnaissance internationale par la Grande-Bretagne",
+    "description": "Madagascar commence à être considéré comme un royaume unifié dans la diplomatie européenne."
+  },
+  {
+    "date": "1820",
+    "evenement": "Introduction des écoles protestantes",
+    "description": "La LMS anglaise crée le premier système éducatif moderne."
+  },
+  {
+    "date": "1828",
+    "evenement": "Règne de Ranavalona I",
+    "description": "Politique isolationniste, résistance à l'influence européenne."
+  },
+  {
+    "date": "1861",
+    "evenement": "Avènement de Radama II",
+    "description": "Tentative d’ouverture internationale intense mais brève."
+  },
+  {
+    "date": "1868",
+    "evenement": "Ranavalona II devient reine",
+    "description": "Christianisation officielle de la monarchie."
+  },
+  {
+    "date": "1883",
+    "evenement": "Première guerre franco-malgache",
+    "description": "La France tente de prendre le contrôle de Madagascar."
+  },
+  {
+    "date": "1895",
+    "evenement": "Conquête française de Madagascar",
+    "description": "Chute du royaume merina ; début de la colonisation française."
+  },
+  {
+    "date": "1897",
+    "evenement": "Abolition officielle de la monarchie",
+    "description": "Exil de la reine Ranavalona III."
+  },
+  {
+    "date": "1900",
+    "evenement": "Administration coloniale consolidée",
+    "description": "Mise en place du système colonial français."
+  },
+  {
+    "date": "1915",
+    "evenement": "Implication dans la Première Guerre mondiale",
+    "description": "Envoi de soldats malgaches dans l’armée française."
+  },
+  {
+    "date": "1929",
+    "evenement": "Manifestations nationalistes",
+    "description": "Jeunesse malgache réclame plus de droits politiques."
+  },
+  {
+    "date": "1942",
+    "evenement": "Bataille de Madagascar",
+    "description": "Les Britanniques envahissent Madagascar pour empêcher l’occupation japonaise."
+  },
+  {
+    "date": "1947",
+    "evenement": "Insurrection malgache",
+    "description": "Soulèvement majeur contre la colonisation française : répression extrêmement violente."
+  },
+  {
+    "date": "1956",
+    "evenement": "Loi Cadre",
+    "description": "Début de l'autonomie politique malgache."
+  },
+  {
+    "date": "1958",
+    "evenement": "Référendum créant la République malgache",
+    "description": "Madagascar devient une République autonome."
+  },
+  {
+    "date": "1960",
+    "evenement": "Indépendance",
+    "description": "Proclamée par Philibert Tsiranana."
+  },
+  {
+    "date": "1972",
+    "evenement": "Crise politique majeure",
+    "description": "Chute du régime Tsiranana ; intervention militaire."
+  },
+  {
+    "date": "1975",
+    "evenement": "Seconde République",
+    "description": "Ratsiraka instaure un régime socialiste."
+  },
+  {
+    "date": "1991",
+    "evenement": "Panorama démocratique",
+    "description": "Manifestations et transition démocratique."
+  },
+  {
+    "date": "1992",
+    "evenement": "Nouvelle Constitution",
+    "description": "Début de la Troisième République."
+  },
+  {
+    "date": "2002",
+    "evenement": "Crise post-électorale",
+    "description": "Affrontement Ravalomanana–Ratsiraka."
+  },
+  {
+    "date": "2009",
+    "evenement": "Chute de Marc Ravalomanana",
+    "description": "Transition menée par Andry Rajoelina."
+  },
+  {
+    "date": "2010",
+    "evenement": "Nouvelle Constitution",
+    "description": "Création de la Quatrième République."
+  },
+  {
+    "date": "2013",
+    "evenement": "Élections présidentielles",
+    "description": "Retour à l'ordre constitutionnel."
+  },
+  {
+    "date": "2018",
+    "evenement": "Élection d’Andry Rajoelina",
+    "description": "Retour à la présidence après 5 ans."
+  },
+  {
+    "date": "2020",
+    "evenement": "Crise sanitaire COVID-19",
+    "description": "Impact économique et sanitaire majeur."
+  },
+  {
+    "date": "2023",
+    "evenement": "Tension électorale",
+    "description": "Boycott partiel et contestations de l’opposition."
+  },
+  {
+    "date": "2024",
+    "evenement": "Crise du coût de la vie",
+    "description": "Inflation et difficultés économiques importantes."
+  }
+]

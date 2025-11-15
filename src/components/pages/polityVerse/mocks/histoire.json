@@ -1,0 +1,212 @@
+[
+  {
+    "date": "1947",
+    "evenement": "Insurrection malgache",
+    "description": "Soulèvement majeur contre le colonialisme français, brutalement réprimé. Entre 11 000 et 100 000 morts selon les sources.",
+    "type": "revolte",
+    "dates_proposees": ["1945", "1950", "1943"],
+    "evenements_proposes": [
+      {
+        "evenement": "Signature du traité de paix",
+        "description": "Accord diplomatique mettant fin aux tensions coloniales."
+      },
+      {
+        "evenement": "Création de l'Assemblée nationale",
+        "description": "Mise en place d'une institution parlementaire locale."
+      },
+      {
+        "evenement": "Réforme agraire coloniale",
+        "description": "Redistribution des terres par l'administration française."
+      }
+    ]
+  },
+  {
+    "date": "1896",
+    "evenement": "Protectorat français",
+    "description": "Madagascar devient officiellement un protectorat français après la conquête militaire.",
+    "type": "colonisation",
+    "dates_proposees": ["1885", "1900", "1892"],
+    "evenements_proposes": [
+      {
+        "evenement": "Traité commercial franco-malgache",
+        "description": "Accord économique entre la France et Madagascar."
+      },
+      {
+        "evenement": "Alliance militaire avec la France",
+        "description": "Pacte de défense mutuelle signé volontairement."
+      },
+      {
+        "evenement": "Ouverture des frontières malgaches",
+        "description": "Politique d'ouverture économique vers l'Europe."
+      }
+    ]
+  },
+  {
+    "date": "1960",
+    "evenement": "Indépendance de Madagascar",
+    "description": "Madagascar obtient son indépendance de la France le 26 juin 1960. Philibert Tsiranana devient le premier président.",
+    "type": "independance",
+    "dates_proposees": ["1958", "1962", "1965"],
+    "evenements_proposes": [
+      {
+        "evenement": "Autonomie interne de Madagascar",
+        "description": "Statut intermédiaire avant l'indépendance complète."
+      },
+      {
+        "evenement": "Adhésion à la Communauté française",
+        "description": "Madagascar rejoint l'union française volontairement."
+      },
+      {
+        "evenement": "Réforme constitutionnelle coloniale",
+        "description": "Nouvelle constitution sous administration française."
+      }
+    ]
+  },
+  {
+    "date": "1960-06-26",
+    "evenement": "Proclamation de l'indépendance",
+    "description": "Cérémonie officielle de proclamation de l'indépendance à Antananarivo.",
+    "type": "independance",
+    "dates_proposees": ["1960-07-14", "1960-05-01", "1960-12-10"],
+    "evenements_proposes": [
+      {
+        "evenement": "Élection du premier parlement",
+        "description": "Vote pour désigner les députés de la nouvelle nation."
+      },
+      {
+        "evenement": "Visite officielle du président français",
+        "description": "Rencontre diplomatique pour renforcer les liens."
+      },
+      {
+        "evenement": "Adoption du nouveau drapeau",
+        "description": "Choix des couleurs nationales par référendum."
+      }
+    ]
+  },
+  {
+    "date": "1810",
+    "evenement": "Unification du royaume de Madagascar",
+    "description": "Le roi Radama I achève l'unification de Madagascar sous un royaume unique.",
+    "type": "royaume",
+    "dates_proposees": ["1805", "1815", "1820"],
+    "evenements_proposes": [
+      {
+        "evenement": "Couronnement de Radama I",
+        "description": "Cérémonie d'intronisation du nouveau roi."
+      },
+      {
+        "evenement": "Traité de paix entre royaumes",
+        "description": "Accord diplomatique entre les différentes régions."
+      },
+      {
+        "evenement": "Conquête de la côte est",
+        "description": "Extension du territoire royal vers l'océan."
+      }
+    ]
+  },
+  {
+    "date": "1972",
+    "evenement": "Révolution de mai 1972",
+    "description": "Mouvement de contestation étudiant qui renverse la Première République.",
+    "type": "revolution",
+    "dates_proposees": ["1970", "1975", "1968"],
+    "evenements_proposes": [
+      {
+        "evenement": "Réforme universitaire",
+        "description": "Modernisation du système éducatif supérieur."
+      },
+      {
+        "evenement": "Grève générale nationale",
+        "description": "Mouvement social pour de meilleures conditions."
+      },
+      {
+        "evenement": "Élections législatives anticipées",
+        "description": "Organisation de nouvelles élections parlementaires."
+      }
+    ]
+  },
+  {
+    "date": "1828",
+    "evenement": "Règne de Ranavalona I",
+    "description": "La reine Ranavalona I monte sur le trône et mène une politique d'isolement et de résistance aux influences étrangères.",
+    "type": "royaume",
+    "dates_proposees": ["1825", "1830", "1835"],
+    "evenements_proposes": [
+      {
+        "evenement": "Ouverture aux missionnaires",
+        "description": "Politique d'accueil des influences européennes."
+      },
+      {
+        "evenement": "Traité commercial avec la Grande-Bretagne",
+        "description": "Accord économique favorable aux Britanniques."
+      },
+      {
+        "evenement": "Modernisation de l'armée",
+        "description": "Réforme militaire avec aide européenne."
+      }
+    ]
+  },
+  {
+    "date": "2009",
+    "evenement": "Coup d'État de 2009",
+    "description": "Andry Rajoelina prend le pouvoir, soutenu par l'armée, après des mois de contestation.",
+    "type": "coup",
+    "dates_proposees": ["2008", "2010", "2007"],
+    "evenements_proposes": [
+      {
+        "evenement": "Élections présidentielles anticipées",
+        "description": "Organisation d'un scrutin démocratique."
+      },
+      {
+        "evenement": "Accord de gouvernement d'union",
+        "description": "Formation d'une coalition politique pacifique."
+      },
+      {
+        "evenement": "Référendum constitutionnel",
+        "description": "Consultation populaire sur les réformes."
+      }
+    ]
+  },
+  {
+    "date": "1897",
+    "evenement": "Abolition de la monarchie malgache",
+    "description": "La reine Ranavalona III est exilée et la monarchie est officiellement abolie par la France.",
+    "type": "colonisation",
+    "dates_proposees": ["1895", "1900", "1890"],
+    "evenements_proposes": [
+      {
+        "evenement": "Sacre de Ranavalona III",
+        "description": "Couronnement de la nouvelle reine."
+      },
+      {
+        "evenement": "Réforme de la monarchie",
+        "description": "Modernisation de l'institution royale."
+      },
+      {
+        "evenement": "Alliance royale avec la France",
+        "description": "Pacte d'amitié entre le royaume et Paris."
+      }
+    ]
+  },
+  {
+    "date": "1992",
+    "evenement": "Adoption de la Constitution de la Troisième République",
+    "description": "Nouvelle constitution démocratique adoptée par référendum, mettant fin au régime socialiste.",
+    "type": "constitution",
+    "dates_proposees": ["1990", "1994", "1995"],
+    "evenements_proposes": [
+      {
+        "evenement": "Amendement de l'ancienne constitution",
+        "description": "Modification partielle du texte existant."
+      },
+      {
+        "evenement": "Dissolution de l'Assemblée nationale",
+        "description": "Fermeture du parlement par décret."
+      },
+      {
+        "evenement": "Congrès du parti au pouvoir",
+        "description": "Réunion politique pour définir l'orientation."
+      }
+    ]
+  }
+]

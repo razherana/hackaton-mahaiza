@@ -1,0 +1,45 @@
+{
+  "problematique": "Comment renforcer la culture politique et la participation citoyenne à Madagascar ?",
+  "points": [
+    {
+      "titre": "Faible culture politique générale",
+      "description": "La majorité de la population ne comprend pas les concepts fondamentaux de la démocratie et de la République.",
+      "exemples": [
+        "Beaucoup de citoyens ne connaissent pas la différence entre démocratie et république",
+        "Les termes comme 'séparation des pouvoirs' ou 'État de droit' restent abstraits",
+        "Lors des élections, le vote se base souvent sur des critères personnels plutôt que programmatiques",
+        "La confusion entre 'gouvernement' et 'État' est fréquente dans les discussions publiques"
+      ]
+    },
+    {
+      "titre": "Manque de participation citoyenne",
+      "description": "Les citoyens se sentent déconnectés des processus décisionnels et des institutions.",
+      "exemples": [
+        "Taux d'abstention élevé lors des consultations publiques locales",
+        "Les réunions communautaires sont souvent désertées par manque d'intérêt",
+        "Les jeunes se sentent exclus des débats politiques traditionnels",
+        "Sentiment général que 'la politique ne nous concerne pas' ou 'on ne peut rien changer'"
+      ]
+    },
+    {
+      "titre": "Incompréhension du contrat social",
+      "description": "Le concept de droits et devoirs citoyens reste flou pour beaucoup.",
+      "exemples": [
+        "Méconnaissance des droits fondamentaux garantis par la Constitution",
+        "Les devoirs fiscaux sont perçus comme une contrainte plutôt qu'une contribution collective",
+        "Confusion entre liberté individuelle et responsabilité collective",
+        "Les mécanismes de recours (Ombudsman, justice) sont largement ignorés"
+      ]
+    },
+    {
+      "titre": "Distance entre Constitution et réalité",
+      "description": "Les principes constitutionnels ne sont pas toujours appliqués dans la pratique.",
+      "exemples": [
+        "Décalage entre les droits constitutionnels et leur application concrète",
+        "Institutions démocratiques affaiblies par des pratiques informelles",
+        "Difficultés d'accès à la justice pour les populations rurales",
+        "Manque de transparence dans les processus de prise de décision gouvernementale"
+      ]
+    }
+  ]
+}

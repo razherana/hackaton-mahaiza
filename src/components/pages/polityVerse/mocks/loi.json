@@ -1,0 +1,463 @@
+[
+    {
+        "categorie": "Ordinaire",
+        "titre": "Loi sur la Santé Publique",
+        "motifs": "Améliorer le système de santé.",
+        "articles": [
+            "Création d’un programme national de prévention visant à renforcer la vaccination, la prévention des maladies chroniques et l’éducation sanitaire au niveau communautaire.",
+            "Mise en place d’un contrôle renforcé des établissements médicaux pour garantir la qualité des soins, la sécurité des patients et la conformité aux standards professionnels."
+        ]
+    },
+    {
+        "categorie": "Ordinaire",
+        "titre": "Loi sur l’Éducation Nationale",
+        "motifs": "Renforcer l’accès à l’éducation.",
+        "articles": [
+            "L’enseignement primaire est obligatoire et gratuit, avec des mesures spécifiques pour garantir l’accès des enfants dans les zones rurales et défavorisées.",
+            "Renforcement des programmes scientifiques et techniques ainsi que la formation continue des enseignants pour améliorer la qualité pédagogique."
+        ]
+    },
+    {
+        "categorie": "Ordinaire",
+        "titre": "Loi sur la Sécurité Routière",
+        "motifs": "Réduire les accidents.",
+        "articles": [
+            "Instaurer et faire respecter la limitation de vitesse dans les zones urbaines, associée à des campagnes de sensibilisation et à des dispositifs techniques adaptés.",
+            "Rendre le port de la ceinture de sécurité obligatoire pour tous les occupants des véhicules et renforcer les contrôles et sanctions pour non-respect."
+        ]
+    },
+    {
+        "categorie": "Ordinaire",
+        "titre": "Loi sur le Travail",
+        "motifs": "Protéger les travailleurs.",
+        "articles": [
+            "Fixer une durée maximale de travail hebdomadaire, prévoir des dispositions pour heures supplémentaires et des mesures de protection de la santé au travail.",
+            "Garantir le droit à un congé annuel payé et des mécanismes de compensation et de protection sociale pour les travailleurs en cas de maladie ou d’accident."
+        ]
+    },
+    {
+        "categorie": "Ordinaire",
+        "titre": "Loi sur le Numérique",
+        "motifs": "Encadrer les données personnelles.",
+        "articles": [
+            "Renforcement de la protection des données personnelles des utilisateurs, avec des droits clairs d’accès, de rectification et d’effacement.",
+            "Imposer une obligation de transparence et d’information pour les plateformes numériques, ainsi que des règles sur l’algorithme et le traitement automatisé."
+        ]
+    },
+    {
+        "categorie": "Ordinaire",
+        "titre": "Loi sur la Sécurité Alimentaire",
+        "motifs": "Garantir la qualité des produits.",
+        "articles": [
+            "Mise en place d’un contrôle obligatoire et régulier des denrées alimentaires sur l’ensemble de la chaîne d’approvisionnement, du producteur au consommateur.",
+            "Obligation d’un étiquetage complet et lisible des ingrédients, des allergènes et de l’origine des produits pour informer pleinement le consommateur."
+        ]
+    },
+    {
+        "categorie": "Ordinaire",
+        "titre": "Loi sur les Médias",
+        "motifs": "Encadrer la liberté de presse.",
+        "articles": [
+            "Interdiction de la censure arbitraire et garantie du pluralisme des opinions dans les médias, tout en prévoyant des mécanismes de responsabilité pour les abus.",
+            "Protection juridique et matérielle des journalistes dans l’exercice de leurs fonctions, y compris la protection des sources et la sécurité sur le terrain."
+        ]
+    },
+    {
+        "categorie": "Ordinaire",
+        "titre": "Loi sur les Télécommunications",
+        "motifs": "Moderniser l’accès au réseau.",
+        "articles": [
+            "Assurer un accès universel et abordable au haut débit sur l’ensemble du territoire, avec des priorités pour les zones rurales et isolées.",
+            "Établir un cadre de régulation pour les opérateurs afin de garantir la qualité de service, la concurrence loyale et la protection des consommateurs."
+        ]
+    },
+    {
+        "categorie": "Ordinaire",
+        "titre": "Loi sur la Protection des Enfants",
+        "motifs": "Assurer leur sécurité.",
+        "articles": [
+            "Interdiction stricte du travail des mineurs et mise en place de dispositifs de prévention et de réinsertion pour les enfants exposés au travail.",
+            "Renforcement et financement des structures de protection de l’enfance, avec des procédures claires de signalement et d’intervention."
+        ]
+    },
+    {
+        "categorie": "Ordinaire",
+        "titre": "Loi sur la Culture",
+        "motifs": "Promouvoir la création artistique.",
+        "articles": [
+            "Mise en place de dispositifs de soutien financier et de résidences pour les artistes afin de favoriser la création et la diffusion culturelle sur tout le territoire.",
+            "Renforcement des mesures de protection, de conservation et de valorisation du patrimoine matériel et immatériel national."
+        ]
+    },
+    {
+        "categorie": "Ordinaire",
+        "titre": "Loi sur la protection de l'enfance",
+        "motifs": "Protéger les mineurs contre les abus, négligences et violences.",
+        "articles": [
+            "Définition légale de l'enfant et des protections qui lui sont accordées par la société et l’État.",
+            "Définition des obligations parentales, des responsabilités éducatives et des mécanismes de recours en cas de manquement.",
+            "Énoncé des sanctions pénales et administratives applicables en cas d'abus ou de négligence, ainsi que des dispositifs de réparation pour les victimes.",
+            "Description du rôle et des responsabilités des services sociaux, des autorités judiciaires et des organisations non gouvernementales dans la protection de l’enfance."
+        ]
+    },
+    {
+        "categorie": "Ordinaire",
+        "titre": "Loi sur la liberté de la presse",
+        "motifs": "Garantir la liberté d'expression tout en luttant contre la diffamation.",
+        "articles": [
+            "Protection juridique et physique des journalistes, incluant la protection des sources et la sécurité des reporters en zone de conflit.",
+            "Garantir l’accès à l’information publique et la transparence des institutions, sous réserve des exceptions prévues par la loi pour la sécurité nationale.",
+            "Énoncer les limites légales à la liberté d’expression, notamment en matière de diffamation, d’incitation à la haine et de respect de la vie privée."
+        ]
+    },
+    {
+        "categorie": "Ordinaire",
+        "titre": "Loi sur l'éducation nationale",
+        "motifs": "Assurer un enseignement public accessible et obligatoire.",
+        "articles": [
+            "Énoncer l’obligation scolaire jusqu’à un âge fixé par la loi et prévoir des mesures d’accompagnement pour les élèves en difficulté.",
+            "Définir les programmes nationaux et les objectifs d’apprentissage fondamentaux pour chaque cycle d’enseignement.",
+            "Garantir les droits des élèves, y compris l’accès à une éducation inclusive et des dispositifs d’orientation."
+        ]
+    },
+    {
+        "categorie": "Ordinaire",
+        "titre": "Loi sur la santé publique",
+        "motifs": "Améliorer la protection sanitaire de la population.",
+        "articles": [
+            "Programmes de vaccination et de prévention sanitaire ciblant les populations vulnérables et les risques épidémiques.",
+            "Mesures et normes d’hygiène publique, incluant les contrôles sanitaires et l’éducation à l’hygiène.",
+            "Définition du rôle des hôpitaux et des centres de santé dans la prise en charge des malades et la coordination des urgences."
+        ]
+    },
+    {
+        "categorie": "Ordinaire",
+        "titre": "Loi sur la police nationale",
+        "motifs": "Encadrer les forces de sécurité intérieure.",
+        "articles": [
+            "Définir les missions de la police nationale en matière de maintien de l’ordre, de prévention et d’investigation.",
+            "Préciser les règles et procédures encadrant les arrestations, la garde à vue et le respect des droits fondamentaux.",
+            "Garantir les droits des citoyens lors des interventions, y compris le droit à l’accès à un avocat et à des voies de recours."
+        ]
+    },
+    {
+        "categorie": "Ordinaire",
+        "titre": "Loi sur la famille",
+        "motifs": "Régler le mariage, le divorce et la garde des enfants.",
+        "articles": [
+            "Réglementer les conditions du mariage civil, les obligations réciproques et les effets juridiques de l’union.",
+            "Prévoir les procédures de divorce, les mesures de protection et les droits patrimoniaux des époux.",
+            "Établir les règles relatives à la garde des enfants, la résidence habituelle et les modalités de contribution à l’entretien."
+        ]
+    },
+    {
+        "categorie": "Ordinaire",
+        "titre": "Loi sur la propriété",
+        "motifs": "Garantir le droit de posséder et de transmettre un bien.",
+        "articles": [
+            "Reconnaissance et protection de la propriété privée dans le respect de l’intérêt général.",
+            "Dispositions encadrant les procédures d’expropriation pour cause d’utilité publique et les modalités d’indemnisation.",
+            "Règles relatives à la transmission des biens, successions et régimes matrimoniaux."
+        ]
+    },
+    {
+        "categorie": "Ordinaire",
+        "titre": "Loi sur les transports",
+        "motifs": "Organiser la mobilité nationale.",
+        "articles": [
+            "Mesures visant à améliorer la sécurité routière et l’entretien des infrastructures de transport.",
+            "Développement et soutien aux transports publics pour assurer une mobilité inclusive et durable.",
+            "Règles de régulation des véhicules, de leur immatriculation et des services de transport."
+        ]
+    },
+    {
+        "categorie": "Ordinaire",
+        "titre": "Loi sur la cybersécurité",
+        "motifs": "Protéger les données et les infrastructures numériques.",
+        "articles": [
+            "Énoncer les obligations des entreprises et opérateurs critiques en matière de sécurité des systèmes d’information.",
+            "Renforcer la protection des données personnelles et des infrastructures vitales contre les intrusions et fuites.",
+            "Définir les incriminations liées à la cybercriminalité et les pouvoirs d’enquête des autorités compétentes."
+        ]
+    },
+    {
+        "categorie": "Ordinaire",
+        "titre": "Loi sur l'emploi",
+        "motifs": "Encadrer les règles du travail et protéger les employés.",
+        "articles": [
+            "Encadrement des contrats de travail, y compris les droits et obligations des employeurs et travailleurs.",
+            "Règles sur les horaires, les repos et la rémunération pour prévenir l’exploitation et protéger la santé.",
+            "Mesures de sécurité au travail et procédures de prévention des risques professionnels."
+        ]
+    },
+    {
+        "categorie": "Ordinaire",
+        "titre": "Loi sur l’environnement",
+        "motifs": "Préserver les ressources naturelles du pays.",
+        "articles": [
+            "Réglementation et gestion des déchets pour minimiser l’impact environnemental et promouvoir le recyclage.",
+            "Mesures de lutte contre la pollution de l’air, de l’eau et des sols, avec des sanctions pour les infractions graves.",
+            "Protection des espèces et des habitats naturels, incluant la création de zones protégées et des programmes de conservation."
+        ]
+    },
+    {
+        "categorie": "Ordinaire",
+        "titre": "Loi sur les collectivités territoriales",
+        "motifs": "Définir les pouvoirs des maires et communes.",
+        "articles": [
+            "Préciser les pouvoirs et responsabilités du maire dans l’administration locale et la représentation de la collectivité.",
+            "Détailler les compétences locales transférées aux collectivités et les mécanismes de coopération intercommunale.",
+            "Encadrer les finances locales, les ressources et les modalités de transfert de fonds."
+        ]
+    },
+    {
+        "categorie": "Ordinaire",
+        "titre": "Loi sur l'immigration",
+        "motifs": "Réguler l’entrée et le séjour des étrangers.",
+        "articles": [
+            "Établir des règles claires pour l'entrée, le séjour et l'intégration des étrangers, incluant procédures de visa et critères d'admission.",
+            "Définir les conditions de résidence, voies de régularisation et droits sociaux des résidents légaux, ainsi que les obligations administratives.",
+            "Préciser les procédures d'expulsion, les garanties juridiques et les voies de recours afin de respecter les droits fondamentaux."
+        ]
+    },
+    {
+        "categorie": "Ordinaire",
+        "titre": "Loi sur la protection civile",
+        "motifs": "Préparer le pays aux catastrophes naturelles.",
+        "articles": [
+            "Élaborer un plan national d'urgence coordonné entre autorités centrales, services de secours et collectivités, incluant scénarios opérationnels et responsabilités.",
+            "Renforcer les capacités des pompiers et services d'urgence par la formation, l'équipement et des ressources financières dédiées.",
+            "Prévoir des procédures d'alerte, d'évacuation et d'hébergement temporaire pour les populations touchées, ainsi que des plans de retour à la normale."
+        ]
+    },
+    {
+        "categorie": "Ordinaire",
+        "titre": "Loi sur les associations",
+        "motifs": "Garantir la liberté d’association.",
+        "articles": [
+            "Simplifier et sécuriser la création d'associations par des formalités claires et un registre public accessible.",
+            "Encadrer le financement des associations, la transparence des dons et des subventions, avec obligations comptables proportionnées.",
+            "Définir les motifs et procédures de dissolution, les garanties pour les membres et le traitement des biens associatifs en cas de liquidation."
+        ]
+    },
+    {
+        "categorie": "Ordinaire",
+        "titre": "Loi sur la culture et le patrimoine",
+        "motifs": "Protéger les biens culturels matériels et immatériels.",
+        "articles": [
+            "Mettre en place des mesures de protection et d'inventaire du patrimoine national, matériel et immatériel, avec des politiques de conservation.",
+            "Assurer un soutien durable aux musées et institutions culturelles par des financements stables et des programmes d'accessibilité au public.",
+            "Promouvoir la création artistique locale via des dispositifs de soutien, des résidences et des programmes éducatifs favorisant la diffusion culturelle."
+        ]
+    },
+    {
+        "categorie": "Ordinaire",
+        "titre": "Loi sur la sécurité alimentaire",
+        "motifs": "Protéger la population contre les aliments dangereux.",
+        "articles": [
+            "Renforcer les contrôles sanitaires sur la production, la transformation et la distribution des denrées afin de garantir la sécurité alimentaire.",
+            "Encadrer les importations par des normes strictes et des procédures d'inspection pour prévenir l'introduction de produits non conformes.",
+            "Assurer la traçabilité complète des produits alimentaires depuis leur origine jusqu'au consommateur, avec des sanctions pour non-conformité."
+        ]
+    },
+    {
+        "categorie": "Ordinaire",
+        "titre": "Loi sur les télécommunications",
+        "motifs": "Encadrer les opérateurs et protéger les consommateurs.",
+        "articles": ["Réseaux", "Prix", "Protection des usagers"]
+    },
+    {
+        "categorie": "Ordinaire",
+        "titre": "Loi sur le commerce",
+        "motifs": "Organiser les relations commerciales.",
+        "articles": ["Contrats commerciaux", "Normes", "Droits des consommateurs"]
+    },
+    {
+        "categorie": "Ordinaire",
+        "titre": "Loi sur la justice",
+        "motifs": "Garantir l’accès à la justice et l’indépendance des tribunaux.",
+        "articles": ["Fonctionnement des tribunaux", "Aide juridictionnelle", "Procédure"]
+    },
+
+    {
+        "categorie": "Finance",
+        "titre": "Loi de Budget National",
+        "motifs": "Définir les recettes et dépenses de l’État.",
+        "articles": [
+            "Répartition du budget par ministère.",
+            "Fixation du seuil de déficit."
+        ]
+    },
+    {
+        "categorie": "Finance",
+        "titre": "Loi sur l’Impôt",
+        "motifs": "Moderniser la fiscalité.",
+        "articles": [
+            "Création d’un impôt progressif.",
+            "Incitations pour les entreprises locales."
+        ]
+    },
+    {
+        "categorie": "Finance",
+        "titre": "Loi de Financement des Collectivités",
+        "motifs": "Aider les communes et régions.",
+        "articles": [
+            "Subventions pour infrastructures.",
+            "Fonds d'aide aux communes rurales."
+        ]
+    },
+    {
+        "categorie": "Finance",
+        "titre": "Loi sur la Gestion des Dette Publique",
+        "motifs": "Stabiliser la dette.",
+        "articles": [
+            "Limitation des emprunts.",
+            "Programme de remboursement annuel."
+        ]
+    },
+    {
+        "categorie": "Finance",
+        "titre": "Loi d’Audit Public",
+        "motifs": "Contrôler les dépenses de l’État.",
+        "articles": [
+            "Audit annuel obligatoire.",
+            "Publication des résultats."
+        ]
+    },
+    {
+        "categorie": "Finance",
+        "titre": "Loi sur les Investissements Publics",
+        "motifs": "Encourager les projets stratégiques.",
+        "articles": [
+            "Priorité aux infrastructures clés.",
+            "Règles de transparence des appels d'offres."
+        ]
+    },
+    {
+        "categorie": "Finance",
+        "titre": "Loi sur les Ressources Naturelles",
+        "motifs": "Réguler l’exploitation des richesses.",
+        "articles": [
+            "Taxe sur l’extraction minière.",
+            "Protection des zones écologiques."
+        ]
+    },
+    {
+        "categorie": "Finance",
+        "titre": "Loi Bancaire",
+        "motifs": "Assurer la stabilité financière.",
+        "articles": [
+            "Contrôle des banques nationales.",
+            "Normes sur les prêts et intérêts."
+        ]
+    },
+    {
+        "categorie": "Finance",
+        "titre": "Loi sur les Entreprises Publiques",
+        "motifs": "Moderniser la gestion publique.",
+        "articles": [
+            "Évaluation annuelle des performances.",
+            "Ouverture partielle au secteur privé."
+        ]
+    },
+    {
+        "categorie": "Finance",
+        "titre": "Loi de Soutien aux PME",
+        "motifs": "Renforcer l’économie locale.",
+        "articles": [
+            "Crédits d’impôts pour PME.",
+            "Subventions pour innovation."
+        ]
+    },
+    {
+        "categorie": "Finance",
+        "titre": "Loi de finances annuelle",
+        "motifs": "Définir le budget de l’État pour l'année N.",
+        "articles": [
+            "Présenter et voter chaque année le projet de budget national détaillant les recettes prévues et les dépenses par politique publique.",
+            "Prévoir des mécanismes d’ajustement en cas de situation économique exceptionnelle et définir les règles de pilotage budgétaire pour garantir l’équilibre ou la trajectoire de redressement."
+        ]
+    },
+    {
+        "categorie": "Finance",
+        "titre": "Loi sur l'impôt sur le revenu",
+        "motifs": "Fixer les règles de calcul de l'impôt.",
+        "articles": [
+            "Établir les barèmes d'imposition, les tranches de revenus et les règles de calcul pour assurer progressivité et équité fiscale.",
+            "Définir les exonérations, les déductions fiscales et les avantages ciblés pour les ménages et activités prioritaires, avec des contrôles anti-abus."
+        ]
+    },
+    {
+        "categorie": "Finance",
+        "titre": "Loi sur la taxe sur la valeur ajoutée",
+        "motifs": "Encadrer le système de TVA.",
+        "articles": [
+            "Déterminer les taux applicables (normaux et réduits) et les assiettes imposables afin d’assurer la neutralité économique et la protection des consommateurs vulnérables.",
+            "Préciser les règles de TVA à l’import/export et les obligations déclaratives des entreprises pour garantir la collecte efficace et la lutte contre la fraude."
+        ]
+    },
+    {
+        "categorie": "Finance",
+        "titre": "Loi sur les marchés publics",
+        "motifs": "Garantir la transparence des appels d'offres.",
+        "articles": [
+            "Établir des procédures transparentes pour les appels d'offres, la sélection des fournisseurs et l'attribution des contrats publics.",
+            "Mettre en place des contrôles indépendants et des sanctions en cas de corruption ou de non-respect des règles de concurrence."
+        ]
+    },
+    {
+        "categorie": "Finance",
+        "titre": "Loi bancaire",
+        "motifs": "Sécuriser le système bancaire national.",
+        "articles": [
+            "Définir les règles prudentielles applicables aux établissements bancaires, y compris les exigences de fonds propres et de liquidité.",
+            "Encadrer l'octroi du crédit, la protection des déposants et les modalités de supervision et de résolution des établissements en difficulté."
+        ]
+    },
+    {
+        "categorie": "Finance",
+        "titre": "Loi sur la dette publique",
+        "motifs": "Fixer les règles d’emprunt de l’État.",
+        "articles": [
+            "Définir les modalités d'emprunt, les autorisations parlementaires nécessaires et les limites de l'endettement public pour préserver la soutenabilité financière.",
+            "Exiger la transparence dans la gestion de la dette, la publication régulière des engagements et la mise en place de plans de remboursement."
+        ]
+    },
+    {
+        "categorie": "Finance",
+        "titre": "Loi sur la fiscalité locale",
+        "motifs": "Définir les taxes municipales et régionales.",
+        "articles": [
+            "Préciser l'assiette et les taux des taxes locales (taxe foncière, taxe d'habitation ou équivalents) et les règles de calcul pour garantir une répartition équitable.",
+            "Définir les mécanismes de péréquation et de transfert de ressources entre l'État et les collectivités territoriales pour assurer le financement des compétences locales."
+        ]
+    },
+    {
+        "categorie": "Finance",
+        "titre": "Loi sur le financement des partis politiques",
+        "motifs": "Assurer la transparence du financement politique.",
+        "articles": [
+            "Encadrer les sources de financement des partis et campagnes, imposer des limites et des obligations de transparence et de publication des comptes.",
+            "Mettre en place des contrôles et sanctions pour lutter contre le financement illégal et garantir l'équité dans la compétition politique."
+        ]
+    },
+    {
+        "categorie": "Finance",
+        "titre": "Loi sur les douanes",
+        "motifs": "Réguler les importations et exportations.",
+        "articles": [
+            "Définir les taxes et droits applicables aux importations et exportations et les procédures douanières pour faciliter le commerce tout en protégeant le marché intérieur.",
+            "Établir les contrôles sanitaires et de conformité pour les marchandises et les sanctions en cas d'infractions douanières."
+        ]
+    },
+    {
+        "categorie": "Finance",
+        "titre": "Loi de programmation économique",
+        "motifs": "Fixer les orientations économiques sur 3 à 5 ans.",
+        "articles": [
+            "Définir les priorités nationales en matière de croissance, d'investissement public et de réformes structurelles sur une période pluriannuelle.",
+            "Mettre en place des indicateurs de suivi, des objectifs de performance et des mécanismes de coordination entre les politiques sectorielles."
+        ]
+    }
+]
+

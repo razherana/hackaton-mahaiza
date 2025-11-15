@@ -1,0 +1,1 @@
+export { usePolityVerseTheme } from './usePolityVerseTheme';
