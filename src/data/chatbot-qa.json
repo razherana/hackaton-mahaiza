@@ -70,5 +70,48 @@
     "question": "Que faire si je ne trouve pas l'information recherchée ?",
     "answer": "N'hésitez pas à utiliser la barre de recherche avec différents mots-clés, ou à explorer les différents ministères. Vous pouvez aussi me poser la question directement, et je ferai de mon mieux pour vous orienter vers les bonnes ressources !",
     "keywords": ["aide", "support", "problème", "information"]
+   }
+,
+  {
+    "id": 13,
+    "question": "Que penses-tu de ce texte : 'Émission de bons du Trésor : succès auprès des investisseurs locaux' ?",
+    "answer": "Ce texte met en avant la confiance des investisseurs locaux dans la gestion financière de l'État. Le succès de l'émission de bons du Trésor signifie que le gouvernement a pu lever des fonds pour financer des projets importants, tout en diversifiant ses sources de financement. Cela montre aussi la solidité du marché financier national et peut contribuer à limiter la dépendance aux emprunts étrangers. C'est un signal positif pour l'économie, à condition que la dette reste maîtrisée et que les fonds soient bien utilisés.",
+    "keywords": ["bons du Trésor", "investisseurs", "finances", "marché financier", "dette"]
+  },
+  {
+    "id": 14,
+    "question": "Que se passe-t-il si l'Assemblée rejette le projet de budget ?",
+    "answer": "Si l'Assemblée Nationale rejette le projet de budget, le gouvernement doit revoir sa copie et proposer un nouveau texte. Cela peut entraîner des retards dans le financement des services publics et des projets. En cas de blocage persistant, la Constitution prévoit des mécanismes pour assurer la continuité de l'État, comme l'adoption d'un budget provisoire.",
+    "keywords": ["budget", "assemblée", "rejet", "projet de loi", "financement"]
+  },
+  {
+    "id": 15,
+    "question": "Quelles sont les conséquences d'une hausse de la dette publique ?",
+    "answer": "Une hausse de la dette publique peut permettre de financer des investissements utiles, mais si elle devient trop élevée, elle peut peser sur les finances de l'État. Cela peut entraîner une augmentation des intérêts à payer, réduire la capacité à investir dans d'autres secteurs, et inquiéter les investisseurs. Il est donc important de garder la dette à un niveau soutenable.",
+    "keywords": ["dette publique", "conséquences", "finances", "investissement", "risques"]
+  },
+  {
+    "id": 16,
+    "question": "Comment le gouvernement lutte-t-il contre la fraude fiscale ?",
+    "answer": "Le gouvernement a mis en place des mesures comme la plateforme FiscAlert, le renforcement des contrôles, la digitalisation des procédures et la protection des lanceurs d'alerte. L'objectif est d'améliorer la transparence, d'augmenter les recettes fiscales et de sanctionner les fraudeurs.",
+    "keywords": ["fraude fiscale", "fiscalité", "contrôle", "FiscAlert", "transparence"]
+  },
+  {
+    "id": 17,
+    "question": "Pourquoi la transparence budgétaire est-elle importante ?",
+    "answer": "La transparence budgétaire permet aux citoyens de savoir comment l'argent public est utilisé. Elle renforce la confiance dans les institutions, limite la corruption et favorise une meilleure gestion des ressources. C'est aussi un moyen de responsabiliser les décideurs publics.",
+    "keywords": ["transparence", "budget", "finances publiques", "corruption", "citoyens"]
+  },
+  {
+    "id": 18,
+    "question": "Quel est le rôle de l'Assemblée Nationale dans l'adoption des lois ?",
+    "answer": "L'Assemblée Nationale débat, amende et vote les projets de loi proposés par le gouvernement. Elle contrôle aussi l'action du gouvernement et peut proposer des lois. Son rôle est essentiel pour garantir la démocratie et l'équilibre des pouvoirs.",
+    "keywords": ["assemblée nationale", "lois", "vote", "démocratie", "pouvoirs"]
+  },
+  {
+    "id": 19,
+    "question": "Que faire si un article d'actualité me semble incomplet ou biaisé ?",
+    "answer": "Vous pouvez consulter d'autres sources officielles, poser la question à Lummy, ou attendre des mises à jour. ActuFlash IA s'efforce de fournir des informations fiables, mais il est toujours bon de croiser les sources pour se faire une opinion éclairée.",
+    "keywords": ["article", "biais", "incomplet", "sources", "fiabilité"]
   }
 ]

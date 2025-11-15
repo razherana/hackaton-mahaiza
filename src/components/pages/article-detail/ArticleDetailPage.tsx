@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react"
-import { useParams, useNavigate } from "react-router-dom"
+import { useEffect, useState, useRef } from "react"
+import { useParams, useNavigate, Link } from "react-router-dom"
 import { ArrowLeft, Calendar, User, Tag, Share2, Bookmark, ArrowUp, ArrowDown } from "lucide-react"
 import { ChatBot, ChatBotButton, TextSelectionMenu } from "@/components/chatbot"
 import Logo from "@/components/common/Logo"
@@ -34,7 +34,23 @@ interface Article {
 }
 
 export default function ArticleDetailPage() {
+    // Ref pour le footer de l'article
+    const articleFooterRef = useRef<HTMLDivElement>(null);
   const { ministereId, articleId } = useParams<{ ministereId: string; articleId: string }>()
+
+  // Trouver le lien de retour (liste actualités du ministère ou institution)
+  let backLink = "/";
+  if (ministereId) {
+    // Cherche dans ministeresData
+    const entite = ministeresData.find((m: any) => m.id === ministereId);
+    if (entite) {
+      if (entite.type === "ministere") {
+        backLink = `/ministeres/${ministereId.replace(/^min-/, '')}`;
+      } else if (entite.type === "institution") {
+        backLink = `/institutions/${ministereId.replace(/^instit-/, '')}`;
+      }
+    }
+  }
   const navigate = useNavigate()
   const [article, setArticle] = useState<Article | null>(null)
   const [ministereName, setMinistereName] = useState<string>("")
@@ -43,15 +59,27 @@ export default function ArticleDetailPage() {
   const [chatbotInitialMessage, setChatbotInitialMessage] = useState<string | undefined>()
   const [relatedArticles, setRelatedArticles] = useState<Article[]>([])
 
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
+  // Scroll en haut à chaque changement d'article
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [ministereId, articleId]);
+
   const scrollToBottom = () => {
-    window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' })
+    if (articleFooterRef.current) {
+      articleFooterRef.current.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    } else {
+      window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
+    }
   }
 
   useEffect(() => {
+    setLoading(true);
+    setArticle(null);
     const dataMap: Record<string, any> = {
       "assemblee.json": assemblee,
       "senat.json": senat,
@@ -83,32 +111,36 @@ export default function ArticleDetailPage() {
           setArticle(foundArticle)
 
           // Générer des articles similaires (plus robuste)
-          const allArticles: Article[] = []
-          Object.values(dataMap).forEach((ministryData) => {
-            const ministryArray = Array.isArray(ministryData) ? ministryData : [ministryData]
+          // On enrichit chaque article avec son fichier source pour la navigation fiable
+          type ArticleWithSource = Article & { _sourceNewsFile: string };
+          const allArticles: ArticleWithSource[] = [];
+          Object.entries(dataMap).forEach(([newsFile, ministryData]) => {
+            const ministryArray = Array.isArray(ministryData) ? ministryData : [ministryData];
             ministryArray.forEach((ministry: any) => {
               if (ministry.news) {
-                allArticles.push(...ministry.news)
+                (ministry.news as Article[]).forEach(article => {
+                  allArticles.push({ ...article, _sourceNewsFile: newsFile });
+                });
               }
-            })
-          })
+            });
+          });
 
           // Suggestions : priorité à la même catégorie, sinon par mots du titre, sinon n'importe quel autre article
-          let similarArticles = allArticles.filter(a => a.id !== foundArticle.id)
+          let similarArticles = allArticles.filter(a => a.id !== foundArticle.id);
           if (foundArticle.category) {
-            const cat = foundArticle.category
-            const byCat = similarArticles.filter(a => a.category === cat)
-            if (byCat.length >= 3) similarArticles = byCat
-            else if (byCat.length > 0) similarArticles = [...byCat, ...similarArticles.filter(a => a.category !== cat)]
+            const cat = foundArticle.category;
+            const byCat = similarArticles.filter(a => a.category === cat);
+            if (byCat.length >= 3) similarArticles = byCat;
+            else if (byCat.length > 0) similarArticles = [...byCat, ...similarArticles.filter(a => a.category !== cat)];
           }
           // Si pas assez, compléter par mots du titre
           if (similarArticles.length < 3 && foundArticle.title) {
-            const word = foundArticle.title.split(' ')[0].toLowerCase()
-            const byWord = allArticles.filter(a => a.id !== foundArticle.id && a.title && a.title.toLowerCase().includes(word))
-            similarArticles = [...similarArticles, ...byWord]
+            const word = foundArticle.title.split(' ')[0].toLowerCase();
+            const byWord = allArticles.filter(a => a.id !== foundArticle.id && a.title && a.title.toLowerCase().includes(word));
+            similarArticles = [...similarArticles, ...byWord];
           }
           // Toujours au moins 3 si possible
-          setRelatedArticles(similarArticles.slice(0, 3))
+          setRelatedArticles(similarArticles.slice(0, 3));
         }
       }
     } catch (error) {
@@ -139,7 +171,7 @@ export default function ArticleDetailPage() {
     return (
       <div className="article-detail-error">
         <h2>Article non trouvé</h2>
-        <button onClick={() => navigate(-1)} className="back-button">
+        <button onClick={() => navigate(backLink)} className="back-button">
           Retour
         </button>
       </div>
@@ -152,6 +184,18 @@ export default function ArticleDetailPage() {
       <header className="article-header">
         <div className="article-header-container">
           <Logo size="small" />
+
+          <div className="article-header-actions">
+            {/* Boutons spécifiques à la page article : Retour (page précédente) et Retour aux actualités (liste du ministère) */}
+            <button onClick={() => navigate(-1)} className="nav-link article-nav-retour">
+              Retour
+            </button>
+            <button onClick={() => navigate(backLink)} className="nav-link article-nav-retour-actu">
+              <ArrowLeft className="back-icon" />
+              Retour aux actualités
+            </button>
+          </div>
+
           <nav className="article-nav">
             <button onClick={() => navigate("/")} className="nav-link">Accueil</button>
             <button onClick={() => navigate("/actuflash")} className="nav-link">ActuFlash</button>
@@ -169,14 +213,6 @@ export default function ArticleDetailPage() {
         />
         <div className="article-hero-content">
           <div className="article-hero-header">
-            <button
-              className="article-back-button"
-              onClick={() => navigate(-1)}
-            >
-              <ArrowLeft className="back-icon" />
-              Retour
-            </button>
-
             <div className="article-category-badge">{article.category}</div>
           </div>
 
@@ -244,18 +280,12 @@ export default function ArticleDetailPage() {
             ))}
 
             {/* Footer de l'article */}
-            <div className="article-footer">
+            <div className="article-footer" ref={articleFooterRef}>
               <div className="article-divider"></div>
               <p className="article-footer-text">
                 Article publié par {ministereName}
               </p>
-              <button
-                className="article-footer-button"
-                onClick={() => navigate(-1)}
-              >
-                <ArrowLeft className="footer-icon" />
-                Retour aux actualités
-              </button>
+              {/* Bouton déplacé dans la barre de navigation */}
             </div>
           </div>
 
@@ -297,20 +327,21 @@ export default function ArticleDetailPage() {
             <h2 className="related-title">Articles similaires</h2>
             <div className="related-grid">
               {relatedArticles.map((relatedArticle) => {
-                // Trouver le ministère de l'article lié (fallback sur le premier ministere si non trouvé)
-                let relatedMinistry = ministeresData.find(m => m.newsFile && relatedArticle.id.startsWith(m.id))
-                if (!relatedMinistry) {
-                  relatedMinistry = ministeresData.find(m => m.newsFile)
+                // Utilise la propriété _sourceNewsFile pour retrouver le ministère/institution d'origine
+                let relatedMinistry = undefined;
+                if ((relatedArticle as any)._sourceNewsFile) {
+                  relatedMinistry = ministeresData.find(m => m.newsFile === (relatedArticle as any)._sourceNewsFile);
                 }
+                if (!relatedMinistry) {
+                  relatedMinistry = ministeresData[0];
+                }
+                const to = relatedMinistry ? `/article/${relatedMinistry.id}/${relatedArticle.id}` : '#';
                 return (
-                  <article
+                  <Link
                     key={relatedArticle.id}
                     className="related-card"
-                    onClick={() => {
-                      if (relatedMinistry) {
-                        navigate(`/article/${relatedMinistry.id}/${relatedArticle.id}`)
-                      }
-                    }}
+                    to={to}
+                    style={{ textDecoration: 'none', color: 'inherit' }}
                   >
                     <div className="related-image-wrapper">
                       <img
@@ -328,7 +359,7 @@ export default function ArticleDetailPage() {
                         <span>{formatDate(relatedArticle.date)}</span>
                       </div>
                     </div>
-                  </article>
+                  </Link>
                 )
               })}
             </div>

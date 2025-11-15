@@ -67,6 +67,86 @@
           }
         ]
       }
+      ,
+      {
+        "id": "fin-003",
+        "title": "🤝 Accord de soutien : un programme avec le FMI finalisé",
+        "date": "2025-11-05",
+        "author": "Ministère de l'Économie et des Finances",
+        "category": "Économie",
+        "summary": "Le gouvernement a finalisé un accord de soutien avec le FMI incluant des mesures pour stabiliser la macroéconomie et soutenir la croissance inclusive.",
+        "image": "/images/finances.png",
+        "images": [
+          "/images/finances.png"
+        ],
+        "sections": [
+          {
+            "title": "Objectifs du programme",
+            "content": "Le programme avec le Fonds Monétaire International vise à restaurer la stabilité macroéconomique, soutenir la croissance et protéger les dépenses sociales. Il inclut un volet technique pour renforcer la gestion des finances publiques et améliorer la collecte fiscale."
+          },
+          {
+            "title": "Mesures prioritaires",
+            "content": "Parmi les mesures prévues : réforme du recouvrement fiscal, renforcement des contrôles douaniers, meilleure transparence des marchés publics et protection des dépenses prioritaires (santé, éducation). Le calendrier d'exécution est conditionné à des jalons précis suivis trimestriellement."
+          },
+          {
+            "title": "Accompagnement social",
+            "content": "Le gouvernement a obtenu des garanties pour protéger les ménages vulnérables : les mesures d'ajustement seront accompagnées d'un filet social ciblé (transferts monétaires, programmes d'emploi). Les partenaires technique et financiers ont confirmé des appuis pour limiter l'impact social des réformes."
+          }
+        ]
+      },
+      {
+        "id": "fin-004",
+        "title": "📊 Rapport : dette publique stabilisée, perspectives 2026",
+        "date": "2025-10-25",
+        "author": "Direction de la Dette Publique",
+        "category": "Dette publique",
+        "summary": "Le rapport semestriel sur la dette publique indique une stabilisation du ratio dette/PIB et propose des scénarios prudents pour 2026.",
+        "image": "/images/finances.png",
+        "images": [
+          "/images/finances.png"
+        ],
+        "sections": [
+          {
+            "title": "Situation actuelle",
+            "content": "Le ratio dette publique/PIB s'établit autour de 43% après les paiements et les nouvelles mobilisations. Les autorités soulignent que la dette reste soutenable si les trajectoires de croissance et de recettes sont respectées."
+          },
+          {
+            "title": "Scénarios 2026",
+            "content": "Le rapport modélise trois scénarios : conservateur (croissance 2,5%), optimiste (croissance 4%), et adverse (croissance <2%). Les recommandations incluent la préférence pour des emprunts concessionnels et la limitation des émissions à court terme sur le marché local."
+          },
+          {
+            "title": "Recommandations",
+            "content": "Renforcer la transparence de la dette, publier les contrats de prêts, prioriser les projets à forte rentabilité sociale/économique, et poursuivre la politique de mobilisation de recettes internes via la modernisation fiscale."
+          }
+        ]
+      },
+      {
+        "id": "fin-005",
+        "title": "📈 Émission de bons du Trésor : succès auprès des investisseurs locaux",
+        "date": "2025-11-12",
+        "author": "Direction du Trésor",
+        "category": "Marchés financiers",
+        "summary": "L'État a émis une nouvelle tranche de bons du Trésor, bien accueillie par les investisseurs institutionnels locaux, permettant de lever des ressources pour co-financer des projets d'infrastructures.",
+        "image": "/images/finances.png",
+        "images": [
+          "/images/finances.png"
+        ],
+        "sections": [
+          {
+            "title": "Détails de l'émission",
+            "content": "L'émission de 12 mois a été sursouscrite à hauteur de 150% avec un taux attractif pour le contexte local. Les investisseurs incluent des compagnies d'assurance, des banques commerciales et des fonds de pension locaux."
+          },
+          {
+            "title": "Utilisation des fonds",
+            "content": "Les ressources levées financeront des projets de réhabilitation routière et des dépenses d'investissement prioritaires prévues dans le budget 2026. Une partie des fonds contribuera à la gestion de la trésorerie publique."
+          },
+          {
+            "title": "Impact attendu",
+            "content": "Cette opération renforce la confiance des marchés domestiques et permet de diversifier les sources de financement, tout en limitant la dépendance aux emprunts étrangers coûteux. Le Trésor continuera d'optimiser le calendrier des émissions pour maintenir les coûts de financement sous contrôle."
+          }
+        ]
+      }
     ]
   }
 ]
+
