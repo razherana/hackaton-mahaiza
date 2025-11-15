@@ -45,13 +45,13 @@ const modules = [
     icon: Newspaper
   },
   {
-    title: "Quiz Politique & Économie",
+    title: "Quiz Politique & Économique",
     subtitle: "Madagascar en action",
     description:
-      "Renforcez votre culture civique avec des quiz, QCM et vidéos sur la politique et l'économie malgache.",
+      "Renforcez votre culture civique avec des QCM, des jeux sur la politique et l'économie malgache.",
     points: [
       "Questionnaires thématiques et QCM adaptatifs",
-      "Vidéos pédagogiques axées Madagascar",
+      "Jeux pédagogiques axés Madagascar",
       "Chemins d'apprentissage gamifiés",
       "Suivi de progression et défis hebdo"
     ],

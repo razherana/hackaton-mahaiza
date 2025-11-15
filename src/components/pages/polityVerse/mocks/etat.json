@@ -1,0 +1,17 @@
+{
+    "inchanger" : {
+        "pays" : "Madagascar",
+        "capitale" : "Antananarivo",
+        "langues" : [
+            "Malagasy",
+            "Français"
+        ],
+        "systeme" : "Democratie republicaine",
+        "monnaie" : "Ariary malgache"
+    },
+    "changer" : {
+        "hymne" : "hymne.mp3",
+        "devise" : "Fitiavana - Tanindrazana - Fandrosoana",
+        "drapeau" : "drapeau.jpg"
+    }
+}

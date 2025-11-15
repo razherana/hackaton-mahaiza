@@ -1,0 +1,22 @@
+{
+    "principes": [
+        {
+            "categorie": "Institutions",
+            "elements": [
+                "Executives",
+                "Legislatives",
+                "Judiciaires",
+                "Armées",
+                "Collectivités territoriales"
+            ]
+        },
+        {
+            "categorie": "Lois",
+            "elements": [
+                "Constitution",
+                "Ordinaire",
+                "Finance"
+            ]
+        }
+    ]
+}
