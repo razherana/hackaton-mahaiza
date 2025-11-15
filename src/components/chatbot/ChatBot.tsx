@@ -24,16 +24,17 @@ interface ChatBotProps {
   initialMessage?: string
 }
 
-type MascotMood = "neutral" | "happy" | "thinking" | "excited"
-
 export default function ChatBot({ isOpen, onClose, initialMessage }: ChatBotProps) {
   const [conversations, setConversations] = useState<Conversation[]>([])
   const [currentConversationId, setCurrentConversationId] = useState<string | null>(null)
   const [inputMessage, setInputMessage] = useState("")
   const [sidebarOpen, setSidebarOpen] = useState(true)
-  const [mascotMood, setMascotMood] = useState<MascotMood>("neutral")
-  const [isInitialized, setIsInitialized] = useState(false)
+  const [position, setPosition] = useState<{ x: number; y: number } | null>(null)
+  const [isDragging, setIsDragging] = useState(false)
+  const [dragStart, setDragStart] = useState({ x: 0, y: 0 })
   const messagesEndRef = useRef<HTMLDivElement>(null)
+  const textareaRef = useRef<HTMLTextAreaElement>(null)
+  const chatbotRef = useRef<HTMLDivElement>(null)
 
   const createNewConversation = () => {
     const newConv: Conversation = {
@@ -52,16 +53,15 @@ export default function ChatBot({ isOpen, onClose, initialMessage }: ChatBotProp
     }
     setConversations(prev => [newConv, ...prev])
     setCurrentConversationId(newConv.id)
-    setMascotMood("happy")
   }
 
-  // Charger les conversations depuis localStorage
+  // Charger les conversations depuis localStorage au montage
   useEffect(() => {
-    if (!isInitialized) {
-      const savedConversations = localStorage.getItem("lummy-conversations")
-      if (savedConversations) {
+    const savedConversations = localStorage.getItem("lummy-conversations")
+    if (savedConversations) {
+      try {
         const parsed = JSON.parse(savedConversations)
-        setConversations(parsed.map((conv: Conversation) => ({
+        const loadedConversations = parsed.map((conv: Conversation) => ({
           ...conv,
           createdAt: new Date(conv.createdAt),
           updatedAt: new Date(conv.updatedAt),
@@ -69,14 +69,18 @@ export default function ChatBot({ isOpen, onClose, initialMessage }: ChatBotProp
             ...msg,
             timestamp: new Date(msg.timestamp)
           }))
-        })))
-      } else {
-        // Créer une conversation initiale
+        }))
+        setConversations(loadedConversations)
+        if (loadedConversations.length > 0) {
+          setCurrentConversationId(loadedConversations[0].id)
+        }
+      } catch (e) {
         createNewConversation()
       }
-      setIsInitialized(true)
+    } else {
+      createNewConversation()
     }
-  }, [isInitialized])
+  }, [])
 
   // Sauvegarder les conversations dans localStorage
   useEffect(() => {
@@ -92,12 +96,19 @@ export default function ChatBot({ isOpen, onClose, initialMessage }: ChatBotProp
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
   }, [currentConversation?.messages])
 
-  // Traiter le message initial si fourni
+  // Traiter le message initial si fourni (une seule fois)
   useEffect(() => {
-    if (initialMessage && isOpen && currentConversationId && inputMessage !== initialMessage) {
+    if (initialMessage && isOpen && currentConversationId && inputMessage === "") {
       setInputMessage(initialMessage)
+      // Auto-focus sur le textarea
+      setTimeout(() => {
+        textareaRef.current?.focus()
+        // Positionner le curseur à la fin
+        const length = initialMessage.length
+        textareaRef.current?.setSelectionRange(length, length)
+      }, 100)
     }
-  }, [initialMessage, isOpen, currentConversationId, inputMessage])
+  }, [initialMessage, isOpen, currentConversationId])
 
   const findBestAnswer = (question: string): string => {
     const lowerQuestion = question.toLowerCase()
@@ -149,8 +160,6 @@ export default function ChatBot({ isOpen, onClose, initialMessage }: ChatBotProp
     const text = messageText || inputMessage.trim()
     if (!text || !currentConversationId) return
 
-    setMascotMood("thinking")
-
     // Ajouter le message de l'utilisateur
     const userMessage: Message = {
       id: Date.now(),
@@ -199,8 +208,6 @@ export default function ChatBot({ isOpen, onClose, initialMessage }: ChatBotProp
         }
         return conv
       }))
-
-      setMascotMood("happy")
     }, 800)
   }
 
@@ -230,13 +237,80 @@ export default function ChatBot({ isOpen, onClose, initialMessage }: ChatBotProp
     return date.toLocaleDateString("fr-FR", { day: "2-digit", month: "short" })
   }
 
+  // Initialiser la position au premier rendu
+  useEffect(() => {
+    if (position === null && chatbotRef.current) {
+      const initialX = window.innerWidth - chatbotRef.current.offsetWidth - 20
+      const initialY = window.innerHeight - chatbotRef.current.offsetHeight - 100
+      setPosition({ x: Math.max(0, initialX), y: Math.max(0, initialY) })
+    }
+  }, [isOpen, position])
+
+  // Gestion du drag & drop
+  const handleMouseDown = (e: React.MouseEvent) => {
+    // Ne pas déclencher le drag sur les zones interactives
+    const target = e.target as HTMLElement
+    if (
+      target.closest('.chatbot-input, .chatbot-messages, .conversations-list, .chatbot-send-btn, .chatbot-close, .chatbot-sidebar-toggle, button')
+    ) {
+      return
+    }
+
+    if (position) {
+      setIsDragging(true)
+      setDragStart({
+        x: e.clientX - position.x,
+        y: e.clientY - position.y
+      })
+    }
+  }
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (isDragging && position) {
+        const newX = e.clientX - dragStart.x
+        const newY = e.clientY - dragStart.y
+
+        // Limites de l'écran
+        const maxX = window.innerWidth - (chatbotRef.current?.offsetWidth || 900)
+        const maxY = window.innerHeight - (chatbotRef.current?.offsetHeight || 600)
+
+        setPosition({
+          x: Math.max(0, Math.min(newX, maxX)),
+          y: Math.max(0, Math.min(newY, maxY))
+        })
+      }
+    }
+
+    const handleMouseUp = () => {
+      setIsDragging(false)
+    }
+
+    if (isDragging) {
+      document.addEventListener('mousemove', handleMouseMove)
+      document.addEventListener('mouseup', handleMouseUp)
+    }
+
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove)
+      document.removeEventListener('mouseup', handleMouseUp)
+    }
+  }, [isDragging, dragStart, position])
+
   if (!isOpen) return null
 
   return (
-    <div className="chatbot-overlay">
-      <div className="chatbot-container">
-        {/* Sidebar pour l'historique */}
-        <aside className={`chatbot-sidebar ${!sidebarOpen ? "collapsed" : ""}`}>
+    <div
+      ref={chatbotRef}
+      className={`chatbot-container ${isDragging ? "dragging" : ""}`}
+      style={position ? {
+        left: `${position.x}px`,
+        top: `${position.y}px`
+      } : undefined}
+      onMouseDown={handleMouseDown}
+    >
+      {/* Sidebar pour l'historique */}
+      <aside className={`chatbot-sidebar ${!sidebarOpen ? "collapsed" : ""}`}>
           <div className="sidebar-header">
             <h3 className="sidebar-title">Conversations</h3>
             <button 
@@ -280,37 +354,48 @@ export default function ChatBot({ isOpen, onClose, initialMessage }: ChatBotProp
           <div className="chatbot-header">
             <button
               className="chatbot-sidebar-toggle"
-              onClick={() => setSidebarOpen(!sidebarOpen)}
+              onClick={(e) => {
+                e.stopPropagation()
+                setSidebarOpen(!sidebarOpen)
+              }}
             >
-              <Menu size={24} />
+              <Menu size={20} />
             </button>
-            
+
             <div className="chatbot-header-info">
-              <MessageCircle className="chatbot-icon" />
+              <MessageCircle className="chatbot-icon" size={28} />
               <div>
                 <h2 className="chatbot-title">Lummy</h2>
                 <p className="chatbot-subtitle">Assistant IA ActuFlash</p>
               </div>
             </div>
 
-            <button className="chatbot-close" onClick={onClose}>
-              <X size={24} />
+            <button
+              className="chatbot-close"
+              onClick={(e) => {
+                e.stopPropagation()
+                onClose()
+              }}
+              title="Fermer"
+            >
+              <X size={20} />
             </button>
           </div>
 
           {/* Mascotte */}
           <div className="chatbot-mascot">
-            <div className={`mascot-container mood-${mascotMood}`}>
-              <div className="mascot-placeholder">
-                <span className="mascot-emoji">🐒</span>
-                <p className="mascot-name">Lummy</p>
-              </div>
-              {/* Note: Remplacer par une vraie image de lémurien */}
-              {/* <img 
-                src={`/images/lemur/lemur-${mascotMood}.jpg`} 
+            <div className="mascot-container">
+              <img
+                src="/images/lemur.png"
                 alt="Lummy le lémurien"
                 className="mascot-image"
-              /> */}
+                onError={e => {
+                  e.currentTarget.style.display = 'none';
+                  const name = e.currentTarget.nextElementSibling;
+                  if (name) name.innerHTML = '🐒 Lummy';
+                }}
+              />
+              <p className="mascot-name">Lummy</p>
             </div>
           </div>
 
@@ -337,13 +422,24 @@ export default function ChatBot({ isOpen, onClose, initialMessage }: ChatBotProp
 
           {/* Input */}
           <div className="chatbot-input-area">
-            <input
-              type="text"
+            <textarea
+              ref={textareaRef}
               className="chatbot-input"
               placeholder="Posez une question à Lummy..."
               value={inputMessage}
-              onChange={(e) => setInputMessage(e.target.value)}
-              onKeyPress={(e) => e.key === "Enter" && handleSendMessage()}
+              onChange={(e) => {
+                setInputMessage(e.target.value)
+                // Auto-resize
+                e.target.style.height = 'auto'
+                e.target.style.height = Math.min(e.target.scrollHeight, 120) + 'px'
+              }}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                  e.preventDefault()
+                  handleSendMessage()
+                }
+              }}
+              rows={1}
             />
             <button
               className="chatbot-send-btn"
@@ -354,7 +450,6 @@ export default function ChatBot({ isOpen, onClose, initialMessage }: ChatBotProp
             </button>
           </div>
         </div>
-      </div>
     </div>
   )
 }

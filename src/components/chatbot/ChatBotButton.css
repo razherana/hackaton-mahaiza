@@ -1,10 +1,10 @@
 /* Bouton flottant du chatbot */
-.chatbot-floating-btn {
+.chatbot-button {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  width: 64px;
-  height: 64px;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
   background: linear-gradient(135deg, #3A8A2A 0%, #1D4315 100%);
   border: none;
   border-radius: 50%;
@@ -14,9 +14,87 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 9998;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.chatbot-floating-btn {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #3A8A2A 0%, #1D4315 100%);
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  cursor: grab;
+  box-shadow: 0 8px 24px rgba(58, 138, 42, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 10000;
+  animation: float 3s ease-in-out infinite;
+  touch-action: none;
+}
+.chatbot-floating-btn.dragging {
+  cursor: grabbing;
+  box-shadow: 0 12px 32px rgba(58, 138, 42, 0.6);
+  animation: none;
+  z-index: 10001;
+}
+
+@media (max-width: 768px) {
+  .chatbot-button,
+  .chatbot-floating-btn {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 8px 24px rgba(58, 138, 42, 0.4);
+  }
+  50% {
+    box-shadow: 0 8px 32px rgba(58, 138, 42, 0.8);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .chatbot-button {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.chatbot-floating-btn {
+  position: fixed;
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #3A8A2A 0%, #1D4315 100%);
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  cursor: grab;
+  box-shadow: 0 8px 24px rgba(58, 138, 42, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   z-index: 1000;
   animation: float 3s ease-in-out infinite;
+  touch-action: none;
+}
+
+.chatbot-floating-btn.dragging {
+  cursor: grabbing;
+  box-shadow: 0 12px 32px rgba(58, 138, 42, 0.6);
+  animation: none;
+  z-index: 10000;
 }
 
 @keyframes float {
@@ -26,6 +104,16 @@
   50% {
     transform: translateY(-10px);
   }
+}
+
+.chatbot-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 32px rgba(58, 138, 42, 0.6);
+  animation: none;
+}
+
+.chatbot-button:active {
+  transform: scale(0.95);
 }
 
 .chatbot-floating-btn:hover {

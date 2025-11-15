@@ -1,0 +1,33 @@
+.app-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.app-logo:hover {
+  opacity: 0.8;
+}
+
+.app-logo-large .logo-img {
+  height: 48px;
+  width: 48px;
+}
+
+.app-logo-large .logo-text {
+  font-size: 1.6rem;
+}
+
+.logo-img {
+  height: 36px;
+  width: 36px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #3A8A2A;
+  letter-spacing: 1px;
+}

@@ -1,28 +1,19 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import { Newspaper, TrendingUp, Clock } from "lucide-react"
+import { TrendingUp, Clock } from "lucide-react"
 import { ChatBot, ChatBotButton, TextSelectionMenu } from "@/components/chatbot"
+import Logo from "@/components/common/Logo"
+import Footer from "@/components/common/Footer"
+import ministeresData from "@/data/ministeres.json"
 import "./ActuFlashPage.css"
 
-interface Ministere {
-  id: string
-  name: string
-  type: string
-  link: string
-  newsFile: string
-  image: string
-}
-
 export default function ActuFlashPage() {
-  const [ministeres, setMinisteres] = useState<Ministere[]>([])
+  const ministeres = ministeresData
   const [currentTime, setCurrentTime] = useState(new Date())
   const [chatbotOpen, setChatbotOpen] = useState(false)
   const [chatbotInitialMessage, setChatbotInitialMessage] = useState<string | undefined>()
 
   useEffect(() => {
-    fetch("/src/data/ministeres.json")
-      .then((res) => res.json())
-      .then((data) => setMinisteres(data))
 
     const timer = setInterval(() => setCurrentTime(new Date()), 60000)
     return () => clearInterval(timer)
@@ -47,6 +38,8 @@ export default function ActuFlashPage() {
   const handleAskLummy = (selectedText: string) => {
     setChatbotInitialMessage(`Que penses-tu de ce texte : "${selectedText}" ?`)
     setChatbotOpen(true)
+    // Nettoyer le message initial après un court délai pour permettre au chatbot de le lire
+    setTimeout(() => setChatbotInitialMessage(undefined), 500)
   }
 
   return (
@@ -55,10 +48,7 @@ export default function ActuFlashPage() {
       <header className="actuflash-header">
         <div className="actuflash-header-container">
           <div className="actuflash-header-top">
-            <div className="actuflash-branding">
-              <Newspaper className="actuflash-icon" />
-              <h1 className="actuflash-logo">ActuFlash IA</h1>
-            </div>
+            <Logo size="large" />
             <div className="actuflash-datetime">
               <Clock className="actuflash-clock-icon" />
               <div className="actuflash-time-wrapper">
@@ -143,12 +133,7 @@ export default function ActuFlashPage() {
       </main>
 
       {/* Footer */}
-      <footer className="actuflash-footer">
-        <div className="actuflash-footer-content">
-          <p className="actuflash-footer-text">© 2025 ActuFlash IA - Plateforme Mahaiza</p>
-          <p className="actuflash-footer-subtext">Informations officielles des institutions malgaches</p>
-        </div>
-      </footer>
+      <Footer />
 
       {/* Chatbot */}
       <ChatBotButton onClick={() => setChatbotOpen(true)} />

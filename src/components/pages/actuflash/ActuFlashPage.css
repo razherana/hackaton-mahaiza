@@ -3,6 +3,8 @@
   min-height: 100vh;
   background: #0f0f0f;
   color: #e5e5e5;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Header */
@@ -157,7 +159,7 @@
 /* Main Content */
 .actuflash-main {
   padding: 2.5rem 0;
-  min-height: calc(100vh - 200px);
+  flex: 1;
 }
 
 .actuflash-container {

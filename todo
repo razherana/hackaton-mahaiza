@@ -21,4 +21,6 @@
  pour le chatbot on va utiliser un systeme de question et reponses deja posé en json pour la demonstration et pour la mascote on va utiliser des images annimé ou des videos
  Donc commence par integrer le chatbot dans le projet et ajoute la mascote lemurien a coté du chatbot qui va reagir par rapport a ce qui est ecrit
  pour le style du chatbot utilise les memes styles que pour les autres pages,le chatbot doit etre acceccible depuis toutes les pages d'actuFlash (et elle aussi doit etre retractable) elle doit avoir l'historique de discussion et autres comme tous les chatbots 
- mais pour le notre on va utiliser des données json pour les questions et reponses   
+ mais pour le notre on va utiliser des données json pour les questions et reponses
+
+5-Il y a une modification a faire pour le  chatbot,le chatbot doit etre comme le navbar c'est a dire retractable(peut ete cacher pour ne pas gacher l'espace)
