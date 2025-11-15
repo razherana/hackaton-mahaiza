@@ -20,7 +20,7 @@ function AnalysisPageContent() {
       const documentId = parseInt(documentIdParam, 10)
       const document = documentDatas.find(d => d.id === documentId)
       const analysis = getAnalysisByDocumentId(documentId)
-      
+
       if (document && analysis) {
         setSessionData({
           document,

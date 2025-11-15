@@ -1,4 +1,4 @@
-import { Eye, EyeOff, LogOut } from "lucide-react"
+import { BookOpen, Eye, EyeOff, LogOut } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useAnalysis } from "../context/useAnalysis"
 import {
@@ -25,6 +25,20 @@ export function AnalysisSidebar() {
     <>
       <aside className="w-64 border-r border-[#2a2a2a] bg-[#1a1a1a] py-6 px-4 flex flex-col gap-4 h-full">
         <div className="space-y-2">
+          <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-[#b0b0b0] px-2">
+            Apprendre
+          </h3>
+
+          <Button
+            variant="outline"
+            className="w-full justify-start gap-2 border-[#2a2a2a] text-[#f5f5f5] hover:bg-[#2a2a2a]"
+          >
+            <BookOpen className="h-4 w-4" />
+            Try Quiz
+          </Button>
+        </div>
+
+        <div className="space-y-2 mt-3">
           <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-[#b0b0b0] px-2">
             Options
           </h3>
